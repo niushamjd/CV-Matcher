@@ -3,6 +3,7 @@ import json
 import re
 import time
 import csv
+import openpyxl
 
 from dotenv import load_dotenv
 from openai import OpenAI, RateLimitError
@@ -210,15 +211,32 @@ def load_pairs_from_csv(path: str) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-if __name__ == "__main__":
-    for label, cv_text in SAMPLES.items():
-        print(f"=== {label} ===")
+def load_pairs_from_excel(path: str, sheet_name: str = "Candidate Pool", final_only: bool = True) -> list[dict]:
+    wb = openpyxl.load_workbook(path, data_only=True)
+    ws = wb[sheet_name]
+    header = [c.value for c in ws[1]]
+    pairs = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        record = dict(zip(header, row))
+        if not (record.get("resume_text") and record.get("jd_text")):
+            continue
+        if final_only and record.get("FINAL_SELECTION (y/n)") != "y":
+            continue
+        pairs.append(record)
+    return pairs
 
-        judge_result = llm_as_judge(cv_text, SAMPLE_JD)
+
+if __name__ == "__main__":
+    pairs = load_pairs_from_excel("data/cv_matcher_candidate_pool.xlsx")
+    for pair in pairs:
+        pair_id = pair.get("pair_id") or pair.get("resume_id")
+        print(f"=== {pair_id} ===")
+
+        judge_result = llm_as_judge(pair["resume_text"], pair["jd_text"])
         print("LLM-as-Judge result:")
         print(json.dumps(judge_result, indent=2))
 
-        wq_result = writing_quality_signal(cv_text)
+        wq_result = writing_quality_signal(pair["resume_text"])
         print("Writing-quality result:")
         print(json.dumps(wq_result, indent=2))
         print()
