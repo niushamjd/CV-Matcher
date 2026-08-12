@@ -21,7 +21,7 @@ from data_loader import load_pairs_from_excel
 from extraction import extract_profile
 from rule_scorer import score_match
 from gap_explainer import explain_llm, explain_template
-from llm_client import writing_quality_signal
+from llm_client import writing_quality_signal, get_last_usage
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 RESULTS_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_results.json"
@@ -29,18 +29,30 @@ RESULTS_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_res
 
 def run_pair(pair_id: str, resume_text: str, jd_text: str) -> dict:
     start = time.time()
+    prompt_tokens = 0
+    completion_tokens = 0
+
+    def _accum():
+        u = get_last_usage()
+        nonlocal prompt_tokens, completion_tokens
+        prompt_tokens += u["prompt_tokens"] or 0
+        completion_tokens += u["completion_tokens"] or 0
 
     cv_profile = extract_profile(resume_text, source_type="cv")
+    _accum()
     jd_profile = extract_profile(jd_text, source_type="jd")
+    _accum()
     result = score_match(cv_profile, jd_profile)
 
     # Writing-quality signal (CV only, mirrors Niyousha's implementation)
     wq = writing_quality_signal(resume_text)
+    _accum()
     result.sub_scores.writing_quality_score = wq["writing_quality_score"]
 
     # Gap Explainer Option B — LLM-based natural explanation
     try:
         result.explanation = explain_llm(result.structured_diff, wq["writing_quality_score"])
+        _accum()
     except Exception:
         result.explanation = explain_template(result.structured_diff)  # fallback to template
 
@@ -59,6 +71,8 @@ def run_pair(pair_id: str, resume_text: str, jd_text: str) -> dict:
         "structured_diff": result.structured_diff.model_dump(),
         "source": "structured_extraction",
         "latency_seconds": latency,
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
     }
 
 

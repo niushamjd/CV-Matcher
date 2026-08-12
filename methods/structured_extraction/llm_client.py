@@ -25,6 +25,14 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
+# Populated after every call_llm() — read with get_last_usage()
+_last_usage: dict = {"prompt_tokens": None, "completion_tokens": None}
+
+
+def get_last_usage() -> dict:
+    """Returns token counts from the most recent call_llm() call."""
+    return dict(_last_usage)
+
 
 def call_llm(system_prompt: str, user_prompt: str, json_mode: bool = True) -> str:
     """Returns the raw text response from the LLM. Callers parse it further."""
@@ -82,7 +90,11 @@ def _call_groq(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
             if resp.status_code != 429:
                 break
     resp.raise_for_status()
-    return resp.json()["choices"][0]["message"]["content"]
+    data = resp.json()
+    usage = data.get("usage", {})
+    _last_usage["prompt_tokens"] = usage.get("prompt_tokens")
+    _last_usage["completion_tokens"] = usage.get("completion_tokens")
+    return data["choices"][0]["message"]["content"]
 
 
 def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
@@ -112,6 +124,8 @@ def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
             {"role": "user", "content": user_prompt},
         ],
     )
+    _last_usage["prompt_tokens"] = response.usage.prompt_tokens if response.usage else None
+    _last_usage["completion_tokens"] = response.usage.completion_tokens if response.usage else None
     return response.choices[0].message.content
 
 
