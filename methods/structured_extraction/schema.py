@@ -71,6 +71,7 @@ class SubScores(BaseModel):
     skills_score: Optional[float] = None       # 0-100
     experience_score: Optional[float] = None   # 0-100
     education_score: Optional[float] = None    # 0-100
+    writing_quality_score: Optional[float] = None  # 0-100, from Niyousha's signal
 
 
 class MatchResult(BaseModel):

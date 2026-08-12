@@ -20,7 +20,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from data_loader import load_pairs_from_excel
 from extraction import extract_profile
 from rule_scorer import score_match
-from gap_explainer import explain_template
+from gap_explainer import explain_llm, explain_template
+from llm_client import writing_quality_signal
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 RESULTS_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_results.json"
@@ -32,7 +33,16 @@ def run_pair(pair_id: str, resume_text: str, jd_text: str) -> dict:
     cv_profile = extract_profile(resume_text, source_type="cv")
     jd_profile = extract_profile(jd_text, source_type="jd")
     result = score_match(cv_profile, jd_profile)
-    result.explanation = explain_template(result.structured_diff)
+
+    # Writing-quality signal (CV only, mirrors Niyousha's implementation)
+    wq = writing_quality_signal(resume_text)
+    result.sub_scores.writing_quality_score = wq["writing_quality_score"]
+
+    # Gap Explainer Option B — LLM-based natural explanation
+    try:
+        result.explanation = explain_llm(result.structured_diff, wq["writing_quality_score"])
+    except Exception:
+        result.explanation = explain_template(result.structured_diff)  # fallback to template
 
     latency = round(time.time() - start, 2)
 
@@ -42,8 +52,10 @@ def run_pair(pair_id: str, resume_text: str, jd_text: str) -> dict:
             "skills": result.sub_scores.skills_score,
             "experience": result.sub_scores.experience_score,
             "education": result.sub_scores.education_score,
+            "writing_quality": result.sub_scores.writing_quality_score,
         },
         "explanation": result.explanation,
+        "writing_quality_explanation": wq["explanation"],
         "structured_diff": result.structured_diff.model_dump(),
         "source": "structured_extraction",
         "latency_seconds": latency,

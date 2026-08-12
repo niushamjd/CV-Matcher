@@ -55,16 +55,40 @@ def explain_template(diff: StructuredDiff) -> str:
     return " ".join(parts) if parts else "Not enough information to generate an explanation."
 
 
-# --- Option B (LLM-based), stub for later if you want nicer phrasing ---
-# def explain_llm(diff: StructuredDiff) -> str:
-#     from llm_client import call_llm
-#     prompt = f"Turn this structured CV-JD comparison into a 2-3 sentence, " \
-#              f"encouraging but honest explanation for the candidate:\n{diff.model_dump_json()}"
-#     return call_llm(
-#         system_prompt="You write short, honest, encouraging candidate feedback.",
-#         user_prompt=prompt,
-#         json_mode=False,
-#     ).strip()
+# --- Option B (LLM-based): natural, encouraging explanation grounded in the diff ---
+def explain_llm(diff: StructuredDiff, writing_quality_score: float = None) -> str:
+    """
+    Turns the StructuredDiff into a 2-3 sentence human-readable explanation.
+    Grounded in the diff — not free-form hallucination.
+    Optionally mentions writing quality if the score is notably high or low.
+    """
+    from llm_client import call_llm
+    import re
+
+    wq_note = ""
+    if writing_quality_score is not None:
+        if writing_quality_score >= 80:
+            wq_note = f" The CV is well-written and professional (writing quality: {writing_quality_score}/100)."
+        elif writing_quality_score <= 40:
+            wq_note = f" Note: the CV writing quality is weak ({writing_quality_score}/100), which may affect readability."
+
+    prompt = (
+        f"Turn this structured CV–JD comparison into a 2-3 sentence, honest and encouraging "
+        f"explanation for the candidate. Be specific — name the matched and missing skills. "
+        f"Do not invent information beyond what is in the diff.\n\n"
+        f"Structured diff:\n{diff.model_dump_json(indent=2)}"
+        f"{wq_note}"
+    )
+
+    raw = call_llm(
+        system_prompt="You write short, honest, encouraging candidate feedback grounded strictly in the provided data.",
+        user_prompt=prompt,
+        json_mode=False,
+    ).strip()
+
+    # Strip any accidental markdown
+    raw = re.sub(r"^#+\s*", "", raw, flags=re.MULTILINE).strip()
+    return raw
 
 
 if __name__ == "__main__":

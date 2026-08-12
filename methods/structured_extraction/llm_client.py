@@ -106,7 +106,7 @@ def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
     response = client.chat.completions.create(
         model=GEMINI_MODEL,
         temperature=0.2,
-        max_tokens=1000,
+        max_tokens=4096,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -141,8 +141,39 @@ def _call_ollama(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
     return data["message"]["content"]
 
 
+_WRITING_QUALITY_PROMPT = """Rate the writing quality of this CV on clarity,
+grammar, and professionalism only — NOT on the candidate's actual skills or
+experience level. A junior candidate with clean, clear writing should score
+as well as a senior candidate with clean writing.
+
+Return ONLY valid JSON, no other text:
+{
+  "writing_quality_score": <int 0-100, where 100 = very clear/professional writing>,
+  "explanation": "<1 sentence reason>"
+}
+"""
+
+
+def writing_quality_signal(cv_text: str) -> dict:
+    """
+    Returns {"writing_quality_score": 0-100, "explanation": str}.
+    Mirrors Niyousha's writing_quality_signal() — same prompt, provider-agnostic.
+    """
+    import re
+    raw = call_llm(
+        system_prompt=_WRITING_QUALITY_PROMPT,
+        user_prompt=cv_text,
+        json_mode=True,
+    ).strip()
+    raw = re.sub(r"^```json|```$", "", raw, flags=re.MULTILINE).strip()
+    parsed = json.loads(raw)
+    return {
+        "writing_quality_score": parsed.get("writing_quality_score"),
+        "explanation": parsed.get("explanation", ""),
+    }
+
+
 if __name__ == "__main__":
-    # Quick connectivity test
     out = call_llm(
         system_prompt="Reply with valid JSON only: {\"status\": \"ok\"}",
         user_prompt="ping",
