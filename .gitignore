@@ -3,3 +3,11 @@ venv/
 __pycache__/
 *.pyc
 data/
+
+# additional ignores
+Resume/Resume.csv
+Resume/*.pdf
+env
+.DS_Store
+.vscode/
+.idea/

@@ -18,3 +18,8 @@ sniffio==1.3.1
 tqdm==4.70.0
 typing-inspection==0.4.2
 typing_extensions==4.16.0
+
+# method 2b — Structured Extraction + Rules (Ertugrul)
+pandas>=2.0
+requests>=2.31
+pdfplumber>=0.11
