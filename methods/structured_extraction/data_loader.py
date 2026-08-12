@@ -20,11 +20,12 @@ from typing import Optional
 import pandas as pd
 
 # Repo root is one level above this file (src/)
-_REPO_ROOT = Path(__file__).resolve().parent.parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent  # methods/structured_extraction/ -> methods/ -> repo root
 
 # Default paths — override by passing explicit arguments if your layout differs
 DEFAULT_CSV_PATH = _REPO_ROOT / "Resume" / "Resume.csv"
 DEFAULT_PDF_ROOT = _REPO_ROOT / "data" / "data"
+DEFAULT_GOLD_EXCEL = _REPO_ROOT / "annotation" / "cv_matcher_candidate_pool.xlsx"
 
 
 @dataclass
@@ -139,6 +140,54 @@ def load_resumes_pdf(
         records = records[:n]
 
     return records
+
+
+# ---------------------------------------------------------------------------
+# 3. Gold-standard Excel loader (annotation/cv_matcher_candidate_pool.xlsx)
+# ---------------------------------------------------------------------------
+
+@dataclass
+class GoldPair:
+    pair_id: str
+    resume_text: str
+    jd_text: str
+
+
+def load_pairs_from_excel(
+    excel_path: Optional[str] = None,
+    sheet_name: str = "Candidate Pool",
+    final_only: bool = True,
+) -> list[GoldPair]:
+    """
+    Load the 30 gold-standard CV–JD pairs from Buse's annotation Excel.
+    Mirrors Niyousha's load_pairs_from_excel() so both methods run on identical input.
+
+    excel_path: defaults to annotation/cv_matcher_candidate_pool.xlsx
+    final_only: if True (default), only rows where FINAL_SELECTION (y/n) == "y"
+    """
+    try:
+        import openpyxl
+    except ImportError:
+        raise ImportError("openpyxl is required. Run: pip install openpyxl")
+
+    path = str(excel_path or DEFAULT_GOLD_EXCEL)
+    wb = openpyxl.load_workbook(path, data_only=True)
+    ws = wb[sheet_name]
+    header = [c.value for c in ws[1]]
+
+    pairs = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        record = dict(zip(header, row))
+        if not (record.get("resume_text") and record.get("jd_text")):
+            continue
+        if final_only and record.get("FINAL_SELECTION (y/n)") != "y":
+            continue
+        pairs.append(GoldPair(
+            pair_id=str(record.get("pair_id", "")),
+            resume_text=_clean_resume_text(str(record["resume_text"])),
+            jd_text=str(record["jd_text"]).strip(),
+        ))
+    return pairs
 
 
 if __name__ == "__main__":

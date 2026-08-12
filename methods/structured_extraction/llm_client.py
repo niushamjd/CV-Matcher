@@ -15,11 +15,13 @@ LLM_PROVIDER to "ollama".
 
 import json
 import os
+import time
 import requests
 
 # --- Config: change this one line to switch providers ---
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")  # "groq" or "ollama"
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")  # "groq", "gemini", or "ollama"
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 OLLAMA_URL = "http://localhost:11434/api/chat"
 
@@ -28,6 +30,8 @@ def call_llm(system_prompt: str, user_prompt: str, json_mode: bool = True) -> st
     """Returns the raw text response from the LLM. Callers parse it further."""
     if LLM_PROVIDER == "groq":
         return _call_groq(system_prompt, user_prompt, json_mode)
+    elif LLM_PROVIDER == "gemini":
+        return _call_gemini(system_prompt, user_prompt, json_mode)
     elif LLM_PROVIDER == "ollama":
         return _call_ollama(system_prompt, user_prompt, json_mode)
     else:
@@ -64,8 +68,51 @@ def _call_groq(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
         json=payload,
         timeout=60,
     )
+    if resp.status_code == 429:
+        # Rate limited — retry with longer waits to clear the 60s token window
+        for attempt, wait in enumerate([30, 60, 90], start=1):
+            print(f"  [rate limit] waiting {wait}s before retry {attempt}/3...")
+            time.sleep(wait)
+            resp = requests.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}"},
+                json=payload,
+                timeout=60,
+            )
+            if resp.status_code != 429:
+                break
     resp.raise_for_status()
     return resp.json()["choices"][0]["message"]["content"]
+
+
+def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
+    """
+    Gemini via OpenAI-compatible SDK — identical setup to Niyousha's llm_judge_starter.py.
+    1M tokens/minute on the free tier, no practical rate limit for 30 pairs.
+    """
+    from openai import OpenAI
+
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "GEMINI_API_KEY not set. Get a free key at https://aistudio.google.com, "
+            "then run: export GEMINI_API_KEY=\"your_key_here\""
+        )
+
+    client = OpenAI(
+        api_key=api_key,
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    )
+    response = client.chat.completions.create(
+        model=GEMINI_MODEL,
+        temperature=0.2,
+        max_tokens=1000,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+    )
+    return response.choices[0].message.content
 
 
 # --- Fallback: fully local/offline option (no API key, needs Ollama installed) ---
