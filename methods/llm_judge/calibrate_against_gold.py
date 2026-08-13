@@ -8,15 +8,15 @@ sys.path.insert(0, os.path.dirname(__file__))
 from llm_judge_starter import load_pairs_from_excel, llm_as_judge
 
 DATA_PATH = "data/cv_matcher_candidate_pool.xlsx"
-LABELS_PATH = "data/annotation-buse.csv"
-CACHE_PATH = "data/judge_results_cache.json"
-COMPARISON_CSV_PATH = "data/judge_vs_human_comparison.csv"
+LABELS_PATH = "data/annotation/annotated_pairs.xlsx"
+CACHE_PATH = "results/judge_results_cache.json"
+COMPARISON_CSV_PATH = "results/judge_vs_human_comparison.csv"
 
 
 def load_labels(path):
-    with open(path, newline="", encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
-    return {row["pair_id"]: row for row in rows}
+    import pandas as pd
+    df = pd.read_excel(path, sheet_name="Sheet1")
+    return {str(row["pair_id"]): row.to_dict() for _, row in df.iterrows()}
 
 
 def to_float(value):
@@ -65,7 +65,7 @@ def load_cache():
 
 
 def save_cache(cache):
-    os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+    os.makedirs(os.path.dirname(os.path.abspath(CACHE_PATH)), exist_ok=True)
     with open(CACHE_PATH, "w") as f:
         json.dump(cache, f, indent=2)
 

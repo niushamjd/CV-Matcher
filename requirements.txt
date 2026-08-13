@@ -19,7 +19,13 @@ tqdm==4.70.0
 typing-inspection==0.4.2
 typing_extensions==4.16.0
 
+# method 2a — Embedding Similarity (Ipek)
+sentence-transformers>=2.0
+scikit-learn>=1.0
+torch>=2.0
+
 # method 2b — Structured Extraction + Rules (Ertugrul)
 pandas>=2.0
 requests>=2.31
 pdfplumber>=0.11
+scipy>=1.10
