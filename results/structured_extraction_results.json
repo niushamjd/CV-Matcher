@@ -1,0 +1,1472 @@
+{
+  "PAIR_17": {
+    "match_score": 35.0,
+    "sub_scores": {
+      "skills": 20.0,
+      "experience": null,
+      "education": 50.0,
+      "writing_quality": 68
+    },
+    "explanation": "Thank you for applying! With your 20 years of experience and strong background in ITIL, you bring a solid foundation to the table. However, this role specifically requires expertise in cybersecurity, CISSP, cloud computing, and IT infrastructure, which are currently missing from your profile.",
+    "writing_quality_explanation": "The CV contains several grammatical awkwardnesses, run-on sentences, punctuation errors (e.g., missing periods and weird spacing), and a massive, unformatted skills keyword dump at the end.",
+    "structured_diff": {
+      "matched_skills": [
+        "itil"
+      ],
+      "missing_skills": [
+        "cissp",
+        "cloud computing",
+        "cybersecurity",
+        "it infrastructure"
+      ],
+      "extra_skills": [
+        "allscripts",
+        "arcserve",
+        "backup exec",
+        "ccai",
+        "ccna",
+        "cna",
+        "emr",
+        "hipaa",
+        "hitech",
+        "landesk",
+        "mckesson",
+        "net backup",
+        "novell netware",
+        "symantec ghost",
+        "tcp/ip",
+        "windows 2000",
+        "windows 7",
+        "windows server 2000",
+        "windows server 2003",
+        "windows server 2008",
+        "windows xp"
+      ],
+      "years_required": null,
+      "years_candidate": 20.0,
+      "years_gap": null,
+      "education_match": false,
+      "degree_level_match": true,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 13.34,
+    "prompt_tokens": 3753,
+    "completion_tokens": 1060
+  },
+  "PAIR_28": {
+    "match_score": 36.4,
+    "sub_scores": {
+      "skills": 36.4,
+      "experience": null,
+      "education": null,
+      "writing_quality": 60
+    },
+    "explanation": "You bring a strong foundation in Linux, active directory, DHCP, and DNS. However, the role requires several specific technologies that are currently missing from your profile, including group policy, kerberos, ldap, microsoft, nltm, powershell, and saml. With some targeted upskilling in these specific areas, you'll be in a much stronger position for this type of role!",
+    "writing_quality_explanation": "The text suffers from severe structural disorganization, redundant repetition of entire sections, and formatting errors (such as stray parentheses and unorganized lists), though the individual bullet points are generally coherent.",
+    "structured_diff": {
+      "matched_skills": [
+        "active directory",
+        "dhcp",
+        "dns",
+        "linux"
+      ],
+      "missing_skills": [
+        "group policy",
+        "kerberos",
+        "ldap",
+        "microsoft",
+        "nltm",
+        "powershell",
+        "saml"
+      ],
+      "extra_skills": [
+        "apache2",
+        "aws",
+        "bash scripting",
+        "centos",
+        "cisco packet tracer",
+        "ftp",
+        "hsrp",
+        "http",
+        "ipsec",
+        "isis",
+        "mpls",
+        "oracle",
+        "ospf",
+        "python",
+        "rhel",
+        "rip",
+        "smtp",
+        "ssh",
+        "stp",
+        "tcp/ip",
+        "ubuntu",
+        "udp",
+        "virtualbox",
+        "vlan",
+        "vmware",
+        "vpn",
+        "windows",
+        "windows server",
+        "wireshark"
+      ],
+      "years_required": 1.0,
+      "years_candidate": null,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.93,
+    "prompt_tokens": 4493,
+    "completion_tokens": 1207
+  },
+  "PAIR_25": {
+    "match_score": 46.7,
+    "sub_scores": {
+      "skills": 40.0,
+      "experience": 100.0,
+      "education": 0.0,
+      "writing_quality": 62
+    },
+    "explanation": "With 9 years of experience, you easily exceed the required 5 years and bring strong foundational skills in ETL and Microsoft Excel. However, this specific role requires expertise in IFS, OneStream, and SAP Concur, which are currently missing from your background. We encourage you to highlight transferable technical skills from your extensive toolkit as you continue your job search!",
+    "writing_quality_explanation": "The CV contains detailed professional experience and technical skills, but it suffers from repetitive sections, inconsistent formatting, a massive block of disorganized keyword spam at the end, and minor grammatical inconsistencies.",
+    "structured_diff": {
+      "matched_skills": [
+        "etl",
+        "microsoft excel"
+      ],
+      "missing_skills": [
+        "ifs",
+        "onestream",
+        "sap concur"
+      ],
+      "extra_skills": [
+        "access",
+        "active directory",
+        "automation anywhere",
+        "aws",
+        "azure",
+        "crystal reports",
+        "css",
+        "datorama",
+        "dax",
+        "dynamics 365",
+        "edi",
+        "html",
+        "hyper-v",
+        "intune",
+        "office 365",
+        "oracle",
+        "powerapps",
+        "powerbi",
+        "powershell",
+        "python",
+        "qliksense",
+        "qlikview",
+        "r",
+        "red hat linux",
+        "sharepoint",
+        "sisense",
+        "sql",
+        "ssas",
+        "ssis",
+        "ssrs",
+        "tableau",
+        "vb.net",
+        "vba",
+        "visio",
+        "vmware",
+        "yellowfin"
+      ],
+      "years_required": 5.0,
+      "years_candidate": 9.0,
+      "years_gap": 4.0,
+      "education_match": false,
+      "degree_level_match": null,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.63,
+    "prompt_tokens": 10053,
+    "completion_tokens": 1166
+  },
+  "PAIR_16": {
+    "match_score": 33.3,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 0.0,
+      "writing_quality": 75
+    },
+    "explanation": "You bring an impressive 25 years of experience and a strong background in tools like Linux, Windows Server, and Cisco, significantly exceeding the experience requirement. However, this particular role requires specific skills in database management, hardware support, networking, report writing, and software support that weren't evident in your application, along with a matching educational background. We appreciate the depth of your technical expertise and encourage you to apply for roles that closely align with your extensive IT skill set.",
+    "writing_quality_explanation": "The text is generally clear and professional, though it contains some informal phrasing ('jack of all trades IT guy') and minor grammatical clunkiness in the bullet points.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "database",
+        "hardware support",
+        "networking",
+        "report writing",
+        "software support"
+      ],
+      "extra_skills": [
+        "active directory",
+        "android",
+        "apache",
+        "cacti",
+        "centos",
+        "cisco",
+        "dhcp",
+        "dns",
+        "drupal",
+        "group policy",
+        "html",
+        "iis",
+        "ios",
+        "joomla",
+        "ldap",
+        "linux",
+        "mac os server",
+        "microsoft exchange",
+        "moodle",
+        "mysql",
+        "nagios",
+        "openssl",
+        "php",
+        "ssl",
+        "tcp/ip",
+        "vmware",
+        "windows",
+        "windows server",
+        "wordpress"
+      ],
+      "years_required": 4.0,
+      "years_candidate": 25.0,
+      "years_gap": 21.0,
+      "education_match": false,
+      "degree_level_match": null,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.61,
+    "prompt_tokens": 4038,
+    "completion_tokens": 1023
+  },
+  "PAIR_26": {
+    "match_score": 100.0,
+    "sub_scores": {
+      "skills": 100.0,
+      "experience": 100.0,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for your application and for sharing your extensive 20-year background with us. While your strong technical skill set\u2014including Microsoft Excel, SQL, and customer relationship management\u2014is impressive, this particular role requires specific skills that were not highlighted in your CV. We appreciate the time you took to apply and wish you the very best in your ongoing job search.",
+    "writing_quality_explanation": "The CV suffers from inconsistent bullet point formatting, mixed tense usage, and occasional grammatical awkwardness, though it remains generally legible.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [],
+      "extra_skills": [
+        "access",
+        "adobe acrobat",
+        "customer relationship management",
+        "hot docs",
+        "microsoft excel",
+        "microsoft word",
+        "outlook",
+        "powerpoint",
+        "snag-it",
+        "sql",
+        "visual basic",
+        "windows",
+        "windows server"
+      ],
+      "years_required": 1.0,
+      "years_candidate": 20.0,
+      "years_gap": 19.0,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.33,
+    "prompt_tokens": 5754,
+    "completion_tokens": 628
+  },
+  "PAIR_07": {
+    "match_score": 33.3,
+    "sub_scores": {
+      "skills": 33.3,
+      "experience": null,
+      "education": null,
+      "writing_quality": 68
+    },
+    "explanation": "You bring an impressive 20 years of experience and strong expertise in project management that aligns well with the role. However, the position specifically requires experience in quality assurance and SDLC, which are currently missing from your profile. With your extensive technical background across many systems, highlighting any transferable experience in those areas would make you a much stronger fit.",
+    "writing_quality_explanation": "The text suffers from inconsistent verb tenses (mixing past and present) and minor typographical errors, but remains generally understandable.",
+    "structured_diff": {
+      "matched_skills": [
+        "project management"
+      ],
+      "missing_skills": [
+        "quality assurance",
+        "sdlc"
+      ],
+      "extra_skills": [
+        "access",
+        "application development",
+        "asset management",
+        "billing systems",
+        "c",
+        "c++",
+        "crystal reports",
+        "ftp",
+        "gis",
+        "hp-ux",
+        "html",
+        "lotus approach",
+        "oracle",
+        "oracle 7.3",
+        "oracle 8",
+        "oracle database",
+        "os/2",
+        "php",
+        "pl/sql",
+        "pro c",
+        "sharepoint",
+        "shell scripting",
+        "sql",
+        "sql server",
+        "sybase sql server",
+        "system administration",
+        "uniface",
+        "uniface 5.2",
+        "uniface 6.1",
+        "unix",
+        "unix shell scripts",
+        "visual basic",
+        "windows",
+        "windows 95",
+        "windows nt",
+        "xml"
+      ],
+      "years_required": null,
+      "years_candidate": 20.0,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.15,
+    "prompt_tokens": 3921,
+    "completion_tokens": 1122
+  },
+  "PAIR_14": {
+    "match_score": 16.7,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 0.0,
+      "education": 50.0,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for your interest in the role! While you meet the degree-level requirement and bring great skills in Microsoft Excel, Word, PowerPoint, database, website management, and American Sign Language, this position requires 5 years of experience (you have 1) and specific technical expertise in Active Directory, CompTIA Security+, Linux, Oracle Database, PowerShell, VMware, Windows 10, and Windows Server. We encourage you to keep building your technical background and experience for future opportunities.",
+    "writing_quality_explanation": "The CV contains several grammatical awkwardnesses and unnatural phrasing (e.g., 'Analyzed students in acquiring' and 'Contributed students to improve') alongside a poorly structured objective statement.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "active directory",
+        "comptia security+",
+        "linux",
+        "oracle database",
+        "powershell",
+        "vmware",
+        "windows 10",
+        "windows server"
+      ],
+      "extra_skills": [
+        "american sign language",
+        "database",
+        "microsoft excel",
+        "microsoft word",
+        "powerpoint",
+        "website"
+      ],
+      "years_required": 5.0,
+      "years_candidate": 1.0,
+      "years_gap": -4.0,
+      "education_match": false,
+      "degree_level_match": true,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.02,
+    "prompt_tokens": 3497,
+    "completion_tokens": 688
+  },
+  "PAIR_03": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": 100.0,
+      "writing_quality": 62
+    },
+    "explanation": "With 10 years of experience and a strong background in technical support, troubleshooting, and network management, your educational background and broad IT expertise make you a great fit for this field. However, this specific role requires direct experience with Microsoft Teams, Office 365, and Windows 10, which weren't highlighted on your CV. If you have worked with these tools, be sure to add them to your resume, as your extensive technical foundation is a great asset!",
+    "writing_quality_explanation": "The text suffers from duplicate sections, inconsistent tense usage, formatting errors like 'Tittle', and fragmented bullet points that detract from overall professionalism.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "microsoft teams",
+        "office 365",
+        "windows 10"
+      ],
+      "extra_skills": [
+        "database",
+        "electronic health records",
+        "information security",
+        "microsoft products",
+        "network management",
+        "risk analysis",
+        "security analysis",
+        "software development",
+        "technical support",
+        "troubleshoot"
+      ],
+      "years_required": null,
+      "years_candidate": 10.0,
+      "years_gap": null,
+      "education_match": true,
+      "degree_level_match": null,
+      "field_of_study_match": true
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 6.5,
+    "prompt_tokens": 3969,
+    "completion_tokens": 715
+  },
+  "PAIR_30": {
+    "match_score": 33.3,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 0.0,
+      "writing_quality": 68
+    },
+    "explanation": "You bring fantastic, extensive experience with over 10 years in the field\u2014well above the 3 years required\u2014along with valuable extra skills in recruiting, benefits, and SAP. However, this specific role requires several technical tools and administrative competencies that aren't on your CV yet, specifically 401(k) administration, applicant tracking systems, ERP, FMLA, HRIS, payroll, and Microsoft Office applications like Excel, Word, PowerPoint, and Office 365. With your strong HR background, gaining familiarity with these missing systems will make you a much stronger fit for this type of position in the future!",
+    "writing_quality_explanation": "The writing is generally clear and understandable, but suffers from inconsistent verb tenses, minor grammatical errors, and a keyword-stuffed skills section.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "401(k) administration",
+        "applicant tracking system",
+        "erp",
+        "fmla",
+        "hris",
+        "microsoft excel",
+        "office 365",
+        "payroll",
+        "powerpoint",
+        "word"
+      ],
+      "extra_skills": [
+        "benefits",
+        "clerical",
+        "cpr",
+        "data entry",
+        "hiring",
+        "human resources",
+        "insurance",
+        "inventory",
+        "microsoft office",
+        "recruiting",
+        "recruitment",
+        "reporting",
+        "sap",
+        "spanish",
+        "staffing"
+      ],
+      "years_required": 3.0,
+      "years_candidate": 10.0,
+      "years_gap": 7.0,
+      "education_match": false,
+      "degree_level_match": false,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 6.19,
+    "prompt_tokens": 5489,
+    "completion_tokens": 958
+  },
+  "PAIR_13": {
+    "match_score": 73.3,
+    "sub_scores": {
+      "skills": 20.0,
+      "experience": 100.0,
+      "education": 100.0,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for applying! With your 19 years of experience and strong background in HRIS, ADP, and payroll processing, you bring a wealth of expertise to the table. However, this specific role requires proficiency in Microsoft Excel, Microsoft PowerPoint, Microsoft Word, and Workday, which are currently missing from your profile.",
+    "writing_quality_explanation": "The text suffers from inconsistent tense usage, awkward phrasing in places, and a fragmented layout that detracts from overall professional polish.",
+    "structured_diff": {
+      "matched_skills": [
+        "hris"
+      ],
+      "missing_skills": [
+        "microsoft excel",
+        "microsoft powerpoint",
+        "microsoft word",
+        "workday"
+      ],
+      "extra_skills": [
+        "adp",
+        "ats",
+        "auditing",
+        "data entry",
+        "database",
+        "hrss",
+        "ibm",
+        "kronos",
+        "microsoft office suite",
+        "mss",
+        "oracle",
+        "payroll processing",
+        "recruiting",
+        "sap",
+        "workbrain"
+      ],
+      "years_required": 4.0,
+      "years_candidate": 19.0,
+      "years_gap": 15.0,
+      "education_match": true,
+      "degree_level_match": true,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.27,
+    "prompt_tokens": 5118,
+    "completion_tokens": 883
+  },
+  "PAIR_10": {
+    "match_score": 100.0,
+    "sub_scores": {
+      "skills": 100.0,
+      "experience": 100.0,
+      "education": null,
+      "writing_quality": 72
+    },
+    "explanation": "Thank you for your interest! While you bring an impressive 14 years of experience\u2014well exceeding the 3 years required\u2014we are unfortunately unable to move forward at this time as your background does not align with the specific skills needed for this role. We genuinely appreciate the time you took to apply and wish you the very best in your job search.",
+    "writing_quality_explanation": "The CV is generally professional and understandable, but suffers from minor grammatical inconsistencies (e.g., 'Insure' instead of 'Ensure'), awkward phrasing, and a poorly formatted keyword dump at the end.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [],
+      "extra_skills": [
+        "access",
+        "ada",
+        "adp",
+        "eeo",
+        "fmla",
+        "hris",
+        "kronos",
+        "lawson",
+        "microsoft excel",
+        "microsoft office",
+        "outlook",
+        "paychex",
+        "powerpoint",
+        "publisher",
+        "visio",
+        "wc",
+        "word"
+      ],
+      "years_required": 3.0,
+      "years_candidate": 14.0,
+      "years_gap": 11.0,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.13,
+    "prompt_tokens": 6066,
+    "completion_tokens": 648
+  },
+  "PAIR_22": {
+    "match_score": 77.8,
+    "sub_scores": {
+      "skills": 33.3,
+      "experience": 100.0,
+      "education": 100.0,
+      "writing_quality": 68
+    },
+    "explanation": "With 15 years of HR experience and a strong background in HRIS, your educational background is a great match for this role. However, this specific position requires experience with payroll and SuccessFactors, which are missing from your current skill set.",
+    "writing_quality_explanation": "The CV is generally understandable and professional, but suffers from inconsistent bullet formatting, awkward date entries (e.g., month-long employment spans), and a messy skills section.",
+    "structured_diff": {
+      "matched_skills": [
+        "hris"
+      ],
+      "missing_skills": [
+        "payroll",
+        "success factors"
+      ],
+      "extra_skills": [
+        "abra",
+        "ceridian",
+        "crystal reports",
+        "dominion",
+        "infotronics",
+        "mastertax",
+        "microsoft excel",
+        "microsoft word",
+        "paychex",
+        "peoplesoft",
+        "powerpoint",
+        "quickbooks",
+        "sap",
+        "store master",
+        "time star"
+      ],
+      "years_required": 3.0,
+      "years_candidate": 15.0,
+      "years_gap": 12.0,
+      "education_match": true,
+      "degree_level_match": null,
+      "field_of_study_match": true
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.19,
+    "prompt_tokens": 4803,
+    "completion_tokens": 756
+  },
+  "PAIR_21": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 50.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for applying! You bring solid 3 years of experience and great technical strengths like Microsoft Office (including Excel, Word, PowerPoint, and Outlook), plus valuable HRIS knowledge like Paychex Flex, Paychex, ADA, EEO, FMLA, and POS. However, the role specifically requires experience with Paycom, which is currently missing from your background.",
+    "writing_quality_explanation": "The text suffers from numerous punctuation errors, such as stray periods within sentences, awkward formatting artifacts (like 'Continued...' and broken bullet equivalents), and inconsistent verb tenses.",
+    "structured_diff": {
+      "matched_skills": [
+        "microsoft office"
+      ],
+      "missing_skills": [
+        "paycom"
+      ],
+      "extra_skills": [
+        "ada",
+        "eeo",
+        "fmla",
+        "hris",
+        "microsoft excel",
+        "outlook",
+        "paychex",
+        "paychex flex",
+        "pos",
+        "powerpoint",
+        "word"
+      ],
+      "years_required": null,
+      "years_candidate": 3.0,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.21,
+    "prompt_tokens": 4238,
+    "completion_tokens": 617
+  },
+  "PAIR_29": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 50.0,
+      "writing_quality": 62
+    },
+    "explanation": "With six years of experience, you bring a strong background to the table, but this role specifically requires experience with applicant tracking, e-verify, and payroll. We were also looking for a closer match in the required education field. Thank you for your interest, and we encourage you to keep developing your expertise!",
+    "writing_quality_explanation": "The CV contains several grammatical errors (e.g., 'courses that was taken', 'human resources personal'), inconsistent punctuation, and fragmented bullet points that affect overall readability.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "applicant tracking",
+        "e-verify",
+        "payroll"
+      ],
+      "extra_skills": [
+        "adobe acrobat",
+        "adobe illustrator",
+        "adobe indesign",
+        "adobe photoshop",
+        "adobe professional",
+        "adp enterprise v5",
+        "adp select",
+        "concur",
+        "eprize",
+        "mas200",
+        "microsoft excel",
+        "microsoft office",
+        "ms outlook",
+        "ms publisher",
+        "peoplesoft",
+        "pivot tables",
+        "sap",
+        "sharepoint",
+        "snagit",
+        "taleo",
+        "vlookup"
+      ],
+      "years_required": 3.0,
+      "years_candidate": 6.0,
+      "years_gap": 3.0,
+      "education_match": false,
+      "degree_level_match": true,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.27,
+    "prompt_tokens": 3990,
+    "completion_tokens": 861
+  },
+  "PAIR_23": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 50.0,
+      "writing_quality": 75
+    },
+    "explanation": "You bring an impressive 15 years of experience and a matching degree level, which is a fantastic foundation! However, this role specifically requires experience with ATS, spreadsheet, and word processing tools. Because of this gap in specific software requirements and your field of study, we won't be moving forward this time, but we truly appreciate the time you took to apply.",
+    "writing_quality_explanation": "The CV is generally professional and grammatically sound, but contains fragmented sentence structures, repetitive skill sections, and slightly inconsistent formatting.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "ats",
+        "spreadsheet",
+        "word processing"
+      ],
+      "extra_skills": [
+        "e-recruitment",
+        "microsoft excel",
+        "microsoft powerpoint",
+        "microsoft word",
+        "neogov",
+        "outlook"
+      ],
+      "years_required": 1.0,
+      "years_candidate": 15.0,
+      "years_gap": 14.0,
+      "education_match": false,
+      "degree_level_match": true,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.02,
+    "prompt_tokens": 4047,
+    "completion_tokens": 606
+  },
+  "PAIR_18": {
+    "match_score": 80.0,
+    "sub_scores": {
+      "skills": 40.0,
+      "experience": 100.0,
+      "education": 100.0,
+      "writing_quality": 45
+    },
+    "explanation": "It's great to see your strong background of 5 years of experience alongside your solid expertise in payroll and benefits administration. However, this role specifically requires experience in human resources, onboarding, and recruitment, which are currently missing from your profile. With your strong foundation and educational match, focusing on gaining experience in those missing areas will make you a much stronger fit for similar roles in the future!",
+    "writing_quality_explanation": "The CV suffers from frequent grammatical errors, inconsistent phrasing, typos (e.g., 'woking areas', 'pay roll', 'facilited'), and a lack of clear, professional formatting.",
+    "structured_diff": {
+      "matched_skills": [
+        "benefits administration",
+        "payroll"
+      ],
+      "missing_skills": [
+        "human resources",
+        "onboarding",
+        "recruitment"
+      ],
+      "extra_skills": [
+        "access",
+        "employment law",
+        "hris",
+        "microsoft excel",
+        "microsoft office",
+        "outlook",
+        "paychex",
+        "peoplesoft enterprise human resources",
+        "powerpoint",
+        "word"
+      ],
+      "years_required": 2.0,
+      "years_candidate": 5.0,
+      "years_gap": 3.0,
+      "education_match": true,
+      "degree_level_match": true,
+      "field_of_study_match": true
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.55,
+    "prompt_tokens": 3499,
+    "completion_tokens": 812
+  },
+  "PAIR_02": {
+    "match_score": 33.3,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 0.0,
+      "writing_quality": 62
+    },
+    "explanation": "With 10 years of experience, you bring a strong background in leadership development, project management, and sales that exceeds the role's duration requirement. However, this position specifically requires expertise in customer relationship management, digital marketing, document management systems, MS Office suite, and online research, which are currently missing from your profile alongside the targeted education requirements. We encourage you to highlight transferable skills from your extensive experience if you decide to apply for future roles that align more closely with these specific technical needs!",
+    "writing_quality_explanation": "The CV suffers from notable formatting errors, spacing issues (e.g., 'r esponsible', 'more than10'), run-on bullet points, and inconsistent tense usage, though the overall professional tone remains intact.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "customer relationship management",
+        "digital marketing",
+        "document management system",
+        "ms office suite",
+        "online research"
+      ],
+      "extra_skills": [
+        "coaching",
+        "consultation",
+        "customer service",
+        "data analysis",
+        "enterprise",
+        "leadership",
+        "leadership development",
+        "mentoring",
+        "microsoft office",
+        "performance management",
+        "process improvement",
+        "project management",
+        "sales",
+        "sales development",
+        "telecommunication",
+        "visio"
+      ],
+      "years_required": 5.0,
+      "years_candidate": 10.0,
+      "years_gap": 5.0,
+      "education_match": false,
+      "degree_level_match": false,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.0,
+    "prompt_tokens": 4516,
+    "completion_tokens": 977
+  },
+  "PAIR_19": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": null,
+      "writing_quality": 68
+    },
+    "explanation": "Thank you for your application and for sharing your extensive 24-year background in finance, accounting, and business operations. However, this particular role requires specific technical expertise in integration and process tools like Appian, Boomi, MuleSoft, Workato, Jitterbit, and HubSpot, as well as core skills in business analysis, product management, and automation that are not currently highlighted in your profile. We appreciate your strong experience and wish you the best in your ongoing job search.",
+    "writing_quality_explanation": "The CV is generally professional and understandable, but contains minor grammatical inconsistencies and repetitive phrasing in the job duties.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "appian",
+        "automation",
+        "boomi",
+        "business analysis",
+        "business process management",
+        "content management",
+        "hubspot",
+        "ipaas",
+        "jitterbit",
+        "mulesoft",
+        "product management",
+        "salesintel",
+        "workato"
+      ],
+      "extra_skills": [
+        "accounting",
+        "accounts payable",
+        "accounts receivable",
+        "audit",
+        "billing",
+        "bookkeeping",
+        "budgeting",
+        "business development",
+        "cash management",
+        "collections",
+        "credit card processing",
+        "database",
+        "documentation",
+        "finance",
+        "forecasting",
+        "human resources",
+        "inventory control",
+        "loss prevention",
+        "marketing",
+        "merchandising",
+        "payroll",
+        "sales",
+        "tax returns",
+        "telemarketing"
+      ],
+      "years_required": 5.0,
+      "years_candidate": 24.0,
+      "years_gap": 19.0,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.18,
+    "prompt_tokens": 4007,
+    "completion_tokens": 1151
+  },
+  "PAIR_15": {
+    "match_score": 0.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 68
+    },
+    "explanation": "You bring an impressive 10.5 years of experience with strong skills in account management, cold calling, lead generation, and sales forecasting. However, this role specifically requires experience with 6sense, Salesforce, Salesloft, and ZoomInfo, which are currently missing from your background. We encourage you to highlight any transferable tool experience and thank you for your interest in the position!",
+    "writing_quality_explanation": "The text suffers from inconsistent formatting, mixed use of first and third person, and occasional grammatical awkwardness, but remains generally understandable.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "6sense",
+        "salesforce",
+        "salesloft",
+        "zoominfo"
+      ],
+      "extra_skills": [
+        "account management",
+        "cold calling",
+        "consultative selling",
+        "data extraction",
+        "lead generation",
+        "linkedin marketing",
+        "prospecting",
+        "sales forecasting",
+        "sales reporting",
+        "social media management",
+        "upselling"
+      ],
+      "years_required": null,
+      "years_candidate": 10.5,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.07,
+    "prompt_tokens": 3574,
+    "completion_tokens": 753
+  },
+  "PAIR_11": {
+    "match_score": 66.7,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 100.0,
+      "writing_quality": 68
+    },
+    "explanation": "Thank you for your application and for sharing your extensive 21 years of experience, along with your strong educational background that matches our requirements. However, we are moving forward with other candidates because this role specifically calls for expertise in business development, negotiation, project management, avod, svod, and tvod, which are currently missing from your profile. We genuinely appreciate your time and wish you the very best in your job search!",
+    "writing_quality_explanation": "The CV features strong professional content and quantifiable metrics, but suffers from noticeable grammatical errors, inconsistent tense usage, and awkward phrasing in several bullet points.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "avod",
+        "business development",
+        "negotiation",
+        "project management",
+        "svod",
+        "tvod"
+      ],
+      "extra_skills": [],
+      "years_required": 5.0,
+      "years_candidate": 21.0,
+      "years_gap": 16.0,
+      "education_match": true,
+      "degree_level_match": true,
+      "field_of_study_match": true
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.73,
+    "prompt_tokens": 3984,
+    "completion_tokens": 538
+  },
+  "PAIR_12": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for your strong interest and your impressive 26 years of professional experience in fields like business management, supply chain, and sales. However, this particular role requires specific background in Cpg experience, distributor management, Microsoft Office, sales data analysis, syndicated data, and trade analytics that we couldn't find highlighted in your profile. We encourage you to apply for other roles where your extensive business background is a closer match!",
+    "writing_quality_explanation": "The CV suffers from disorganized sections, inconsistent formatting, fragmented bullet points, and repetitive phrasing throughout the experience history.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "cpg experience",
+        "distributor management",
+        "microsoft office",
+        "sales data analysis",
+        "syndicated data",
+        "trade analytics"
+      ],
+      "extra_skills": [
+        "automation",
+        "business development",
+        "business management",
+        "economics",
+        "finance",
+        "marketing",
+        "mathematics",
+        "packaging",
+        "quality",
+        "sales",
+        "siemens",
+        "six sigma",
+        "sop",
+        "supply chain"
+      ],
+      "years_required": 3.0,
+      "years_candidate": 26.0,
+      "years_gap": 23.0,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.44,
+    "prompt_tokens": 5029,
+    "completion_tokens": 804
+  },
+  "PAIR_08": {
+    "match_score": 0.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 35
+    },
+    "explanation": "Thank you for applying! While your background in customer service, caregiving, and cash handling brings valuable interpersonal skills to the table, this specific role requires specialized experience in saas sales and technology sales. Strengthening the clarity and professional presentation of your CV could also help better highlight your transferable experience for future opportunities. Keep up the hard work\u2014we appreciate your interest and encourage you to keep applying!",
+    "writing_quality_explanation": "The CV suffers from severe grammatical errors, inconsistent phrasing, and redundant duplication of entire work history sections.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "saas sales",
+        "technology sales"
+      ],
+      "extra_skills": [
+        "caregiver",
+        "cash transactions",
+        "cashier",
+        "customer service",
+        "english",
+        "home care"
+      ],
+      "years_required": null,
+      "years_candidate": 2.5,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.68,
+    "prompt_tokens": 5663,
+    "completion_tokens": 544
+  },
+  "PAIR_06": {
+    "match_score": 100.0,
+    "sub_scores": {
+      "skills": 100.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for applying with your 15 years of experience and strong background in tools like Microsoft Excel, SharePoint, and Six Sigma. However, because the job description did not specify required skills or qualifications in the provided data, we are unable to move forward at this time. We truly appreciate your time and interest in this role!",
+    "writing_quality_explanation": "The CV contains unconventional formatting choices such as specific working hours listed with dates, awkward parentheses like '(Laid Off)', and minor stylistic inconsistencies, though the overall sentence-level grammar and clarity are reasonably sound.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [],
+      "extra_skills": [
+        "idashboards",
+        "lean six sigma",
+        "microsoft excel",
+        "microsoft office",
+        "microsoft sharepoint",
+        "outlook",
+        "pentaho",
+        "powerpoint",
+        "publisher",
+        "sap businessobjects",
+        "sharepoint",
+        "siebel",
+        "six sigma",
+        "visio",
+        "word"
+      ],
+      "years_required": null,
+      "years_candidate": 15.0,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.67,
+    "prompt_tokens": 4783,
+    "completion_tokens": 619
+  },
+  "PAIR_20": {
+    "match_score": 25.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": 50.0,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for your interest in the role and for sharing your extensive 25 years of experience. While your background includes strong skills in sales, customer service, and operations, this specific position requires targeted expertise in tools and systems like Apollo.io, Expandi, LinkedIn Sales Navigator, Salesloft, Reply, customer relationship management, and no-code platforms. Because your current skill set does not closely align with these specific technical requirements, we have decided not to move forward at this time, but we truly appreciate the time you took to apply.",
+    "writing_quality_explanation": "The CV contains several grammatical errors (e.g., subject-verb agreement issues), spelling mistakes (\"mulit-task\"), and inconsistent formatting, though the overall structure remains decipherable.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "apollo.io",
+        "customer relationship management",
+        "expandi",
+        "linkedin sales navigator",
+        "no-code",
+        "reply",
+        "salesloft"
+      ],
+      "extra_skills": [
+        "accounting",
+        "accounts payable",
+        "accounts receivable",
+        "billing",
+        "budget",
+        "customer satisfaction",
+        "customer service",
+        "documentation",
+        "forecasting",
+        "human resources",
+        "inventory",
+        "inventory control",
+        "lean six sigma",
+        "marketing",
+        "microsoft office",
+        "microsoft office suite",
+        "payroll",
+        "powerpoint",
+        "purchasing",
+        "quality",
+        "quality control",
+        "recruiting",
+        "research",
+        "safety",
+        "sales",
+        "six sigma",
+        "supervising",
+        "transportation",
+        "visual merchandising"
+      ],
+      "years_required": null,
+      "years_candidate": 25.0,
+      "years_gap": null,
+      "education_match": false,
+      "degree_level_match": true,
+      "field_of_study_match": false
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 5.2,
+    "prompt_tokens": 4159,
+    "completion_tokens": 1080
+  },
+  "PAIR_05": {
+    "match_score": 66.7,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": 100.0,
+      "writing_quality": 75
+    },
+    "explanation": "While you bring an impressive 11.5 years of experience and strong hands-on skills in areas like carpentry, plumbing, and tank cleaning, this role specifically requires an FAA airframe and powerplant license, an FCC license, and proficiency in Microsoft Office. Because these specific certifications and tools are missing from your background, we have decided to move forward with other candidates whose profiles more closely align with these technical requirements. We truly appreciate your time and wish you the best in your job search!",
+    "writing_quality_explanation": "The text features clear formatting and generally good professionalism, but suffers from minor grammar and tense inconsistencies in the bullet points.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "faa airframe and powerplant license",
+        "fcc license",
+        "microsoft office"
+      ],
+      "extra_skills": [
+        "building maintenance",
+        "carpentry",
+        "concrete construction",
+        "environmental coordination",
+        "hydroblasting",
+        "painting",
+        "plumbing",
+        "power tools",
+        "tank cleaning",
+        "vacuum truck operation"
+      ],
+      "years_required": 1.0,
+      "years_candidate": 11.5,
+      "years_gap": 10.5,
+      "education_match": true,
+      "degree_level_match": true,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.6,
+    "prompt_tokens": 2596,
+    "completion_tokens": 641
+  },
+  "PAIR_04": {
+    "match_score": 0.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 45
+    },
+    "explanation": "Thank you for your interest in the role! While you bring a strong background in finance, budgeting, and process management, this position requires specific experience in logistics, freight brokerage, freight sales, and customer relationship management. Because your current profile does not yet include these key areas, we won't be moving forward at this time, but we truly appreciate the time you took to apply.",
+    "writing_quality_explanation": "The CV suffers from severe structural disorganization, mixing bullet points with paragraphs, numerous grammatical errors, inconsistent tense usage, and repeated sections.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "customer relationship management",
+        "freight brokerage",
+        "freight sales",
+        "logistics"
+      ],
+      "extra_skills": [
+        "billing",
+        "budget development",
+        "budget management",
+        "corporate finance",
+        "cost control",
+        "financial accounting",
+        "financial analysis",
+        "financial forecasting",
+        "microsoft excel",
+        "microsoft outlook",
+        "microsoft word",
+        "performance optimization",
+        "pricing analysis",
+        "process management",
+        "procurement",
+        "sourcing strategies"
+      ],
+      "years_required": 1.0,
+      "years_candidate": null,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.99,
+    "prompt_tokens": 3025,
+    "completion_tokens": 726
+  },
+  "PAIR_09": {
+    "match_score": 100.0,
+    "sub_scores": {
+      "skills": 100.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "Thank you for applying with your 7 years of experience and strong background in Microsoft Office, PowerPoint, Microsoft Excel, and Veribalance. However, we have decided to move forward with other candidates, as your profile did not show the specific skills required for this role. We truly appreciate the time and effort you put into your application and wish you the very best in your job search.",
+    "writing_quality_explanation": "The CV suffers from a disorganized structure, repetitive skill sections, and inconsistent verb tenses throughout the work history.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [],
+      "extra_skills": [
+        "microsoft excel",
+        "microsoft office",
+        "powerpoint",
+        "veribalance"
+      ],
+      "years_required": null,
+      "years_candidate": 7.0,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.34,
+    "prompt_tokens": 3284,
+    "completion_tokens": 453
+  },
+  "PAIR_27": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": 100.0,
+      "education": null,
+      "writing_quality": 62
+    },
+    "explanation": "With an impressive 33 years of experience\u2014far exceeding the required 1 year\u2014you bring strong expertise in telecommunications, project management, and budget forecasting. However, this specific role requires foundational skills that aren't highlighted on your CV, including 3PL operations, accounting, accounts payable/receivable, invoicing, and the Microsoft Office suite. Because of these missing financial and administrative requirements, we won't be moving forward at this time, but we appreciate your interest and wish you the best in your job search!",
+    "writing_quality_explanation": "The CV features strong professional terminology and clear job history, but suffers from inconsistent verb tense usage and a poorly formatted, messy skills section at the end.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "3pl operations",
+        "accounting",
+        "accounts payable/receivable",
+        "invoicing",
+        "microsoft office suite"
+      ],
+      "extra_skills": [
+        "alcatel/lucent 8600",
+        "autocad",
+        "budget forecasting",
+        "cable maintenance",
+        "cell site construction",
+        "fiber optic splicing",
+        "inventory control",
+        "osp aerial, buried, underground",
+        "osp fault locating",
+        "project management",
+        "system design",
+        "telecommunications"
+      ],
+      "years_required": 1.0,
+      "years_candidate": 33.0,
+      "years_gap": 32.0,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.44,
+    "prompt_tokens": 4599,
+    "completion_tokens": 786
+  },
+  "PAIR_24": {
+    "match_score": 0.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": null,
+      "writing_quality": 45
+    },
+    "explanation": "Thank you for applying! While your background includes strong administrative and design skills like data entry, AutoCAD, and Microsoft Excel, this particular role requires specific warehouse machinery and tool experience. At this time, we are moving forward with candidates who specifically bring hands-on expertise with a forklift, order picker, reach truck, and scanner.",
+    "writing_quality_explanation": "The CV suffers from disjointed formatting, mismatched placeholder text, and inconsistent chronological ordering.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "forklift",
+        "order picker",
+        "reach truck",
+        "scanner"
+      ],
+      "extra_skills": [
+        "adobe photoshop",
+        "autocad",
+        "data entry",
+        "illustrator",
+        "inspection",
+        "insurance",
+        "interior design",
+        "microsoft excel",
+        "microsoft word",
+        "payroll",
+        "powerpoint",
+        "revit"
+      ],
+      "years_required": 1.0,
+      "years_candidate": null,
+      "years_gap": null,
+      "education_match": null,
+      "degree_level_match": null,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 3.62,
+    "prompt_tokens": 2174,
+    "completion_tokens": 628
+  },
+  "PAIR_01": {
+    "match_score": 50.0,
+    "sub_scores": {
+      "skills": 0.0,
+      "experience": null,
+      "education": 100.0,
+      "writing_quality": 42
+    },
+    "explanation": "You bring an impressive technical background with 8 years of experience and a strong skill set spanning Python, C, MATLAB, and machine learning techniques like neural networks and decision trees. However, you are missing Microsoft Office, which is required for this role. We encourage you to highlight any experience you have with Microsoft Office if you've used it, and we wish you the best with your application!",
+    "writing_quality_explanation": "The CV contains several grammatical errors, fragmented sentences, awkward phrasing (e.g., \"Plenty amount of practices\"), and inconsistent formatting throughout the experience and project sections.",
+    "structured_diff": {
+      "matched_skills": [],
+      "missing_skills": [
+        "microsoft office"
+      ],
+      "extra_skills": [
+        "a*",
+        "adaboost",
+        "arduino",
+        "assembly",
+        "autocad",
+        "c",
+        "clustering",
+        "decision tree",
+        "dijkstra",
+        "extended kalman filter",
+        "java",
+        "kalman filter",
+        "knn",
+        "lasso",
+        "latex",
+        "logistic regression",
+        "matlab",
+        "matrix factorization",
+        "navicat",
+        "na\u00efve bayes",
+        "neural networks",
+        "pca",
+        "pi",
+        "pid control",
+        "plc",
+        "processing",
+        "python",
+        "r",
+        "ransac",
+        "regression",
+        "simulink",
+        "solidworks",
+        "spss",
+        "sql",
+        "sql server",
+        "stata",
+        "svm"
+      ],
+      "years_required": null,
+      "years_candidate": 8.0,
+      "years_gap": null,
+      "education_match": true,
+      "degree_level_match": true,
+      "field_of_study_match": null
+    },
+    "source": "structured_extraction",
+    "latency_seconds": 4.46,
+    "prompt_tokens": 3848,
+    "completion_tokens": 1033
+  }
+}

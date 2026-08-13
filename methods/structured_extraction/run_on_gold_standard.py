@@ -3,7 +3,7 @@ Run the structured extraction + rules pipeline (method 2b) against all 30
 gold-standard CV–JD pairs from Buse's annotation Excel.
 
 Mirrors Niyousha's llm_judge_starter.py so results are directly comparable.
-Outputs are saved to annotation/results/structured_extraction_results.json.
+Outputs are saved to results/structured_extraction_results.json.
 
 Run from the repo root or from methods/structured_extraction/:
     python methods/structured_extraction/run_on_gold_standard.py
@@ -24,7 +24,7 @@ from gap_explainer import explain_llm, explain_template
 from llm_client import writing_quality_signal, get_last_usage
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-RESULTS_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_results.json"
+RESULTS_PATH = REPO_ROOT / "results" / "structured_extraction_results.json"
 
 
 def run_pair(pair_id: str, resume_text: str, jd_text: str) -> dict:

@@ -25,7 +25,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent.parent  # methods/structured
 # Default paths — override by passing explicit arguments if your layout differs
 DEFAULT_CSV_PATH = _REPO_ROOT / "Resume" / "Resume.csv"
 DEFAULT_PDF_ROOT = _REPO_ROOT / "data" / "data"
-DEFAULT_GOLD_EXCEL = _REPO_ROOT / "annotation" / "cv_matcher_candidate_pool.xlsx"
+DEFAULT_GOLD_EXCEL = _REPO_ROOT / "data" / "cv_matcher_candidate_pool.xlsx"
 
 
 @dataclass

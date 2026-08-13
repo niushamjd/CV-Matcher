@@ -15,9 +15,9 @@ import pandas as pd
 from scipy.stats import spearmanr
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-RESULTS_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_results.json"
-EXCEL_PATH = REPO_ROOT / "annotation" / "annotation-buse.xlsx"
-OUT_PATH = REPO_ROOT / "annotation" / "results" / "structured_extraction_vs_human.csv"
+RESULTS_PATH = REPO_ROOT / "results" / "structured_extraction_results.json"
+EXCEL_PATH = REPO_ROOT / "data" / "annotation" / "annotated_pairs.xlsx"
+OUT_PATH = REPO_ROOT / "results" / "structured_extraction_vs_human.csv"
 
 
 def rescale_1to5(v):
@@ -72,7 +72,7 @@ def main():
     print(f"  Spearman : r={r:.3f}  p={p:.4f}")
 
     # Comparison vs Niyousha's judge
-    judge_path = REPO_ROOT / "annotation" / "results" / "judge_vs_human_comparison.csv"
+    judge_path = REPO_ROOT / "results" / "judge_vs_human_comparison.csv"
     if judge_path.exists():
         df_j = pd.read_csv(judge_path).set_index("pair_id")
         common = df.set_index("pair_id").join(df_j[["match_score"]], rsuffix="_judge").dropna(

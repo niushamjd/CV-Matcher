@@ -12,10 +12,10 @@ Each variant result is stored in the same format as structured_extraction_result
 so Ipek's eval harness can consume them directly.
 
 Output:
-  annotation/results/bias_format_results.json
-  annotation/results/bias_name_results.json
-  annotation/results/bias_format_summary.csv
-  annotation/results/bias_name_summary.csv
+  results/bias_format_results.json
+  results/bias_name_results.json
+  results/bias_format_summary.csv
+  results/bias_name_summary.csv
 
 Run from repo root or methods/structured_extraction/:
   export LLM_PROVIDER=gemini
@@ -39,11 +39,11 @@ from rule_scorer import score_match
 from llm_client import get_last_usage
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
-BIAS_DIR = REPO_ROOT / "formatting&name bias inputs"
-FORMAT_DIR = BIAS_DIR / "format_variants"
-NAME_DIR = BIAS_DIR / "name_variants"
+BIAS_DIR = REPO_ROOT / "data" / "week2_variants"
+FORMAT_DIR = BIAS_DIR / "format"
+NAME_DIR = BIAS_DIR / "names"
 JD_DIR = BIAS_DIR / "original_controls" / "jds"
-RESULTS_DIR = REPO_ROOT / "annotation" / "results"
+RESULTS_DIR = REPO_ROOT / "results"
 
 BASELINE_PATH = RESULTS_DIR / "structured_extraction_results.json"
 

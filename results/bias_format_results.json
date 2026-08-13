@@ -1,0 +1,638 @@
+{
+  "PAIR_01": {
+    "baseline": 50.0,
+    "variants": {
+      "single_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.97,
+        "prompt_tokens": 1537,
+        "completion_tokens": 746
+      },
+      "two_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.87,
+        "prompt_tokens": 1548,
+        "completion_tokens": 618
+      },
+      "table": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.82,
+        "prompt_tokens": 1554,
+        "completion_tokens": 599
+      },
+      "section_order": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.78,
+        "prompt_tokens": 1537,
+        "completion_tokens": 1084
+      }
+    }
+  },
+  "PAIR_09": {
+    "baseline": 100.0,
+    "variants": {
+      "single_column": {
+        "match_score": 100.0,
+        "sub_scores": {
+          "skills": 100.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.18,
+        "prompt_tokens": 1345,
+        "completion_tokens": 242
+      },
+      "two_column": {
+        "match_score": 100.0,
+        "sub_scores": {
+          "skills": 100.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 0.93,
+        "prompt_tokens": 1360,
+        "completion_tokens": 214
+      },
+      "table": {
+        "match_score": 100.0,
+        "sub_scores": {
+          "skills": 100.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 0.99,
+        "prompt_tokens": 1343,
+        "completion_tokens": 214
+      },
+      "section_order": {
+        "match_score": 100.0,
+        "sub_scores": {
+          "skills": 100.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.03,
+        "prompt_tokens": 1345,
+        "completion_tokens": 219
+      }
+    }
+  },
+  "PAIR_10": {
+    "baseline": 100.0,
+    "variants": {
+      "single_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.44,
+        "prompt_tokens": 2052,
+        "completion_tokens": 415
+      },
+      "two_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.56,
+        "prompt_tokens": 2096,
+        "completion_tokens": 414
+      },
+      "table": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.26,
+        "prompt_tokens": 2085,
+        "completion_tokens": 398
+      },
+      "section_order": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.88,
+        "prompt_tokens": 2052,
+        "completion_tokens": 554
+      }
+    }
+  },
+  "PAIR_11": {
+    "baseline": 66.7,
+    "variants": {
+      "single_column": {
+        "match_score": 66.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.03,
+        "prompt_tokens": 1471,
+        "completion_tokens": 279
+      },
+      "two_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 0.9,
+        "prompt_tokens": 1469,
+        "completion_tokens": 143
+      },
+      "table": {
+        "match_score": 66.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.28,
+        "prompt_tokens": 1480,
+        "completion_tokens": 279
+      },
+      "section_order": {
+        "match_score": 66.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.2,
+        "prompt_tokens": 1471,
+        "completion_tokens": 335
+      }
+    }
+  },
+  "PAIR_13": {
+    "baseline": 73.3,
+    "variants": {
+      "single_column": {
+        "match_score": 73.3,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.13,
+        "prompt_tokens": 1560,
+        "completion_tokens": 505
+      },
+      "two_column": {
+        "match_score": 73.3,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.39,
+        "prompt_tokens": 1560,
+        "completion_tokens": 504
+      },
+      "table": {
+        "match_score": 73.3,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 3.84,
+        "prompt_tokens": 1572,
+        "completion_tokens": 1425
+      },
+      "section_order": {
+        "match_score": 73.3,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": 100.0,
+          "education": 100.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.29,
+        "prompt_tokens": 1560,
+        "completion_tokens": 313
+      }
+    }
+  },
+  "PAIR_14": {
+    "baseline": 16.7,
+    "variants": {
+      "single_column": {
+        "match_score": 16.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 0.0,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.12,
+        "prompt_tokens": 854,
+        "completion_tokens": 313
+      },
+      "two_column": {
+        "match_score": 16.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 0.0,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.03,
+        "prompt_tokens": 873,
+        "completion_tokens": 230
+      },
+      "table": {
+        "match_score": 16.7,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 0.0,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.02,
+        "prompt_tokens": 854,
+        "completion_tokens": 251
+      },
+      "section_order": {
+        "match_score": 25.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 0.93,
+        "prompt_tokens": 854,
+        "completion_tokens": 217
+      }
+    }
+  },
+  "PAIR_15": {
+    "baseline": 0.0,
+    "variants": {
+      "single_column": {
+        "match_score": 0.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.05,
+        "prompt_tokens": 1167,
+        "completion_tokens": 271
+      },
+      "two_column": {
+        "match_score": 0.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.64,
+        "prompt_tokens": 1182,
+        "completion_tokens": 470
+      },
+      "table": {
+        "match_score": 0.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.03,
+        "prompt_tokens": 1168,
+        "completion_tokens": 241
+      },
+      "section_order": {
+        "match_score": 0.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 0.93,
+        "prompt_tokens": 1167,
+        "completion_tokens": 199
+      }
+    }
+  },
+  "PAIR_17": {
+    "baseline": 35.0,
+    "variants": {
+      "single_column": {
+        "match_score": 35.0,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.97,
+        "prompt_tokens": 1486,
+        "completion_tokens": 690
+      },
+      "two_column": {
+        "match_score": 35.0,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.86,
+        "prompt_tokens": 1492,
+        "completion_tokens": 599
+      },
+      "table": {
+        "match_score": 35.0,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 3.03,
+        "prompt_tokens": 1507,
+        "completion_tokens": 1170
+      },
+      "section_order": {
+        "match_score": 35.0,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.83,
+        "prompt_tokens": 1486,
+        "completion_tokens": 1064
+      }
+    }
+  },
+  "PAIR_20": {
+    "baseline": 25.0,
+    "variants": {
+      "single_column": {
+        "match_score": 25.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.53,
+        "prompt_tokens": 1509,
+        "completion_tokens": 424
+      },
+      "two_column": {
+        "match_score": 25.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.43,
+        "prompt_tokens": 1498,
+        "completion_tokens": 418
+      },
+      "table": {
+        "match_score": 25.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.2,
+        "prompt_tokens": 1534,
+        "completion_tokens": 290
+      },
+      "section_order": {
+        "match_score": 25.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": null,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.07,
+        "prompt_tokens": 1509,
+        "completion_tokens": 714
+      }
+    }
+  },
+  "PAIR_25": {
+    "baseline": 46.7,
+    "variants": {
+      "single_column": {
+        "match_score": 46.7,
+        "sub_scores": {
+          "skills": 40.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 3.06,
+        "prompt_tokens": 4625,
+        "completion_tokens": 1157
+      },
+      "two_column": {
+        "match_score": 40.0,
+        "sub_scores": {
+          "skills": 20.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.61,
+        "prompt_tokens": 4602,
+        "completion_tokens": 941
+      },
+      "table": {
+        "match_score": 46.7,
+        "sub_scores": {
+          "skills": 40.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.58,
+        "prompt_tokens": 4695,
+        "completion_tokens": 924
+      },
+      "section_order": {
+        "match_score": 46.7,
+        "sub_scores": {
+          "skills": 40.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 3.1,
+        "prompt_tokens": 4625,
+        "completion_tokens": 1254
+      }
+    }
+  },
+  "PAIR_27": {
+    "baseline": 50.0,
+    "variants": {
+      "single_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.79,
+        "prompt_tokens": 1916,
+        "completion_tokens": 381
+      },
+      "two_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.31,
+        "prompt_tokens": 1945,
+        "completion_tokens": 332
+      },
+      "table": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.31,
+        "prompt_tokens": 1954,
+        "completion_tokens": 344
+      },
+      "section_order": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": null
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.53,
+        "prompt_tokens": 1916,
+        "completion_tokens": 1035
+      }
+    }
+  },
+  "PAIR_29": {
+    "baseline": 50.0,
+    "variants": {
+      "single_column": {
+        "match_score": 33.3,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.62,
+        "prompt_tokens": 1436,
+        "completion_tokens": 527
+      },
+      "two_column": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.78,
+        "prompt_tokens": 1434,
+        "completion_tokens": 572
+      },
+      "table": {
+        "match_score": 33.3,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 0.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 1.94,
+        "prompt_tokens": 1437,
+        "completion_tokens": 613
+      },
+      "section_order": {
+        "match_score": 50.0,
+        "sub_scores": {
+          "skills": 0.0,
+          "experience": 100.0,
+          "education": 50.0
+        },
+        "source": "structured_extraction",
+        "latency_seconds": 2.78,
+        "prompt_tokens": 1436,
+        "completion_tokens": 983
+      }
+    }
+  }
+}

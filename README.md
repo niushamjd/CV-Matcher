@@ -36,12 +36,9 @@ GEMINI_API_KEY=your-key-here
 
 ## Gold-standard data
 
-The script reads real CV/JD pairs from `annotation/cv_matcher_candidate_pool.xlsx` (not tracked in git — download it from the shared Drive and place it in `annotation/` yourself). It reads the `Candidate Pool` sheet, not `Final Selection` — the text lives in the `resume_text` and `jd_text` columns of `Candidate Pool`, filtered to the 30 rows where `FINAL_SELECTION (y/n) == "y"`.
+The script reads real CV/JD pairs from `data/cv_matcher_candidate_pool.xlsx` (tracked in git under `data/`). It reads the `Candidate Pool` sheet, not `Final Selection` — the text lives in the `resume_text` and `jd_text` columns of `Candidate Pool`, filtered to the 30 rows where `FINAL_SELECTION (y/n) == "y"`.
 
-```bash
-mkdir -p annotation
-mv ~/Downloads/cv_matcher_candidate_pool.xlsx annotation/
-```
+Human annotations (for evaluation) are in `data/annotation/annotated_pairs.xlsx`.
 
 ---
 
@@ -110,7 +107,7 @@ The pipeline has two data source options — edit the `USE_PDF` flag at the top 
 python3 methods/llm_judge/llm_judge_starter.py
 ```
 
-By default this runs the judge and writing-quality signal against all 30 real gold-standard CV/JD pairs from `annotation/cv_matcher_candidate_pool.xlsx`. Pair order matches the sheet's row order, which is intentionally randomized per the labeling rubric.
+By default this runs the judge and writing-quality signal against all 30 real gold-standard CV/JD pairs from `data/cv_matcher_candidate_pool.xlsx`. Pair order matches the sheet's row order, which is intentionally randomized per the labeling rubric.
 
 To run against the six synthetic edge-case samples instead (strong match, clear mismatch, negation, poorly-written-but-qualified, hallucination, synonym/implied-experience) — useful for quick sanity checks without burning API quota on 30 pairs — swap the loop in `__main__` to iterate `SAMPLES` instead of `load_pairs_from_excel(...)`.
 
