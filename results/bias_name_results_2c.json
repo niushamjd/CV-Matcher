@@ -1,0 +1,1466 @@
+{
+  "PAIR_01": {
+    "baseline": 38,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 20,
+          "education": 90
+        },
+        "explanation": "The candidate has strong formal education (Bachelor's and Master's in Mechanical Engineering) which aligns with the preferred degree qualification, but lacks the core operational experience required for a Package Preload Supervisor role. The candidate's background is heavily technical (R&D engineering, robotics, and software development) with zero evidence of warehouse operations management, supervising package handlers, or administrative responsibilities like timecard management and attendance tracking.",
+        "source": "llm_judge",
+        "latency_seconds": 1.69,
+        "prompt_tokens": 2240,
+        "completion_tokens": 142
+      },
+      "WH_F": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 25,
+          "education": 90
+        },
+        "explanation": "The candidate has a strong educational background with a Master's in Mechanical Engineering matching the preferred Bachelor's degree, and possesses basic MS Office knowledge. However, the candidate's resume lacks any supervisory experience, team management, or warehouse logistics background required for a Preload Supervisor role, focusing instead on technical R&D and engineering development.",
+        "source": "llm_judge",
+        "latency_seconds": 1.86,
+        "prompt_tokens": 2240,
+        "completion_tokens": 125
+      },
+      "WH_M": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 25,
+          "education": 70
+        },
+        "explanation": "The candidate has a strong technical background in mechanical engineering and software development (Master's degree, AutoCAD, Solidworks), which partially satisfies the education and warehouse-adjacent technical skills. However, the candidate completely lacks the required supervisory, training, and operational management experience needed for a Preload Supervisor role, and there is no evidence of the required physical capability or leadership background outlined in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 2.2,
+        "prompt_tokens": 2240,
+        "completion_tokens": 136
+      },
+      "AA_F": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 40
+        },
+        "explanation": "The candidate has a strong technical background in mechanical engineering and software development (Master's degree, C, Python, CAD), but lacks the required warehouse operations, team supervision, and package-handling experience outlined in the UPS job description. Furthermore, there is no evidence of the required physical capability (lifting 70 lbs) or people management history needed for a Preload Supervisor role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.13,
+        "prompt_tokens": 2241,
+        "completion_tokens": 134
+      },
+      "AA_M": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 20,
+          "education": 90
+        },
+        "explanation": "The candidate has a strong technical background with a Master's in Mechanical Engineering and relevant software skills like Microsoft Office, but lacks the core supervisory, warehouse operations, and people-management experience required for the PT Preload Supervisor role. The resume focuses heavily on R&D engineering, robotics, and software development rather than warehouse package handling, safety compliance, or team leadership.",
+        "source": "llm_judge",
+        "latency_seconds": 2.11,
+        "prompt_tokens": 2241,
+        "completion_tokens": 131
+      },
+      "TR_F": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 70
+        },
+        "explanation": "The candidate has a strong technical background in mechanical engineering and software development (Master's degree, CAD, Python, C), but completely lacks the required warehouse supervision, team leadership, timecard management, and package-handling experience needed for a Preload Supervisor role. There is no evidence of managing package handlers, conducting attendance tracking, or working in a fast-paced logistics warehouse environment.",
+        "source": "llm_judge",
+        "latency_seconds": 1.85,
+        "prompt_tokens": 2242,
+        "completion_tokens": 134
+      },
+      "TR_M": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 30,
+          "education": 70
+        },
+        "explanation": "The candidate has a strong technical engineering background (Master's in Mechanical Engineering, CAD, programming skills) and meets the education requirement, but lacks the core supervisory, warehouse operations, and people management background specified for the PT Preload Supervisor role. Additionally, there is no evidence of required warehouse capabilities like heavy lifting (70 lbs) or package handling supervision.",
+        "source": "llm_judge",
+        "latency_seconds": 2.43,
+        "prompt_tokens": 2241,
+        "completion_tokens": 129
+      },
+      "IN_F": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 70
+        },
+        "explanation": "The candidate has a strong technical engineering background (Master's in Mech. Eng. and software skills like C and Python) and meets the preferred Bachelor's degree qualification, but lacks the core operational must-haves for a PT Preload Supervisor role. The CV shows zero supervisory, team leadership, warehouse management, or package handling experience, and does not demonstrate the required people management or safety enforcement background.",
+        "source": "llm_judge",
+        "latency_seconds": 1.7,
+        "prompt_tokens": 2241,
+        "completion_tokens": 139
+      },
+      "IN_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 75
+        },
+        "explanation": "The candidate has a strong technical engineering background and a relevant Bachelor's degree (preferred qualification), but completely lacks the required warehouse supervisory, team management, and operations background specified in the job description. The CV focuses entirely on R&D, robotics engineering, and software programming rather than package handling supervision, safety compliance, or staff timecard management.",
+        "source": "llm_judge",
+        "latency_seconds": 1.8,
+        "prompt_tokens": 2240,
+        "completion_tokens": 125
+      }
+    }
+  },
+  "PAIR_09": {
+    "baseline": 75,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 72,
+          "education": 60
+        },
+        "explanation": "The candidate has strong transferable physical and logistics experience, including military aircraft maintenance (handling heavy equipment and ground support) and retail/grocery experience involving pallet jacks, hand trucks, and warehouse organization. While prior dedicated warehouse experience is preferred rather than strictly mandatory, the candidate's general labor and equipment background aligns well with the physical demands of the role. Education (Associate's in Paralegal) is irrelevant to warehousing, but does not penalize an entry-level operational role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.19,
+        "prompt_tokens": 2093,
+        "completion_tokens": 152
+      },
+      "WH_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 72,
+          "education": 60
+        },
+        "explanation": "The candidate has strong transferable physical and logistics-related experience from her time as a US Navy Aviation Electrician and retail sales roles (specifically mentioning pallet jacks, hand trucks, and warehouse organization). While the job prefers prior warehouse experience and the ability to lift 25-75 lbs (which military maintenance and retail stock handling partially satisfy), the role has low entry barriers and is willing to train the right candidate. Her background demonstrates high energy, strong work ethic, and adaptability fitting for a fast-paced warehouse environment.",
+        "source": "llm_judge",
+        "latency_seconds": 2.75,
+        "prompt_tokens": 2093,
+        "completion_tokens": 161
+      },
+      "WH_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 65,
+          "education": 70
+        },
+        "explanation": "The candidate demonstrates relevant physical and logistics experience from their time as a Sales Associate and Aviation Electrician (handling equipment, pallet jacks, hand trucks, and warehouse organization). While the job prefers prior warehouse experience and the candidate mostly has customer service and administrative backgrounds, the transferable skills in physical work and equipment handling fit the training-friendly requirement well.",
+        "source": "llm_judge",
+        "latency_seconds": 1.88,
+        "prompt_tokens": 2093,
+        "completion_tokens": 125
+      },
+      "AA_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 72,
+          "education": 60
+        },
+        "explanation": "The candidate has strong transferable physical and logistics experience, including military aircraft maintenance and retail stock handling where she operated pallet jacks, hand trucks, and unboxed merchandise. While the job requires lifting 25-75 lbs and heavy physical work\u2014which her background as an Aviation Electrician and Sales Associate strongly supports\u2014she lacks direct warehouse loading/unloading experience, though the employer explicitly states they are willing to train the right candidate.",
+        "source": "llm_judge",
+        "latency_seconds": 2.02,
+        "prompt_tokens": 2094,
+        "completion_tokens": 144
+      },
+      "AA_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 65,
+          "education": 70
+        },
+        "explanation": "The candidate has relevant physical and equipment experience from past roles (such as operating pallet jacks, hand trucks, and unboxing merchandise) along with military service demonstrating a strong work ethic. While the job posting states prior warehouse experience is preferred rather than strictly mandatory, the candidate's background aligns well with the physical and operational demands of a warehouse associate.",
+        "source": "llm_judge",
+        "latency_seconds": 1.55,
+        "prompt_tokens": 2094,
+        "completion_tokens": 126
+      },
+      "TR_F": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 60,
+          "education": 70
+        },
+        "explanation": "The candidate demonstrates strong transferable skills relevant to a warehouse environment, including retail stock handling, equipment operation like pallet jacks and hand trucks, and a high-energy background as a US Navy Aviation Electrician. While she lacks direct heavy warehouse loading/unloading experience, the job description notes they are willing to train the right candidate, and her physical work history makes her a viable match.",
+        "source": "llm_judge",
+        "latency_seconds": 1.79,
+        "prompt_tokens": 2095,
+        "completion_tokens": 133
+      },
+      "TR_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 60,
+          "education": 70
+        },
+        "explanation": "The candidate has strong transferable skills in physical work, equipment operation (pallet jacks, hand trucks), and a demonstrated strong work ethic from their military background as an Aviation Electrician and retail roles. While they lack direct heavy warehouse loading/unloading experience, the job description notes willingness to train the right candidate. Their background shows high adaptability and capability for physical, fast-paced environments.",
+        "source": "llm_judge",
+        "latency_seconds": 2.2,
+        "prompt_tokens": 2094,
+        "completion_tokens": 133
+      },
+      "IN_F": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 60,
+          "education": 70
+        },
+        "explanation": "The candidate demonstrates relevant physical and logistics experience through her background as an Aviation Electrician and Sales Associate, which included operating pallet jacks, hand trucks, and handling warehouse/stock duties. While the job prefers prior warehouse experience, it is not strictly required as training is provided, and the candidate shows strong transferable skills in high-energy, physical environments. Education requirements are fully met with her Associate degree.",
+        "source": "llm_judge",
+        "latency_seconds": 1.59,
+        "prompt_tokens": 2094,
+        "completion_tokens": 136
+      },
+      "IN_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 60,
+          "experience": 65,
+          "education": 60
+        },
+        "explanation": "The candidate has relevant physical and operational experience from their military background (Aviation Electrician) and retail roles, including handling equipment like pallet jacks and hand trucks, which aligns well with the physical demands of the Warehouse Associate position. While the job prioritizes work ethic and willingness to train over strict prerequisites, the candidate's resume lacks direct heavy warehouse loading/unloading experience at scale. Overall, transferable skills in teamwork and physical tasks make them a viable trainee.",
+        "source": "llm_judge",
+        "latency_seconds": 2.65,
+        "prompt_tokens": 2093,
+        "completion_tokens": 149
+      }
+    }
+  },
+  "PAIR_10": {
+    "baseline": 92,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 95,
+          "experience": 90,
+          "education": 90
+        },
+        "explanation": "The candidate significantly exceeds the minimum qualifications, bringing extensive experience in HR management, recruitment, onboarding, employee benefits administration, and payroll practices. While the job is a senior clerical/lead role, the candidate's higher-level HR Manager and Director background encompasses all required functions (HR rules, compliance, recordkeeping, benefits) with strong measurable results. Furthermore, the candidate holds a Bachelor of Business Administration, easily satisfying educational preferences.",
+        "source": "llm_judge",
+        "latency_seconds": 2.19,
+        "prompt_tokens": 4264,
+        "completion_tokens": 143
+      },
+      "WH_F": {
+        "match_score": 65,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 50,
+          "education": 90
+        },
+        "explanation": "The candidate has exceptional senior-level HR credentials, including extensive experience in benefits administration, recruitment, payroll, and employee relations, backed by a Bachelor's degree in Business Administration. However, there is a significant risk of 'over-qualification' and role mismatch: the candidate is a seasoned HR Manager/Director applying for a clerical support position (Senior Human Resources Clerk), which may create retention concerns regarding compensation and day-to-day tactical clerical duties.",
+        "source": "llm_judge",
+        "latency_seconds": 1.91,
+        "prompt_tokens": 4264,
+        "completion_tokens": 153
+      },
+      "WH_M": {
+        "match_score": 75,
+        "sub_scores": {
+          "skills": 80,
+          "experience": 70,
+          "education": 90
+        },
+        "explanation": "The candidate significantly exceeds the minimum qualifications, holding a Bachelor's degree and over a decade of progressive HR experience ranging from HR Representative to HR Director, which easily fulfills the required 3 years of clerical/HR experience and lead/supervisory capacities. However, the candidate is arguably overqualified for a clerical support role (Senior Human Resources Clerk) and the resume lacks explicit typing speed verification (45 WPM) or specific public sector/county HR rules like PERS mentioned in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 2.72,
+        "prompt_tokens": 4264,
+        "completion_tokens": 156
+      },
+      "AA_F": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 95,
+          "experience": 90,
+          "education": 85
+        },
+        "explanation": "The candidate significantly exceeds the minimum qualifications, bringing over a decade of progressive HR experience ranging from representative to director levels, with extensive background in recruitment, onboarding, benefits administration, and payroll. While the job is a clerical lead role and the candidate is a seasoned HR Manager/Director (potentially overqualified), she possesses all required core competencies, including benefits administration, payroll, and HR regulations. She also holds the required Bachelor's degree in Business Administration.",
+        "source": "llm_judge",
+        "latency_seconds": 2.19,
+        "prompt_tokens": 4265,
+        "completion_tokens": 147
+      },
+      "AA_M": {
+        "match_score": 75,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 65,
+          "education": 90
+        },
+        "explanation": "The candidate has exceptional HR skills, benefits administration experience, and a strong educational background (Bachelor's in Business Administration) that exceeds the minimum qualifications. However, this is a senior clerical/lead-level role within a county probation department, whereas the candidate's recent experience is heavily weighted toward high-level strategic management (HR Manager, Sr. HR Manager, HR Director). While they clearly possess the required functional knowledge, their profile is overqualified for a clerical role and lacks direct evidence of the specific clerical transaction processing and typing speeds requested in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 2.46,
+        "prompt_tokens": 4265,
+        "completion_tokens": 175
+      },
+      "TR_F": {
+        "match_score": 75,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 70,
+          "education": 90
+        },
+        "explanation": "The candidate has exceptional skills and extensive HR experience, including benefits administration, payroll, recruitment, and employee relations. However, her background is at the manager and director level, whereas this position is a lead clerical role (Senior Human Resources Clerk), meaning she is significantly overqualified for a clerical position that requires routine transaction processing and typing skills.",
+        "source": "llm_judge",
+        "latency_seconds": 1.89,
+        "prompt_tokens": 4266,
+        "completion_tokens": 124
+      },
+      "TR_M": {
+        "match_score": 75,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 70,
+          "education": 90
+        },
+        "explanation": "The candidate has extensive HR experience (over two decades) covering recruitment, onboarding, benefits administration, and payroll, which strongly aligns with the core must-haves. However, the candidate's background is at the management level (HR Manager/Director), whereas the target role is a senior-level clerical/lead position, representing a potential overqualification risk. Regardless, the foundational HR skills, knowledge of rules/regulations, and leadership experience are well-documented with measurable accomplishments.",
+        "source": "llm_judge",
+        "latency_seconds": 2.64,
+        "prompt_tokens": 4265,
+        "completion_tokens": 154
+      },
+      "IN_F": {
+        "match_score": 92,
+        "sub_scores": {
+          "skills": 95,
+          "experience": 90,
+          "education": 90
+        },
+        "explanation": "The candidate strongly exceeds the minimum qualifications, possessing over a decade of progressive HR experience spanning recruitment, benefits administration, payroll, and employee relations (well above the required 3 years). She demonstrates extensive experience working in lead and managerial capacities that directly map to the senior clerical/lead requirements of the role. Additionally, she holds a Bachelor of Business Administration, fulfilling educational preferences.",
+        "source": "llm_judge",
+        "latency_seconds": 1.7,
+        "prompt_tokens": 4265,
+        "completion_tokens": 136
+      },
+      "IN_M": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 95,
+          "experience": 90,
+          "education": 85
+        },
+        "explanation": "The candidate significantly exceeds the minimum qualifications, demonstrating extensive experience in recruitment, onboarding, employee benefits, and payroll management across progressive leadership roles (HR Manager, Sr. HR Manager). They possess strong expertise in HR rules, regulations (FMLA, ADA, EEO), and recordkeeping practices required for the Senior Human Resources Clerk position. The only minor nuance is that the candidate's profile is oriented toward higher-level HR management rather than a clerical role, but their core skill set directly aligns with all job requirements.",
+        "source": "llm_judge",
+        "latency_seconds": 1.63,
+        "prompt_tokens": 4264,
+        "completion_tokens": 160
+      }
+    }
+  },
+  "PAIR_11": {
+    "baseline": 62,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "The candidate meets the core must-haves, holding a Bachelor's degree in Business Management and possessing extensive business development and account management experience spanning well over the required 5+ years. They demonstrate strong, quantifiable sales and negotiation accomplishments across multiple roles. However, the CV lacks specific experience in the digital media, Connected TV (SmartCast/AVOD/SVOD) industry requested in the nice-to-haves, which limits the overall platform fit.",
+        "source": "llm_judge",
+        "latency_seconds": 2.48,
+        "prompt_tokens": 2732,
+        "completion_tokens": 151
+      },
+      "WH_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 75,
+          "experience": 70,
+          "education": 100
+        },
+        "explanation": "The candidate meets the must-haves, including a Bachelor's degree in Business Management and over 5 years of business development and account management experience with strong, measurable results (e.g., increasing sales by 60%, growing client bases). However, the resume lacks direct industry experience in digital media, Connected TV (CTV), or specific monetization models like AVOD/SVOD requested by VIZIO, making her domain expertise a gap.",
+        "source": "llm_judge",
+        "latency_seconds": 1.55,
+        "prompt_tokens": 2732,
+        "completion_tokens": 154
+      },
+      "WH_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 90
+        },
+        "explanation": "The candidate brings strong, quantifiable business development and account management experience spanning well over the required 5 years, along with a Bachelor's degree in Business Management which satisfies the educational requirement. He demonstrates strong deal-making, negotiation, and cross-functional leadership capabilities with impressive revenue generation metrics. However, the resume lacks explicit mentions of digital media platforms, Connected TV (CTV), or specific video business models (AVOD, SVOD, TVOD) requested in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 1.94,
+        "prompt_tokens": 2732,
+        "completion_tokens": 153
+      },
+      "AA_F": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "Aisha Jackson meets the core educational requirement with a Bachelor's in Business Management and brings extensive, quantifiable business development and account management experience (exceeding the 5+ years requirement). However, her background is heavily rooted in traditional sales, retail, and route management rather than the digital media, Connected TV (SmartCast), or tech industry partnerships specified in the VIZIO job description. While she demonstrates strong deal-making and negotiation skills, there is no evidence of digital media platform knowledge (AVOD, SVOD, etc.) required for the role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.9,
+        "prompt_tokens": 2733,
+        "completion_tokens": 171
+      },
+      "AA_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "The candidate has a strong foundation with a Bachelor's in Business Management, extensive business development and negotiation experience, and quantifiable metrics (e.g., growing client base, managing portfolios generating significant revenue). However, the resume completely lacks explicit mention of digital media, connected TV, or modern monetization models like AVOD/SVOD which are key components of VIZIO's platform. Furthermore, the timeline shows overlapping employment periods and some non-relevant experience roles (like food service and radio production), lowering the overall precision of the match.",
+        "source": "llm_judge",
+        "latency_seconds": 1.96,
+        "prompt_tokens": 2733,
+        "completion_tokens": 166
+      },
+      "TR_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "Zeynep Demir meets the educational requirement with a Bachelor's in Business Management and has extensive, quantifiable business development and account management experience (well over 5+ years). She demonstrates strong measurable accomplishments, such as increasing sales by 60% and growing client bases significantly. However, the candidate lacks the specific digital media/Connected TV industry background and familiarity with content distribution models (AVOD, SVOD, TVOD) highlighted as key nice-to-haves in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 2.55,
+        "prompt_tokens": 2734,
+        "completion_tokens": 158
+      },
+      "TR_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 65,
+          "experience": 70,
+          "education": 100
+        },
+        "explanation": "The candidate meets the core experience and education requirements with a Bachelor's in Business Management and over 5 years of business development, account management, and contract negotiation experience backed by quantifiable metrics. However, the resume completely lacks background or familiarity with digital media platforms, Connected TV (CTV), AVOD, TVOD, or SVOD business models, which are key domain requirements for this Vizio SmartCast role.",
+        "source": "llm_judge",
+        "latency_seconds": 4.65,
+        "prompt_tokens": 2733,
+        "completion_tokens": 140
+      },
+      "IN_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "The candidate brings extensive business development and account management experience with strong quantifiable achievements, such as increasing annual sales by 60% and managing large account portfolios, satisfying the 5+ years experience requirement and Bachelor's in Business Management. However, the CV lacks specific digital media, streaming (AVOD/SVOD/TVOD), or Connected TV industry background, which are key components of VIZIO's SmartCast platform role.",
+        "source": "llm_judge",
+        "latency_seconds": 3.92,
+        "prompt_tokens": 2733,
+        "completion_tokens": 146
+      },
+      "IN_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 100
+        },
+        "explanation": "The candidate brings strong, quantifiable business development and account management experience (e.g., increasing annual sales by 20-60% and managing large portfolios) alongside a Bachelor's degree in Business Management which satisfies the core education and experience must-haves. However, the CV lacks specific evidence of digital media, AVOD/SVOD/TVOD business models, or Connected TV (CTV) platforms required for VIZIO's SmartCast ecosystem. While strong on general B2B deal-making and contract negotiation, the missing media industry domain expertise lowers the holistic match.",
+        "source": "llm_judge",
+        "latency_seconds": 11.05,
+        "prompt_tokens": 2732,
+        "completion_tokens": 177
+      }
+    }
+  },
+  "PAIR_13": {
+    "baseline": 82,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 95
+        },
+        "explanation": "The candidate strongly matches the must-haves, bringing over 15 years of HR professional experience (exceeding the 4-year requirement) and a Bachelor\u2019s degree in Public Administration plus an MBA. They possess extensive background in core HR functions requested by the job description, such as employee relations, performance management, onboarding, and HRIS/Workday-adjacent tools. The only minor gap is a lack of explicit mention of consulting/matrixed firm experience, which is a nice-to-have.",
+        "source": "llm_judge",
+        "latency_seconds": 2.18,
+        "prompt_tokens": 3680,
+        "completion_tokens": 162
+      },
+      "WH_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 95
+        },
+        "explanation": "The candidate strongly exceeds the minimum experience requirements with over 15 years of progressive HR professional experience and holds both a Bachelor's and an MBA, satisfying the education and tenure prerequisites. Her background includes robust competencies in employee relations, onboarding, performance management, and HRIS systems (such as SAP and Oracle, matching the Workday preference). While direct experience in a professional services or consulting partnership is not explicitly highlighted, her extensive generalist background and quantifiable achievements (e.g., reducing turnover and improving processes) make her a very strong match for the role.",
+        "source": "llm_judge",
+        "latency_seconds": 3.52,
+        "prompt_tokens": 3680,
+        "completion_tokens": 169
+      },
+      "WH_M": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 90,
+          "education": 95
+        },
+        "explanation": "The candidate strongly matches the job requirements with over a decade of progressive HR experience, a relevant Bachelor's degree and MBA, and strong proficiency in Microsoft Office and HR systems. While the CV lacks explicit mention of Workday (preferred HRIS) or consulting industry experience, his extensive background in HR generalist duties, performance management, onboarding, and employee relations makes him a very strong candidate.",
+        "source": "llm_judge",
+        "latency_seconds": 3.61,
+        "prompt_tokens": 3680,
+        "completion_tokens": 135
+      },
+      "AA_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 90,
+          "education": 95
+        },
+        "explanation": "Aisha Jackson exceeds the baseline requirements with over 15 years of progressive HR experience (surpassing the 4-year minimum) and a relevant Bachelor's degree plus an MBA. She demonstrates strong competencies in core HR functions requested by Bain, such as HRIS/Workday-adjacent systems, onboarding, performance management, and employee relations, backed by measurable achievements like reducing turnover and improving processes. While the CV lacks explicit mention of consulting firm experience or Workday specifically, her deep generalist background and strong administrative track record make her an exceptionally strong match.",
+        "source": "llm_judge",
+        "latency_seconds": 4.32,
+        "prompt_tokens": 3681,
+        "completion_tokens": 170
+      },
+      "AA_M": {
+        "match_score": 85,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 95
+        },
+        "explanation": "The candidate strongly matches the must-haves, exceeding the education requirement with a Master's degree and bringing well over 4 years of HR professional experience. They possess strong HRIS/Microsoft Office skills and a solid background in performance management, employee relations, and onboarding. While they lack the specific nice-to-have of consulting/matrixed firm experience, their comprehensive generalist background and quantifiable achievements make them a strong overall fit.",
+        "source": "llm_judge",
+        "latency_seconds": 2.8,
+        "prompt_tokens": 3681,
+        "completion_tokens": 150
+      },
+      "TR_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 90
+        },
+        "explanation": "Zeynep Demir is a strong match for the Senior HR Specialist role, bringing extensive HR generalist experience dating back to 2005, which exceeds the 4-year requirement. She holds both a Bachelor's and an MBA, and demonstrates proficiency in Microsoft Office and HR systems. While the resume lacks explicit mention of Workday (preferred HRIS) or consulting industry experience, her deep background in talent management, employee relations, onboarding, and performance management aligns closely with the job's core responsibilities.",
+        "source": "llm_judge",
+        "latency_seconds": 4.73,
+        "prompt_tokens": 3682,
+        "completion_tokens": 162
+      },
+      "TR_M": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 95
+        },
+        "explanation": "The candidate strongly meets the requirements with over 10 years of HR professional experience, an MBA and a Bachelor's degree (surpassing the minimum education and experience prerequisites), and strong background in HRIS systems, onboarding, performance management, and benefits administration. While they lack specific professional consulting/partnership firm experience, their deep generalist HR background, quantifiable achievements, and relevant technical skill set make them a very strong match for the role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.54,
+        "prompt_tokens": 3681,
+        "completion_tokens": 145
+      },
+      "IN_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 95
+        },
+        "explanation": "Priya exceeds the minimum educational requirements with both a Bachelor's and an MBA, and brings well over the required 4 years of HR professional experience (dating back to 2005) encompassing onboarding, performance management, employee relations, and HRIS/Workday-adjacent systems. Her resume includes strong quantifiable achievements (e.g., reducing turnover from 68% to 14%, cutting process time by 30%), aligning nicely with Bain's focus on operational excellence. She misses the specific nice-to-have background in a professional services/consulting partnership firm, but her core HR competencies and administrative rigor make her a very strong match.",
+        "source": "llm_judge",
+        "latency_seconds": 2.36,
+        "prompt_tokens": 3681,
+        "completion_tokens": 193
+      },
+      "IN_M": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 80,
+          "education": 90
+        },
+        "explanation": "The candidate strongly meets all must-haves, including over 4 years of HR professional experience and a Bachelor's degree (plus an MBA). They demonstrate direct experience with HR operations, employee relations, onboarding, and HRIS systems like SAP and Oracle. However, the resume lacks explicit mention of experience within a consulting or matrixed partnership firm, which is a key nice-to-have for this Bain & Company role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.15,
+        "prompt_tokens": 3680,
+        "completion_tokens": 143
+      }
+    }
+  },
+  "PAIR_14": {
+    "baseline": 0,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 10,
+          "education": 40
+        },
+        "explanation": "The candidate lacks critical must-haves, including an active U.S. Top Secret/SCI security clearance, CompTIA Security+ certification, and 5+ years of professional experience with Windows Server, network storage, and troubleshooting. The resume reflects mostly entry-level or intern experience from 2012-2015 with basic software like Excel and Word, falling far short of the senior-level systems administration requirements.",
+        "source": "llm_judge",
+        "latency_seconds": 1.96,
+        "prompt_tokens": 2675,
+        "completion_tokens": 143
+      },
+      "WH_F": {
+        "match_score": 0,
+        "sub_scores": {
+          "skills": 0,
+          "experience": 0,
+          "education": 10
+        },
+        "explanation": "The candidate completely lacks the mandatory requirements for this senior-level role, including an active U.S. Top Secret/SCI clearance, DoD 8570 certification (e.g., CompTIA Security+), 5+ years of Windows/Linux administration, data storage, Oracle databases, and networking experience. The resume reflects an entry-level/intern background from 2012-2016 with basic office and student assistant tasks, falling drastically short of the required senior technical experience and security clearances.",
+        "source": "llm_judge",
+        "latency_seconds": 1.73,
+        "prompt_tokens": 2675,
+        "completion_tokens": 160
+      },
+      "WH_M": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 5,
+          "education": 40
+        },
+        "explanation": "The candidate lacks critical must-have qualifications including an active U.S. Top Secret/SCI clearance, CompTIA Security+ certification, and 5+ years of Windows Server, Linux, and network storage administration experience. The resume only shows basic entry-level internship experience from 2012 and a Bachelor's degree from 2016, falling significantly short of the senior-level technical requirements.",
+        "source": "llm_judge",
+        "latency_seconds": 1.85,
+        "prompt_tokens": 2675,
+        "completion_tokens": 138
+      },
+      "AA_F": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 10,
+          "education": 40
+        },
+        "explanation": "The candidate lacks critical must-haves, including an active Top Secret/SCI security clearance, a CompTIA Security+ certification (or DoD 8570 equivalent), and 5+ years of professional systems administration experience with Windows Server, Linux, network storage, and troubleshooting. The applicant is an entry-level graduate with only brief internship and student assistant experience from 2012-2015, falling drastically short of the senior-level requirements.",
+        "source": "llm_judge",
+        "latency_seconds": 1.63,
+        "prompt_tokens": 2676,
+        "completion_tokens": 155
+      },
+      "AA_M": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 5,
+          "education": 30
+        },
+        "explanation": "The candidate has an entry-level background with an IT degree but completely lacks the critical must-haves for this senior-level role: no active Top Secret/SCI clearance, no CompTIA Security+ certification, and nowhere near the 5+ years of required experience with Windows Server, Active Directory, network storage, and enterprise troubleshooting. The resume only shows very brief internship/student experience from 2012-2015 and basic office software skills.",
+        "source": "llm_judge",
+        "latency_seconds": 2.22,
+        "prompt_tokens": 2676,
+        "completion_tokens": 149
+      },
+      "TR_F": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 0,
+          "experience": 10,
+          "education": 40
+        },
+        "explanation": "The candidate completely lacks the critical must-have requirements for this Senior IT System Administrator role, including an active Top Secret/SCI clearance, DoD 8570 compliant certification (like Security+), and 5+ years of hands-on enterprise systems administration experience with Windows Server, Linux, and network storage. The resume reflects an entry-level background with an IT Management degree and very dated, short-term internship/student assistant experience.",
+        "source": "llm_judge",
+        "latency_seconds": 3.08,
+        "prompt_tokens": 2677,
+        "completion_tokens": 149
+      },
+      "TR_M": {
+        "match_score": 0,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 5,
+          "education": 30
+        },
+        "explanation": "The candidate completely lacks the mandatory must-haves: active Top Secret/SCI clearance, Tier 5 investigation, CompTIA Security+ certification, and 5+ years of senior systems administration experience with Windows Server, Linux, storage, and Oracle. The resume only shows basic entry-level internship experience from 2012 and a bachelor's degree, falling vastly short of the senior-level requirements.",
+        "source": "llm_judge",
+        "latency_seconds": 2.05,
+        "prompt_tokens": 2676,
+        "completion_tokens": 137
+      },
+      "IN_F": {
+        "match_score": 0,
+        "sub_scores": {
+          "skills": 0,
+          "experience": 0,
+          "education": 10
+        },
+        "explanation": "The candidate's resume completely lacks the required must-haves for this senior-level role, including an active Top Secret/SCI clearance, CompTIA Security+ certification, 5+ years of systems administration experience with Windows Server/Linux, and network storage configuration. The candidate is an entry-level applicant with basic IT intern experience from 2012 and no relevant senior systems administration background.",
+        "source": "llm_judge",
+        "latency_seconds": 1.62,
+        "prompt_tokens": 2676,
+        "completion_tokens": 135
+      },
+      "IN_M": {
+        "match_score": 5,
+        "sub_scores": {
+          "skills": 5,
+          "experience": 5,
+          "education": 30
+        },
+        "explanation": "The candidate has a degree in Information and Technology Management, but completely lacks the required must-haves: active Top Secret/SCI clearance, active CompTIA Security+ certification, and 5+ years of professional system administration experience with Windows Server, Linux, network storage, and enterprise environments. The resume only shows basic student assistant and intern roles from 2012-2015 with office/basic IT support tasks, making this an extreme mismatch for a Senior IT System Administrator role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.9,
+        "prompt_tokens": 2675,
+        "completion_tokens": 154
+      }
+    }
+  },
+  "PAIR_15": {
+    "baseline": 92,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 92,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 90
+        },
+        "explanation": "The candidate is a strong match, directly checking all must-haves and nice-to-haves. They bring extensive BDR/SDR experience with a proven, measurable track record of exceeding quotas (e.g., 200% to quota, securing meetings with C-level executives) and strong communication and prospecting skills. The only minor gap is a lack of explicitly listed software tools like Salesforce or ZoomInfo in the resume, though they have enterprise sales experience where such tools are standard.",
+        "source": "llm_judge",
+        "latency_seconds": 2.22,
+        "prompt_tokens": 2513,
+        "completion_tokens": 159
+      },
+      "WH_F": {
+        "match_score": 92,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 90
+        },
+        "explanation": "The candidate is a strong match for the Business Development Representative role, possessing direct BDR/SDR experience since 2017 with a proven, quantified track record of exceeding quota (e.g., reaching 133%, 144%, and 200% recently). She demonstrates the required prospecting, cold calling, communication, and time-management skills, and includes minor nice-to-haves like familiarity with Salesforce. Her background in B2B sales and leadership aligns exceptionally well with Experian's qualifications.",
+        "source": "llm_judge",
+        "latency_seconds": 3.63,
+        "prompt_tokens": 2513,
+        "completion_tokens": 168
+      },
+      "WH_M": {
+        "match_score": 92,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 90
+        },
+        "explanation": "The candidate is a strong match, featuring extensive direct experience as a Business Development Representative with quantifiable achievements (consistently exceeding quota up to 200%, securing high-level meetings). He possesses the core communication, prospecting, and sales pipeline management skills required for the role, along with a business-related educational background. While specific software tools like Salesforce or ZoomInfo are not explicitly listed in his skills section, his extensive enterprise sales background (including past work with Dell and notable quota attainment) makes him an exceptional candidate.",
+        "source": "llm_judge",
+        "latency_seconds": 2.2,
+        "prompt_tokens": 2513,
+        "completion_tokens": 161
+      },
+      "AA_F": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 85
+        },
+        "explanation": "The candidate has strong must-have experience working as a Business Development Representative with documented metric-driven success exceeding quotas (e.g., 200% to quota, securing meetings with CEOs). They possess core required skills like prospecting, cold calling, and account management, and even hit nice-to-have criteria with prior BDR experience and familiarity with Salesforce. The only minor gaps are a lack of explicit mention of other specific tools like SalesLoft, ZoomInfo, or 6Sense, and financial services experience.",
+        "source": "llm_judge",
+        "latency_seconds": 1.59,
+        "prompt_tokens": 2514,
+        "completion_tokens": 163
+      },
+      "AA_M": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 85
+        },
+        "explanation": "The candidate has direct, extensive experience as a Business Development Representative with a strong, measurable track record of exceeding quotas (e.g., reaching up to 200%). They possess the required communication, prospecting, and pipeline management skills, though specific tools like Salesforce, ZoomInfo, or SalesLoft are not explicitly named in the CV (despite mentioning Salesforce as a client/partner). Overall, it is a very strong match for an entrepreneurial BDR role.",
+        "source": "llm_judge",
+        "latency_seconds": 4.23,
+        "prompt_tokens": 2514,
+        "completion_tokens": 150
+      },
+      "TR_F": {
+        "match_score": 92,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 90
+        },
+        "explanation": "The candidate has direct, extensive experience as a Business Development Representative with documented quota-crushing achievements (e.g., 200% to quota, securing C-level meetings) and relevant outbound prospecting skills. They meet core communication, self-starter, and sales acumen requirements, though they do not explicitly list preferred sales tools like Salesforce or ZoomInfo on the CV (despite mentioning Salesforce as a client/account). Overall, this is an exceptionally strong match for the BDR role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.53,
+        "prompt_tokens": 2515,
+        "completion_tokens": 156
+      },
+      "TR_M": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 80
+        },
+        "explanation": "The candidate is a near-perfect match with extensive direct experience as a Business Development Representative, backed by quantified metrics like achieving 200% to quota and managing high-value accounts. They possess strong communication, prospecting, and sales acumen as requested by the job description. The only minor gaps are a lack of explicit mention of specific modern sales tools like SalesLoft or ZoomInfo, though Salesforce is implicitly referenced through client work.",
+        "source": "llm_judge",
+        "latency_seconds": 1.99,
+        "prompt_tokens": 2514,
+        "completion_tokens": 144
+      },
+      "IN_F": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 95,
+          "education": 90
+        },
+        "explanation": "The candidate has strong must-have experience, currently working as a Business Development Representative since 2017 with proven, highly quantifiable achievements (consistently exceeding quota up to 200%). They possess the required communication, prospecting, and pipeline management skills. While specific nice-to-have tools like Salesforce and ZoomInfo are not explicitly listed in her skill section, her extensive BDR experience and background strongly compensate for this.",
+        "source": "llm_judge",
+        "latency_seconds": 1.71,
+        "prompt_tokens": 2514,
+        "completion_tokens": 144
+      },
+      "IN_M": {
+        "match_score": 90,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 95,
+          "education": 80
+        },
+        "explanation": "The candidate is a strong match for the Business Development Representative role, possessing direct ongoing BDR experience since 2017 with proven quota-exceeding performance (up to 200%) and extensive cold calling, prospecting, and sales pipeline management skills. They also hit the nice-to-have criteria with prior enterprise sales experience and familiarity with sales tools like Salesforce. The only minor gaps are a lack of explicit mention of specific modern BDR tech stack tools like ZoomInfo or SalesLoft, though their general sales tool proficiency mitigates this.",
+        "source": "llm_judge",
+        "latency_seconds": 2.5,
+        "prompt_tokens": 2513,
+        "completion_tokens": 170
+      }
+    }
+  },
+  "PAIR_17": {
+    "baseline": 85,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 80,
+          "education": 90
+        },
+        "explanation": "The candidate strongly matches the role with an MBA, a Bachelor's in Telecommunications Management, ITIL certification, and extensive historical experience as an IT Manager and Director of Information Systems. They demonstrate relevant skills in infrastructure management, budgeting, disaster recovery, and team leadership, though their recent roles have shifted toward general practice management.",
+        "source": "llm_judge",
+        "latency_seconds": 1.99,
+        "prompt_tokens": 2281,
+        "completion_tokens": 122
+      },
+      "WH_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 95
+        },
+        "explanation": "The candidate strongly matches the job requirements with an MBA, a Bachelor's in Telecommunications Management, and extensive multi-year experience as an IT Manager and Director of Information Systems. She demonstrates core competencies requested in the role, including IT strategy, budget management, disaster recovery, ITIL certification, and team leadership, though her recent roles have shifted more toward general practice management.",
+        "source": "llm_judge",
+        "latency_seconds": 1.95,
+        "prompt_tokens": 2281,
+        "completion_tokens": 132
+      },
+      "WH_M": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 80,
+          "education": 90
+        },
+        "explanation": "The candidate strongly matches the role requirements, possessing an MBA, a BS in Telecommunications Management, ITIL Foundations certification, and extensive historical experience as an IT Manager and Director of Information Systems. He demonstrates direct experience in IT budgeting, disaster recovery, infrastructure improvements, and team leadership, though his most recent role has been as a Practice Manager rather than a dedicated IT Director.",
+        "source": "llm_judge",
+        "latency_seconds": 1.95,
+        "prompt_tokens": 2281,
+        "completion_tokens": 131
+      },
+      "AA_F": {
+        "match_score": 85,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 90
+        },
+        "explanation": "Aisha Jackson strongly matches the core requirements for the Director of IT position, possessing extensive IT leadership experience (Director of Information Systems and IT Manager roles), budget management experience, and relevant technical competencies including disaster recovery, infrastructure, and ITIL/CCNA certifications. Her education includes both a Bachelor's in Telecommunications Management and an MBA, satisfying the degree requirements. The only minor gap is that her recent experience has shifted towards general practice management, though her deep IT background and leadership skills directly align with the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 1.71,
+        "prompt_tokens": 2282,
+        "completion_tokens": 161
+      },
+      "AA_M": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 80,
+          "education": 90
+        },
+        "explanation": "The candidate strongly matches the must-haves with an MBA, a Bachelor's in Telecommunications Management, and extensive IT leadership experience (e.g., Director of Information Systems and IT Manager roles). They also possess relevant certifications including ITIL and CCNA, plus budget management and infrastructure experience. The slight deduction in experience is due to recent roles pivoting toward general practice management rather than pure IT director leadership.",
+        "source": "llm_judge",
+        "latency_seconds": 1.63,
+        "prompt_tokens": 2282,
+        "completion_tokens": 139
+      },
+      "TR_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 95
+        },
+        "explanation": "The candidate strongly matches the job requirements with an MBA and a Bachelor's in Telecommunications Management, alongside extensive IT leadership experience (e.g., Director of Information Systems and IT Manager roles). They possess key technical competencies including ITIL, disaster recovery, budgeting, network management, and staff development. Minor gaps include a lack of modern cloud computing mentions, but their comprehensive background in IT strategy and operations makes them a very strong candidate.",
+        "source": "llm_judge",
+        "latency_seconds": 1.91,
+        "prompt_tokens": 2283,
+        "completion_tokens": 144
+      },
+      "TR_M": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 90,
+          "education": 90
+        },
+        "explanation": "The candidate strongly matches the job requirements with extensive IT leadership experience (e.g., Director of Information Systems and IT Manager roles), budget management, and relevant certifications including ITIL. They also hold an MBA and a Bachelor's in Telecommunications Management, satisfying both baseline and preferred education requirements. While some of their recent experience is in healthcare practice management, their background demonstrates deep technical infrastructure oversight, staff development, and strategic IT planning.",
+        "source": "llm_judge",
+        "latency_seconds": 2.39,
+        "prompt_tokens": 2282,
+        "completion_tokens": 144
+      },
+      "IN_F": {
+        "match_score": 85,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 90
+        },
+        "explanation": "The candidate strongly matches the job requirements with an MBA, a Bachelor's in Telecommunications Management, and extensive IT leadership experience including roles as IT Manager and Director of Information Systems. She possesses required skills in ITIL, asset management, budgeting, disaster recovery, and infrastructure management. Minor gaps include a lack of modern cloud computing explicitly stated in the core skills, but her depth of technical management and leadership background makes her a very strong match for the Director of IT role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.53,
+        "prompt_tokens": 2282,
+        "completion_tokens": 151
+      },
+      "IN_M": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 85,
+          "education": 90
+        },
+        "explanation": "The candidate has strong relevant experience as an IT Manager and Director of Information Systems, including proven budget management, IT strategy, disaster recovery, and ITIL certification matching the job requirements. Furthermore, the candidate holds a Bachelor's in Telecommunications Management and an MBA, which satisfies both the base education requirement and the master's degree preference.",
+        "source": "llm_judge",
+        "latency_seconds": 1.7,
+        "prompt_tokens": 2281,
+        "completion_tokens": 125
+      }
+    }
+  },
+  "PAIR_20": {
+    "baseline": 12,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 0
+        },
+        "explanation": "The candidate completely misses the core education must-have (possessing a recent Bachelor's degree, preferably in business) as they graduated high school in 1980 and present no higher education. Furthermore, the candidate is a senior management professional with 25 years of experience, making them heavily overqualified for an entry-level Business Development Representative role and entirely lacking the specific outbound tech/SaaS tool stack experience requested.",
+        "source": "llm_judge",
+        "latency_seconds": 2.36,
+        "prompt_tokens": 2660,
+        "completion_tokens": 143
+      },
+      "WH_F": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 30,
+          "experience": 10,
+          "education": 0
+        },
+        "explanation": "The candidate fails a critical must-have requirement: the job description explicitly asks for a recent college graduate with a Bachelor's degree, whereas the candidate has a high school diploma and 25+ years of senior management experience. While the candidate has general communication and sales exposure, her profile as an executive/operations manager is vastly overqualified for and misaligned with an entry-level Business Development Representative role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.14,
+        "prompt_tokens": 2660,
+        "completion_tokens": 143
+      },
+      "WH_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 5
+        },
+        "explanation": "The candidate fails the primary must-have requirement of being a recent college graduate with a Bachelor's degree, holding only a High School Diploma from 1980. Furthermore, the candidate's 25 years of senior management and operations experience heavily misaligns with an entry-level Business Development Representative role. While the resume lists some sales and communication skills, the massive gap in education and career seniority makes this a very poor fit.",
+        "source": "llm_judge",
+        "latency_seconds": 1.76,
+        "prompt_tokens": 2660,
+        "completion_tokens": 146
+      },
+      "AA_F": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 5
+        },
+        "explanation": "The candidate fails a primary must-have requirement: the job calls for a recent college graduate with a Bachelor's degree (preferably in business) for an entry-level Business Development Representative role, whereas the candidate has a High School Diploma from 1980 and 25+ years of senior management and operational experience. While the candidate has some peripheral sales and communication skills from past roles, their background is vastly overqualified in terms of seniority and misaligned with the junior SaaS/CRM outbound focus of the position.",
+        "source": "llm_judge",
+        "latency_seconds": 2.18,
+        "prompt_tokens": 2661,
+        "completion_tokens": 161
+      },
+      "AA_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 5
+        },
+        "explanation": "The candidate has a severe mismatch against the core must-haves for this entry-level Business Development Representative role. The job specifically requires a recent bachelor's degree (preferably in business) and targets early-career professionals, whereas the candidate has a high school diploma and 25+ years of senior management and operational experience. While the resume lists basic communication and sales exposure, the extensive executive background makes this a poor fit for the scope and seniority level of the position.",
+        "source": "llm_judge",
+        "latency_seconds": 3.33,
+        "prompt_tokens": 2661,
+        "completion_tokens": 151
+      },
+      "TR_F": {
+        "match_score": 10,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 0
+        },
+        "explanation": "The candidate fails the core must-have requirement of having recently graduated with a bachelor's degree (only a high school diploma is listed, alongside 25+ years of senior management experience). While the candidate has general sales and communication skills, they lack the specific outbound B2B tech/SaaS focus, familiarity with modern outbound tools (Apollo, Salesloft, etc.), and entry-level career positioning intended for this Business Development Representative role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.2,
+        "prompt_tokens": 2662,
+        "completion_tokens": 146
+      },
+      "TR_M": {
+        "match_score": 10,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 5
+        },
+        "explanation": "The candidate fails the critical must-have education requirement (holding only a High School Diploma while the role requires a recent Bachelor's degree, preferably in business). Furthermore, the candidate is a senior management professional with 25 years of experience, completely misaligned with an entry-level Business Development Representative role focused on SaaS, CRM, and outbound automation.",
+        "source": "llm_judge",
+        "latency_seconds": 1.7,
+        "prompt_tokens": 2661,
+        "completion_tokens": 126
+      },
+      "IN_F": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 5
+        },
+        "explanation": "The candidate has a significant experience gap, offering 25 years of senior management and operational background rather than the early-career entry-level profile sought for a Business Development Representative. Furthermore, the candidate fails the education must-have, listing only a High School Diploma instead of the required Bachelor's degree. While the resume includes some communication and sales exposure, it lacks the modern outbound tech stack (Apollo.io, Salesloft, LinkedIn Sales Navigator) and the SaaS/CRM focus specified in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 4.38,
+        "prompt_tokens": 2661,
+        "completion_tokens": 159
+      },
+      "IN_M": {
+        "match_score": 10,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 0
+        },
+        "explanation": "The candidate has a massive experience mismatch, presenting as a senior executive/manager with 25 years of experience rather than the entry-level Business Development Representative requested. Furthermore, the candidate lacks the required bachelor's degree (holding only a high school diploma) and shows no modern tech stack familiarity (SaaS, CRM, or sales automation tools like Apollo or Salesloft).",
+        "source": "llm_judge",
+        "latency_seconds": 2.49,
+        "prompt_tokens": 2660,
+        "completion_tokens": 131
+      }
+    }
+  },
+  "PAIR_25": {
+    "baseline": 68,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 85,
+          "education": 75
+        },
+        "explanation": "The candidate brings strong, directly relevant technical and business analysis experience, including ERP implementations, data integration/ETL processes, SQL databases, and cross-functional stakeholder management. They also possess a solid educational background with a BS in Management of Information Systems and an AS in Accounting. While they lack explicit experience with specific niche platforms mentioned as assets (IFS, OneStream), their overall profile strongly matches the core requirements for data migration, financial reporting, and ERP system support.",
+        "source": "llm_judge",
+        "latency_seconds": 2.1,
+        "prompt_tokens": 5754,
+        "completion_tokens": 150
+      },
+      "WH_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 92,
+          "education": 80
+        },
+        "explanation": "The candidate has a strong match for the Senior Business Analyst role, demonstrating extensive experience with ERP implementations, ETL processes, data integration, and reporting tools (SSRS, SSAS, Power BI) which directly align with the core requirements. They bring a robust mix of technical skills and financial/supply chain operations background, along with an MIS degree and an accounting background that satisfy the preferred education criteria. Minor gaps include lack of explicit mentions of niche tools like IFS, Concur, or OneStream, but overall technical and business analysis competencies are exceptionally well-aligned.",
+        "source": "llm_judge",
+        "latency_seconds": 2.45,
+        "prompt_tokens": 5754,
+        "completion_tokens": 169
+      },
+      "WH_M": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 88,
+          "education": 75
+        },
+        "explanation": "The candidate brings strong, highly relevant experience in ERP implementations, system integrations, ETL/data warehousing, and financial reporting (SSRS/PowerBI/SQL) matching the core technical requirements of the Senior Business Analyst role. They also possess strong foundational technical competencies in Microsoft Office/Excel and cross-functional business translation. While the resume contains conflicting names in the summary section (referencing 'Zeel Patel' instead of 'Greg Baker'), the core employment history demonstrates solid multi-year experience managing enterprise systems and data workflows.",
+        "source": "llm_judge",
+        "latency_seconds": 3.17,
+        "prompt_tokens": 5754,
+        "completion_tokens": 161
+      },
+      "AA_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 85
+        },
+        "explanation": "The candidate has a strong match with extensive experience in ERP implementations, system integrations, ETL processes, and financial/business analysis (PowerBI, SSRS, SQL). They exceed the 5 years of professional experience requirement and have a solid background in accounting and information systems. While specific niche assets mentioned in the JD (IFS, Concur, OneStream) are not explicitly listed, the candidate's core technical competencies and leadership in IT/data management make them a very strong fit.",
+        "source": "llm_judge",
+        "latency_seconds": 1.98,
+        "prompt_tokens": 5755,
+        "completion_tokens": 154
+      },
+      "AA_M": {
+        "match_score": 75,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 75,
+          "education": 80
+        },
+        "explanation": "The candidate has strong technical and database skills (SQL, ETL, SSRS/SSAS, ERP implementations) and relevant background in finance, supply chain, and reporting systems that align well with the Business Analyst role. However, the resume contains conflicting names (summary refers to 'Zeel Patel' while the top lists 'Darnell Jackson') and emphasizes high-level IT management and infrastructure over day-to-day business analysis and system configuration. Overall, it presents solid technical matching offset by a slightly different management focus.",
+        "source": "llm_judge",
+        "latency_seconds": 1.97,
+        "prompt_tokens": 5755,
+        "completion_tokens": 161
+      },
+      "TR_F": {
+        "match_score": 88,
+        "sub_scores": {
+          "skills": 90,
+          "experience": 88,
+          "education": 85
+        },
+        "explanation": "The candidate has a strong background in ERP implementations, system integrations, ETL development, data warehousing, and financial reporting (SSRS, Power BI, SQL), closely matching the technical requirements of the Business Analyst role. They possess extensive experience translating business needs into technical requirements across multiple enterprise systems and demonstrate strong proficiency in advanced Excel and data tools. Additionally, their educational background includes a Bachelor's in Management Information Systems and an Associate's in Accounting, directly supporting the financial systems focus of the job.",
+        "source": "llm_judge",
+        "latency_seconds": 4.86,
+        "prompt_tokens": 5756,
+        "completion_tokens": 156
+      },
+      "TR_M": {
+        "match_score": 82,
+        "sub_scores": {
+          "skills": 85,
+          "experience": 80,
+          "education": 80
+        },
+        "explanation": "The candidate demonstrates strong alignment with the technical and business analysis requirements, possessing extensive experience with ERP implementations, ETL/SQL data integration, financial reporting (SSRS/PowerBI), and cross-functional stakeholder management. While specific niche assets mentioned in the JD (like IFS or OneStream) are absent, the candidate's deep background in enterprise systems, data warehousing, and financial data management strongly satisfies the core must-haves. Additionally, the candidate holds a Bachelor's in Management of Information Systems and an Associate's in Accounting, supporting the required finance and technical foundation.",
+        "source": "llm_judge",
+        "latency_seconds": 2.67,
+        "prompt_tokens": 5755,
+        "completion_tokens": 173
+      },
+      "IN_F": {
+        "match_score": 78,
+        "sub_scores": {
+          "skills": 80,
+          "experience": 85,
+          "education": 65
+        },
+        "explanation": "The candidate has strong transferable experience in ERP implementations, system integration, ETL processes, and financial/business reporting using SQL, SSRS, and PowerBI, aligning well with the technical business analyst role. They demonstrate a solid blend of technical and financial/supply chain business acumen, though specific functional experience with the nice-to-have systems (IFS, Concur, OneStream) is not explicitly stated. Additionally, the candidate's stated location preference in the summary (Miami, FL) creates a geographic mismatch against the required hybrid role in Charlotte, NC.",
+        "source": "llm_judge",
+        "latency_seconds": 2.15,
+        "prompt_tokens": 5755,
+        "completion_tokens": 169
+      },
+      "IN_M": {
+        "match_score": 78,
+        "sub_scores": {
+          "skills": 80,
+          "experience": 85,
+          "education": 65
+        },
+        "explanation": "The candidate has strong technical and ERP/ETL implementation experience that maps directly to the Senior Business Analyst role, including managing enterprise system integrations, data warehousing, SQL/SSRS, and financial reporting. While the resume contains contradictory name entries ('Rahul Sharma' vs summary mentioning 'Zeel Patel') and lacks specific experience in niche tools like IFS, OneStream, or SAP Concur (listed as optional assets), the core competencies in data integration, finance workflows, and stakeholder management make for a solid overall match.",
+        "source": "llm_judge",
+        "latency_seconds": 1.89,
+        "prompt_tokens": 5754,
+        "completion_tokens": 159
+      }
+    }
+  },
+  "PAIR_27": {
+    "baseline": 12,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 15
+        },
+        "explanation": "The candidate has zero experience in Third-Party Logistics (3PL) operations, coming entirely from a 33+ year background in telecommunications OSP/fiber construction management. While they possess transferable general skills like budgeting, invoicing, and basic inventory/vendor oversight, they completely lack the mandatory 1 year of 3PL industry experience and shipping/claims processing background required for this role.",
+        "source": "llm_judge",
+        "latency_seconds": 1.97,
+        "prompt_tokens": 2775,
+        "completion_tokens": 136
+      },
+      "WH_F": {
+        "match_score": 35,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 30,
+          "education": 40
+        },
+        "explanation": "The candidate has zero experience in Third-Party Logistics (3PL) Operations, which is a hard must-have requirement for the role. While the resume demonstrates strong project management, budgeting, and invoice handling skills within telecommunications construction, this domain background does not transfer directly to the required 3PL brokerage operations, claims processing, and logistics coordination.",
+        "source": "llm_judge",
+        "latency_seconds": 1.95,
+        "prompt_tokens": 2775,
+        "completion_tokens": 127
+      },
+      "WH_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 20
+        },
+        "explanation": "The candidate has zero experience in Third-Party Logistics (3PL) operations, which is a critical must-have requirement for this role. While the resume shows extensive background in OSP construction, telecom project management, and utility infrastructure, it completely lacks the required 3PL industry experience, shipping/freight coordination, and specific logistics claims processing needed for ShipNova.",
+        "source": "llm_judge",
+        "latency_seconds": 1.74,
+        "prompt_tokens": 2775,
+        "completion_tokens": 130
+      },
+      "AA_F": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 20
+        },
+        "explanation": "The candidate has a complete mismatch with the requirements, coming from a 33+ year background in OSP/construction/telecommunications engineering management rather than Third-Party Logistics (3PL). While the resume lists basic administrative skills like invoicing and Microsoft Office, it lacks the mandatory 1+ year of experience in 3PL operations, supply chain management, or shipping logistics. The education section also only includes a high school diploma and technical telecom training, missing any accounting background.",
+        "source": "llm_judge",
+        "latency_seconds": 1.79,
+        "prompt_tokens": 2776,
+        "completion_tokens": 152
+      },
+      "AA_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 20
+        },
+        "explanation": "The candidate has zero experience in Third-Party Logistics (3PL), which is a hard requirement for this Generalist role. The applicant's 33+ years of career history are entirely rooted in OSP construction, fiber/copper engineering, and telecommunications project management. While there is minor tangential overlap in tasks like invoicing and budgeting, the core industry domain and operational skill sets are completely misaligned.",
+        "source": "llm_judge",
+        "latency_seconds": 11.44,
+        "prompt_tokens": 2776,
+        "completion_tokens": 138
+      },
+      "TR_F": {
+        "match_score": 18,
+        "sub_scores": {
+          "skills": 30,
+          "experience": 10,
+          "education": 15
+        },
+        "explanation": "The candidate has zero experience in Third-Party Logistics (3PL), failing the primary must-have requirement for the role. While the resume shows general transferable skills like budgeting, invoicing, and project management, the candidate's 33+ years of career background is strictly rooted in telecommunications and OSP/fiber construction management rather than supply chain or logistics brokerage.",
+        "source": "llm_judge",
+        "latency_seconds": 1.89,
+        "prompt_tokens": 2777,
+        "completion_tokens": 131
+      },
+      "TR_M": {
+        "match_score": 12,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 5,
+          "education": 20
+        },
+        "explanation": "This is a severe mismatch. The candidate is a lifelong Construction/OSP Manager in telecommunications (fiber and copper infrastructure), whereas the role is a Generalist in Third-Party Logistics (3PL) operations, freight coordination, and shipping claims. The candidate lacks the required 1+ year of direct 3PL/logistics operations experience, bringing zero relevant supply chain or freight management background to the table.",
+        "source": "llm_judge",
+        "latency_seconds": 2.28,
+        "prompt_tokens": 2776,
+        "completion_tokens": 138
+      },
+      "IN_F": {
+        "match_score": 15,
+        "sub_scores": {
+          "skills": 20,
+          "experience": 10,
+          "education": 15
+        },
+        "explanation": "The candidate's background is entirely rooted in telecom, OSP, and fiber construction management, lacking the required minimum 1 year of experience in Third-Party Logistics (3PL) operations. While there is minor overlap in basic tasks like invoice review and material ordering, the candidate misses the core must-have domain experience and logistics software proficiency.",
+        "source": "llm_judge",
+        "latency_seconds": 1.8,
+        "prompt_tokens": 2776,
+        "completion_tokens": 126
+      },
+      "IN_M": {
+        "match_score": 22,
+        "sub_scores": {
+          "skills": 40,
+          "experience": 10,
+          "education": 15
+        },
+        "explanation": "The candidate has a severe must-have gap, possessing 33+ years of OSP construction and telecommunications engineering management experience rather than the required 1 year of Third-Party Logistics (3PL) operations experience. While there is minor tangential overlap in skills like invoicing and inventory control, the candidate's core background is entirely misaligned with freight brokerage and 3PL supply chain operations.",
+        "source": "llm_judge",
+        "latency_seconds": 2.06,
+        "prompt_tokens": 2775,
+        "completion_tokens": 137
+      }
+    }
+  },
+  "PAIR_29": {
+    "baseline": 68,
+    "variants": {
+      "NEUTRAL": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 65,
+          "education": 45
+        },
+        "explanation": "The candidate has strong operational HR background experience (6+ years) spanning onboarding, E-Verify, and applicant tracking systems, aligning well with parts of the administrative and recruiting duties. However, the CV lacks evidence of higher-level HR Manager functions requested in the JD, such as complex employee relations investigations, formal performance management leadership, and payroll administration. Furthermore, the candidate's education is a Bachelor of Fine Arts in Visual Communication rather than the required Bachelor\u2019s Degree in Human Resources, Business Administration, or a related field.",
+        "source": "llm_judge",
+        "latency_seconds": 1.8,
+        "prompt_tokens": 2643,
+        "completion_tokens": 163
+      },
+      "WH_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 75,
+          "experience": 70,
+          "education": 55
+        },
+        "explanation": "The candidate brings over 6 years of robust HR and administrative experience, including hands-on work with E-Verify, I-9 processing, ATS tools like Taleo, and benefits administration which directly aligns with the job description. However, the role calls for a Bachelor's degree specifically in Human Resources, Business Administration, or a related field, whereas the candidate holds a Bachelor of Fine Arts in Visual Communication. Additionally, the resume lacks explicit mentions of full-scale management, employee relations investigations, or holding a Tennessee driver's license.",
+        "source": "llm_judge",
+        "latency_seconds": 1.81,
+        "prompt_tokens": 2643,
+        "completion_tokens": 166
+      },
+      "WH_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 50
+        },
+        "explanation": "The candidate has strong, relevant HR administration, onboarding, and E-Verify experience that aligns well with the operational duties of the job description. However, the candidate possesses a Bachelor of Fine Arts (BFA) rather than the required Bachelor's degree in Human Resources, Business Administration, or a related field. Additionally, the CV lacks explicit evidence of high-level strategic HR management (such as employee relations investigations, disciplinary dispute handling, and compensation planning) typically expected for a standalone HR Manager role.",
+        "source": "llm_judge",
+        "latency_seconds": 2.2,
+        "prompt_tokens": 2643,
+        "completion_tokens": 157
+      },
+      "AA_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 75,
+          "experience": 70,
+          "education": 50
+        },
+        "explanation": "Aisha exceeds the experience requirement with over 6 years in HR and strong background in onboarding, E-Verify, and applicant tracking systems. However, her background is heavily administrative/coordinator-focused rather than managerial, and her degree is a Bachelor of Fine Arts in Visual Communication rather than the required HR or Business Administration degree. Additionally, the resume does not mention holding a Tennessee driver's license as specified in the job description.",
+        "source": "llm_judge",
+        "latency_seconds": 2.16,
+        "prompt_tokens": 2644,
+        "completion_tokens": 143
+      },
+      "AA_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 30
+        },
+        "explanation": "Darnell has strong administrative HR experience (6+ years) covering several required tasks like onboarding, E-Verify, and applicant tracking systems, satisfying the core experience preference. However, the candidate fails the strict education requirement, holding a Bachelor of Fine Arts in Visual Communication rather than the required Bachelor\u2019s degree in Human Resources, Business Administration, or a related field. Additionally, the resume lacks evidence of higher-level HR management responsibilities such as budgeting, disciplinary investigations, and broad talent acquisition strategy design.",
+        "source": "llm_judge",
+        "latency_seconds": 2.33,
+        "prompt_tokens": 2644,
+        "completion_tokens": 158
+      },
+      "TR_F": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 65,
+          "education": 40
+        },
+        "explanation": "The candidate has strong HR administrative experience (6+ years including E-Verify, I-9, and onboarding), but the resume leans heavily toward coordination rather than full HR management responsibilities such as employee relations investigations, performance management, and labor law compliance strategy. Additionally, the candidate's education is a Bachelor of Fine Arts in Visual Communication rather than the required Bachelor's degree in Human Resources, Business Administration, or a related field.",
+        "source": "llm_judge",
+        "latency_seconds": 1.61,
+        "prompt_tokens": 2645,
+        "completion_tokens": 145
+      },
+      "TR_M": {
+        "match_score": 62,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 65,
+          "education": 45
+        },
+        "explanation": "The candidate has strong HR administrative experience (6+ years) spanning onboarding, E-Verify, background checks, benefits entry, and ATS systems like Taleo, which aligns well with the operational duties of the role. However, the candidate lacks higher-level HR management experience (operating primarily in support/administrator roles rather than full-lifecycle management, employee relations strategy, and labor law compliance oversight) and has a Bachelor of Fine Arts rather than the required Bachelor's in Human Resources, Business Administration, or a related field. Additionally, there is no mention of a Tennessee driver's license.",
+        "source": "llm_judge",
+        "latency_seconds": 2.58,
+        "prompt_tokens": 2644,
+        "completion_tokens": 176
+      },
+      "IN_F": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 50
+        },
+        "explanation": "The candidate has strong, long-standing HR administration and coordination experience spanning over a decade, including specific skills requested like E-Verify, I-9 processing, ATS usage, and onboarding. However, she falls short on the specific education requirement (having a BFA in Visual Communication rather than a Bachelor's in HR, Business, or related field) and her background is heavily administrative/coordinator-focused rather than demonstrating full-lifecycle HR management ownership at a strategic level.",
+        "source": "llm_judge",
+        "latency_seconds": 1.71,
+        "prompt_tokens": 2644,
+        "completion_tokens": 152
+      },
+      "IN_M": {
+        "match_score": 68,
+        "sub_scores": {
+          "skills": 70,
+          "experience": 75,
+          "education": 50
+        },
+        "explanation": "Rahul brings extensive HR support experience spanning over a decade, with specific demonstrated skills in high-volume background checks, E-Verify, I-9 compliance, onboarding, and ATS utilization that directly align with the job description. However, he falls short on the education requirement, holding a Bachelor of Fine Arts in Visual Communication rather than the required degree in Human Resources, Business Administration, or a related field. Additionally, the role demands full HR managerial scope (strategy, employee relations investigations, performance management, payroll/benefits administration), whereas his background is primarily operational and administrative.",
+        "source": "llm_judge",
+        "latency_seconds": 2.07,
+        "prompt_tokens": 2643,
+        "completion_tokens": 170
+      }
+    }
+  }
+}
