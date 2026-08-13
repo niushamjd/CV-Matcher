@@ -1,0 +1,31 @@
+pair_id,job_family,fit_bucket_prescreen,overlap_score,resume_id,resume_category,jd_id,jd_title,pdf_confirmed_multicolumn
+PAIR_01,logistics,weak,0.0109,22946204,AUTOMOBILE,3902862504,PT Preload Supervisor,False
+PAIR_02,sales,strong,0.0919,26932091,SALES,3906229818,Business Development Specialist (Intellectual Property),False
+PAIR_03,software_data,weak,0.0389,28035460,INFORMATION-TECHNOLOGY,3905376504,Information Technology Operations Intern - Summer 2024,False
+PAIR_04,logistics,strong,0.0679,19818707,AVIATION,3902833729,Freight Broker/Agent,False
+PAIR_05,logistics,strong,0.0921,11650031,CONSTRUCTION,3901985932,Maintenance Controller,False
+PAIR_06,sales,weak,0.0352,29014805,BUSINESS-DEVELOPMENT,3905835001,National Sales Specialist,False
+PAIR_07,software_data,partial,0.0474,29975124,INFORMATION-TECHNOLOGY,3899518312,Senior Information Technology Project Manager,False
+PAIR_08,sales,weak,0.0342,31199035,SALES,3905697483,"Business Development Manager, Caribbean and Latin America (Spanish speaking)",False
+PAIR_09,logistics,partial,0.0301,17983430,AVIATION,3900937840,Warehouse Associate,False
+PAIR_10,hr_admin,strong,0.1232,17812897,HR,3905339352,Senior Human Resources Clerk,False
+PAIR_11,sales,partial,0.0519,39875803,BUSINESS-DEVELOPMENT,3891069909,Business Development Manager,True
+PAIR_12,sales,partial,0.0552,80275976,BUSINESS-DEVELOPMENT,3901479226,Territory Sales Manager,False
+PAIR_13,hr_admin,strong,0.1137,86184722,HR,3894288438,Senior Human Resources Specialist,False
+PAIR_14,software_data,weak,0.0282,68460556,INFORMATION-TECHNOLOGY,3895275234,Senior Information Technology System Administrator,False
+PAIR_15,sales,partial,0.0525,20633855,BUSINESS-DEVELOPMENT,3906237986,Business Development Representative,False
+PAIR_16,software_data,partial,0.0542,27770859,INFORMATION-TECHNOLOGY,3900070536,Information Technology Administrator,False
+PAIR_17,software_data,strong,0.1007,15297298,INFORMATION-TECHNOLOGY,3890899146,Director of Information Technology,False
+PAIR_18,hr_admin,weak,0.0513,39650734,HR,3902953786,Human Resources Generalist,False
+PAIR_19,sales,strong,0.0854,12377803,BUSINESS-DEVELOPMENT,3902351411,Business Development Manager,False
+PAIR_20,sales,weak,0.036,19582792,SALES,3901800100,Business Development Representative,True
+PAIR_21,hr_admin,partial,0.074,34554248,HR,3904923783,Human Resources Operations Coordinator,False
+PAIR_22,hr_admin,partial,0.0732,30646367,HR,3901343703,Senior Human Resources Business Partner,False
+PAIR_23,hr_admin,weak,0.0448,11847784,HR,3884899919,Human Resources Recruiter,False
+PAIR_24,logistics,weak,0.0189,99433371,CONSTRUCTION,3903826537,Warehouse Specialist,False
+PAIR_25,software_data,strong,0.116,18067556,INFORMATION-TECHNOLOGY,3895200298,Information Technology Business Analyst,False
+PAIR_26,software_data,partial,0.0509,37764298,INFORMATION-TECHNOLOGY,3902324071,Lead Information Technology Specialist (Systems Administration),False
+PAIR_27,logistics,partial,0.0378,22019500,CONSTRUCTION,3814723048,Generalist - Third-Party Logistics,True
+PAIR_28,software_data,strong,0.0961,20824105,INFORMATION-TECHNOLOGY,3901941877,Information Technology System Administrator,False
+PAIR_29,hr_admin,weak,0.0397,29564653,HR,3715891138,Human Resources Manager,False
+PAIR_30,hr_admin,strong,0.1099,15576950,HR,3901389277,Human Resources Manager,False

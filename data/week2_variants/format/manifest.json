@@ -1,0 +1,434 @@
+[
+  {
+    "experiment_id": "FMT_PAIR_13_F1_SINGLE",
+    "pair_id": "PAIR_13",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_13_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_13_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_13_F2_TWO_COL",
+    "pair_id": "PAIR_13",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_13_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_13_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_13_F3_TABLE",
+    "pair_id": "PAIR_13",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_13_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_13_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_13_F4_ORDER",
+    "pair_id": "PAIR_13",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_13_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_13_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_10_F1_SINGLE",
+    "pair_id": "PAIR_10",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_10_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_10_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_10_F2_TWO_COL",
+    "pair_id": "PAIR_10",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_10_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_10_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_10_F3_TABLE",
+    "pair_id": "PAIR_10",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_10_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_10_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_10_F4_ORDER",
+    "pair_id": "PAIR_10",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_10_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_10_CV.pdf",
+    "section_count": 5,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_29_F1_SINGLE",
+    "pair_id": "PAIR_29",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_29_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_29_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_29_F2_TWO_COL",
+    "pair_id": "PAIR_29",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_29_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_29_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_29_F3_TABLE",
+    "pair_id": "PAIR_29",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_29_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_29_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_29_F4_ORDER",
+    "pair_id": "PAIR_29",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_29_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_29_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_09_F1_SINGLE",
+    "pair_id": "PAIR_09",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_09_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_09_CV.pdf",
+    "section_count": 9,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_09_F2_TWO_COL",
+    "pair_id": "PAIR_09",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_09_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_09_CV.pdf",
+    "section_count": 9,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_09_F3_TABLE",
+    "pair_id": "PAIR_09",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_09_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_09_CV.pdf",
+    "section_count": 9,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_09_F4_ORDER",
+    "pair_id": "PAIR_09",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_09_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_09_CV.pdf",
+    "section_count": 9,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_27_F1_SINGLE",
+    "pair_id": "PAIR_27",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_27_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_27_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_27_F2_TWO_COL",
+    "pair_id": "PAIR_27",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_27_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_27_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_27_F3_TABLE",
+    "pair_id": "PAIR_27",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_27_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_27_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_27_F4_ORDER",
+    "pair_id": "PAIR_27",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_27_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_27_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_01_F1_SINGLE",
+    "pair_id": "PAIR_01",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_01_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_01_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_01_F2_TWO_COL",
+    "pair_id": "PAIR_01",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_01_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_01_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_01_F3_TABLE",
+    "pair_id": "PAIR_01",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_01_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_01_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_01_F4_ORDER",
+    "pair_id": "PAIR_01",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_01_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_01_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_15_F1_SINGLE",
+    "pair_id": "PAIR_15",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_15_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_15_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_15_F2_TWO_COL",
+    "pair_id": "PAIR_15",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_15_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_15_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_15_F3_TABLE",
+    "pair_id": "PAIR_15",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_15_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_15_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_15_F4_ORDER",
+    "pair_id": "PAIR_15",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_15_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_15_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_11_F1_SINGLE",
+    "pair_id": "PAIR_11",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_11_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_11_CV.pdf",
+    "section_count": 4,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_11_F2_TWO_COL",
+    "pair_id": "PAIR_11",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_11_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_11_CV.pdf",
+    "section_count": 4,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_11_F3_TABLE",
+    "pair_id": "PAIR_11",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_11_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_11_CV.pdf",
+    "section_count": 4,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_11_F4_ORDER",
+    "pair_id": "PAIR_11",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_11_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_11_CV.pdf",
+    "section_count": 4,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_20_F1_SINGLE",
+    "pair_id": "PAIR_20",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_20_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_20_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_20_F2_TWO_COL",
+    "pair_id": "PAIR_20",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_20_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_20_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_20_F3_TABLE",
+    "pair_id": "PAIR_20",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_20_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_20_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_20_F4_ORDER",
+    "pair_id": "PAIR_20",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_20_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_20_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_25_F1_SINGLE",
+    "pair_id": "PAIR_25",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_25_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_25_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_25_F2_TWO_COL",
+    "pair_id": "PAIR_25",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_25_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_25_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_25_F3_TABLE",
+    "pair_id": "PAIR_25",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_25_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_25_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_25_F4_ORDER",
+    "pair_id": "PAIR_25",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_25_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_25_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_17_F1_SINGLE",
+    "pair_id": "PAIR_17",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_17_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_17_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_17_F2_TWO_COL",
+    "pair_id": "PAIR_17",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_17_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_17_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_17_F3_TABLE",
+    "pair_id": "PAIR_17",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_17_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_17_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_17_F4_ORDER",
+    "pair_id": "PAIR_17",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_17_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_17_CV.pdf",
+    "section_count": 6,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_14_F1_SINGLE",
+    "pair_id": "PAIR_14",
+    "condition": "F1_SINGLE",
+    "file": "week2_variants/format/PAIR_14_single_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_14_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_14_F2_TWO_COL",
+    "pair_id": "PAIR_14",
+    "condition": "F2_TWO_COL",
+    "file": "week2_variants/format/PAIR_14_two_column.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_14_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_14_F3_TABLE",
+    "pair_id": "PAIR_14",
+    "condition": "F3_TABLE",
+    "file": "week2_variants/format/PAIR_14_table.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_14_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  },
+  {
+    "experiment_id": "FMT_PAIR_14_F4_ORDER",
+    "pair_id": "PAIR_14",
+    "condition": "F4_ORDER",
+    "file": "week2_variants/format/PAIR_14_section_order.pdf",
+    "source_file": "annotation/annotation_packets/cv_pdfs/PAIR_14_CV.pdf",
+    "section_count": 7,
+    "content_qa_passed": true
+  }
+]
