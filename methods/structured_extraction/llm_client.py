@@ -102,7 +102,7 @@ def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
     Gemini via OpenAI-compatible SDK — identical setup to Niyousha's llm_judge_starter.py.
     1M tokens/minute on the free tier, no practical rate limit for 30 pairs.
     """
-    from openai import OpenAI
+    from openai import OpenAI, RateLimitError
 
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -115,18 +115,27 @@ def _call_gemini(system_prompt: str, user_prompt: str, json_mode: bool) -> str:
         api_key=api_key,
         base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
     )
-    response = client.chat.completions.create(
-        model=GEMINI_MODEL,
-        temperature=0.2,
-        max_tokens=4096,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
-        ],
-    )
-    _last_usage["prompt_tokens"] = response.usage.prompt_tokens if response.usage else None
-    _last_usage["completion_tokens"] = response.usage.completion_tokens if response.usage else None
-    return response.choices[0].message.content
+
+    for attempt, wait in enumerate([0, 45, 60, 90]):
+        if wait:
+            print(f"  [rate limit] waiting {wait}s before retry {attempt}/3...")
+            time.sleep(wait)
+        try:
+            response = client.chat.completions.create(
+                model=GEMINI_MODEL,
+                temperature=0.2,
+                max_tokens=4096,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+            )
+            _last_usage["prompt_tokens"] = response.usage.prompt_tokens if response.usage else None
+            _last_usage["completion_tokens"] = response.usage.completion_tokens if response.usage else None
+            return response.choices[0].message.content
+        except RateLimitError:
+            if attempt == 3:
+                raise
 
 
 # --- Fallback: fully local/offline option (no API key, needs Ollama installed) ---
