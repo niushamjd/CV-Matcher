@@ -26,13 +26,17 @@ CVMatcher/
 │   ├── cv_matcher_candidate_pool.xlsx   # 30 gold-standard CV/JD pairs
 │   ├── annotation/                      # Human annotations and pair packets
 │   └── week2_variants/                  # Bias robustness test PDFs
+├── docs/
+│   └── CV_Matcher_Labeling_Rubric.docx  # Rubric used for human annotation
 ├── results/                       # All output JSON/CSV files
+├── images/                        # Figures used in the project report
 ├── demo/
 │   ├── demo.py                    # Live single-pair demo, all three methods
 │   ├── demo_bias.py               # Live bias-robustness demo, all three methods
 │   ├── demo_output.txt            # Terminal output from demo.py
 │   └── demo_bias_output.txt       # Terminal output from demo_bias.py
 ├── eval_harness.py                # Unified evaluation across all methods
+├── NLP_in_Industry_CV_Matcher.pdf # Project report
 └── requirements.txt
 ```
 
