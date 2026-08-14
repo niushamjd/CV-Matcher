@@ -8,6 +8,12 @@ CVMatcher evaluates how well a candidate CV matches a job description using thre
 
 ---
 
+## Project Report
+
+Project report is added to the repository named "NLP_in_Industry_CV_Matcher.pdf".
+
+---
+
 ## Project Structure
 
 ```
