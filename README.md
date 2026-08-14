@@ -4,7 +4,7 @@ CVMatcher evaluates how well a candidate CV matches a job description using thre
 
 ## Demo Video
 
-[Watch the demo on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[Watch the demo on YouTube]([https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/cViJXYbMVmU))
 
 ---
 
