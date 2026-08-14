@@ -86,6 +86,89 @@ class EvaluationHarness:
         return results
 
 
+def generate_plots(methods_preds, gold_scores, report):
+    import csv
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    method_meta = {
+        "2a_embedding_similarity":  ("Method 2a\nDense Embedding",  "#4C72B0"),
+        "2b_structured_extraction": ("Method 2b\nStructured Extraction", "#55A868"),
+        "2c_llm_as_judge":          ("Method 2c\nLLM-as-Judge",     "#C44E52"),
+    }
+
+    # ── Figure 1: Predicted vs Human scatter (3 panels) ──────────────────────
+    fig, axes = plt.subplots(1, 3, figsize=(12, 4))
+    harness = EvaluationHarness()
+
+    for ax, (method, preds) in zip(axes, methods_preds.items()):
+        label, color = method_meta[method]
+        parsed = [harness._extract_score(p) for p in preds]
+        pred_scores = [p["match_score"] for p in parsed]
+        rho = report[method]["spearman_correlation"]
+
+        ax.scatter(gold_scores, pred_scores, color=color, alpha=0.75, s=55,
+                   edgecolors="white", linewidth=0.5)
+        ax.plot([0, 100], [0, 100], "k--", linewidth=0.8, alpha=0.35)
+        ax.set_xlabel("Human Score (0–100)", fontsize=10)
+        ax.set_ylabel("Predicted Score (0–100)", fontsize=10)
+        ax.set_title(f"{label}\n$\\rho = {rho:.3f}$", fontsize=10)
+        ax.set_xlim(-5, 105)
+        ax.set_ylim(-5, 105)
+        ax.set_aspect("equal")
+        ax.grid(True, alpha=0.3)
+
+    fig.suptitle("Predicted vs Human Scores", fontsize=12, fontweight="bold")
+    plt.tight_layout()
+    plt.savefig("results/fig1_scatter.pdf", bbox_inches="tight")
+    plt.savefig("results/fig1_scatter.png", bbox_inches="tight", dpi=150)
+    plt.close()
+    print("Saved results/fig1_scatter.pdf/.png")
+
+    # ── Figure 2: Bias robustness grouped bar chart ───────────────────────────
+    def avg_range_from_csv(path):
+        try:
+            with open(path) as f:
+                rows = list(csv.DictReader(f))
+            vals = [float(r["score_range"]) for r in rows if r.get("score_range")]
+            return round(sum(vals) / len(vals), 1) if vals else 0.0
+        except FileNotFoundError:
+            return 0.0
+
+    fmt_avgs  = [avg_range_from_csv(f"results/bias_format_summary_2a.csv"),
+                 avg_range_from_csv(f"results/bias_format_summary.csv"),
+                 avg_range_from_csv(f"results/bias_format_summary_2c.csv")]
+    name_avgs = [avg_range_from_csv(f"results/bias_name_summary_2a.csv"),
+                 avg_range_from_csv(f"results/bias_name_summary.csv"),
+                 avg_range_from_csv(f"results/bias_name_summary_2c.csv")]
+
+    x = np.arange(3)
+    w = 0.35
+    xlabels = ["2a: Embedding", "2b: Structured", "2c: LLM Judge"]
+
+    fig2, ax2 = plt.subplots(figsize=(7, 4))
+    b1 = ax2.bar(x - w/2, fmt_avgs,  w, label="Format bias", color="#4C72B0", alpha=0.85)
+    b2 = ax2.bar(x + w/2, name_avgs, w, label="Name bias",   color="#C44E52", alpha=0.85)
+
+    for bar in list(b1) + list(b2):
+        ax2.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.15,
+                 f"{bar.get_height():.1f}", ha="center", va="bottom", fontsize=9)
+
+    ax2.set_ylabel("Avg score range (pts) — lower is more robust", fontsize=10)
+    ax2.set_title("Bias Robustness Across Methods (n=12 pairs)", fontsize=11, fontweight="bold")
+    ax2.set_xticks(x)
+    ax2.set_xticklabels(xlabels, fontsize=10)
+    ax2.legend(fontsize=10)
+    ax2.grid(axis="y", alpha=0.3)
+    ax2.set_ylim(0, max(max(fmt_avgs), max(name_avgs)) * 1.3)
+
+    plt.tight_layout()
+    plt.savefig("results/fig2_bias.pdf", bbox_inches="tight")
+    plt.savefig("results/fig2_bias.png", bbox_inches="tight", dpi=150)
+    plt.close()
+    print("Saved results/fig2_bias.pdf/.png")
+
+
 def load_dict_or_list_json(filepath):
     
     with open(filepath, "r", encoding="utf-8") as f:
@@ -130,3 +213,5 @@ if __name__ == "__main__":
     
     print("Final Scores")
     print(df_report.to_string())
+
+    generate_plots(methods_dict, gold_scores, report)
