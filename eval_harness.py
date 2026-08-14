@@ -48,7 +48,7 @@ class EvaluationHarness:
         if len(predictions) != len(gold_scores):
             raise ValueError(f"Length mismatch: {len(predictions)} predictions vs {len(gold_scores)} gold labels.")
         
-        parsed_preds = [self._extract_score(p) for p in parsed_preds_list if p is not None] if 'parsed_preds_list' in locals() else [self._extract_score(p) for p in predictions]
+        parsed_preds = [self._extract_score(p) for p in predictions]
         
         pred_scores = [p["match_score"] for p in parsed_preds]
         latencies = [p["latency_ms"] for p in parsed_preds]
@@ -100,21 +100,19 @@ def load_dict_or_list_json(filepath):
 
 if __name__ == "__main__":
     
-    df_human = pd.read_csv("judge_vs_human_comparison.csv")
-    
+    df_human = pd.read_csv("results/judge_vs_human_comparison.csv")
+
     if "human_overall_fit_rescaled" in df_human.columns:
         gold_scores = df_human["human_overall_fit_rescaled"].astype(float).tolist()
     else:
-        df_key = pd.read_csv("pair_key.csv")
+        df_key = pd.read_csv("data/annotation/annotation_packets/pair_key.csv")
         bucket_mapping = {"strong": 90.0, "partial": 50.0, "weak": 10.0}
         gold_scores = df_key["fit_bucket_prescreen"].map(bucket_mapping).tolist()
 
-    
-    preds_2a = load_dict_or_list_json("embedding_results.json")
-    preds_2b = load_dict_or_list_json("structured_extraction_results.json")
-    preds_2c = load_dict_or_list_json("judge_results_cache.json")
+    preds_2a = load_dict_or_list_json("results/embedding_results.json")
+    preds_2b = load_dict_or_list_json("results/structured_extraction_results.json")
+    preds_2c = load_dict_or_list_json("results/judge_results_cache.json")
 
-    
     harness = EvaluationHarness(threshold=70.0)
     methods_dict = {
         "2a_embedding_similarity": preds_2a,
@@ -124,12 +122,11 @@ if __name__ == "__main__":
 
     report = harness.compare_methods(methods_dict, gold_scores)
 
-    
-    with open("final_summary_metrics.json", "w", encoding="utf-8") as f:
+    with open("results/final_summary_metrics.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
 
     df_report = pd.DataFrame(report).T
-    df_report.to_csv("final_summary_metrics.csv")
+    df_report.to_csv("results/final_summary_metrics.csv")
     
     print("Final Scores")
     print(df_report.to_string())

@@ -1,0 +1,23 @@
+{
+  "2a_embedding_similarity": {
+    "spearman_correlation": 0.0763,
+    "accuracy_at_threshold": 0.6667,
+    "avg_latency_ms": 83.23,
+    "total_tokens": 0,
+    "avg_tokens_per_pair": 0.0
+  },
+  "2b_structured_extraction": {
+    "spearman_correlation": 0.2422,
+    "accuracy_at_threshold": 0.7,
+    "avg_latency_ms": 4825.33,
+    "total_tokens": 156452,
+    "avg_tokens_per_pair": 5215.1
+  },
+  "2c_llm_as_judge": {
+    "spearman_correlation": 0.4117,
+    "accuracy_at_threshold": 0.7667,
+    "avg_latency_ms": 2886.0,
+    "total_tokens": 88926,
+    "avg_tokens_per_pair": 2964.2
+  }
+}

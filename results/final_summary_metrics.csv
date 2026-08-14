@@ -1,0 +1,4 @@
+,spearman_correlation,accuracy_at_threshold,avg_latency_ms,total_tokens,avg_tokens_per_pair
+2a_embedding_similarity,0.0763,0.6667,83.23,0.0,0.0
+2b_structured_extraction,0.2422,0.7,4825.33,156452.0,5215.1
+2c_llm_as_judge,0.4117,0.7667,2886.0,88926.0,2964.2

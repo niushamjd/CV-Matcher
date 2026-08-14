@@ -84,41 +84,51 @@ class EmbeddingMatcher:
 
 
 if __name__ == "__main__":
-    matcher = EmbeddingMatcher()
-    
-    
-    input_file = "structured_extraction_vs_human.csv" 
-    if not os.path.exists(input_file):
-        input_file = "judge_vs_human_comparison.csv"  
-        
-    
-    df = pd.read_csv(input_file)
-    
-    results = []
-    comparison_rows = []
-    
-    
-    for idx, row in df.iterrows():
-        cv_text = row.get("cv_text", row.get("resume_text", ""))
-        jd_text = row.get("jd_text", row.get("job_description", ""))
-        human_score = row.get("human_score", row.get("gold_score", 0))
-        
-        res = matcher.match(cv_text, jd_text, section_aware=True)
-        results.append(res)
-        
-        comparison_rows.append({
-            "pair_id": idx + 1,
-            "human_score": human_score,
-            "embedding_match_score": res["match_score"],
-            "latency_ms": res["latency_ms"]
-        })
-    
+    from pathlib import Path
+    import openpyxl
 
-    with open("embedding_results.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
-        
-    pd.DataFrame(comparison_rows).to_csv("embedding_vs_human_comparison.csv", index=False)
-    
-    print("Files are created:")
-    print(" 1. embedding_results.json")
-    print(" 2. embedding_vs_human_comparison.csv")
+    _REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+    EXCEL_PATH = _REPO_ROOT / "data" / "cv_matcher_candidate_pool.xlsx"
+    RESULTS_PATH = _REPO_ROOT / "results" / "embedding_results.json"
+
+    # Load gold-standard pairs (mirrors run_on_gold_standard.py)
+    wb = openpyxl.load_workbook(str(EXCEL_PATH), data_only=True)
+    ws = wb["Candidate Pool"]
+    header = [c.value for c in ws[1]]
+    pairs = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        record = dict(zip(header, row))
+        if not (record.get("resume_text") and record.get("jd_text")):
+            continue
+        if record.get("FINAL_SELECTION (y/n)") != "y":
+            continue
+        pairs.append(record)
+    print(f"Loaded {len(pairs)} gold-standard pairs.")
+
+    # Resume: skip pairs already done
+    results = {}
+    if RESULTS_PATH.exists():
+        with open(RESULTS_PATH, encoding="utf-8") as f:
+            results = json.load(f)
+        print(f"Resuming — {len(results)} pairs already done.\n")
+
+    matcher = EmbeddingMatcher()
+
+    for record in pairs:
+        pair_id = str(record.get("pair_id", ""))
+        if pair_id in results:
+            print(f"  {pair_id} — already done, skipping")
+            continue
+
+        cv_text = str(record["resume_text"]).strip()
+        jd_text = str(record["jd_text"]).strip()
+
+        res = matcher.match(cv_text, jd_text, section_aware=True)
+        results[pair_id] = res
+        print(f"  {pair_id}: match_score={res['match_score']}")
+
+        RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(RESULTS_PATH, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=2)
+
+    print(f"\nSaved {len(results)} results to {RESULTS_PATH}")

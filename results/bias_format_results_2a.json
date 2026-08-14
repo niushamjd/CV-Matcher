@@ -1,0 +1,638 @@
+{
+  "PAIR_01": {
+    "baseline": 27.03,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 26.18,
+        "sub_scores": {
+          "overall_sim": 0.3641,
+          "skills_sim": 0.2426,
+          "experience_sim": 0.2298
+        },
+        "explanation": "Dense vector similarity score of 26.18%.",
+        "latency_ms": 248.22,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 20.38,
+        "sub_scores": {
+          "overall_sim": 0.2663,
+          "skills_sim": 0.2164,
+          "experience_sim": 0.1599
+        },
+        "explanation": "Dense vector similarity score of 20.38%.",
+        "latency_ms": 24.52,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 26.18,
+        "sub_scores": {
+          "overall_sim": 0.3641,
+          "skills_sim": 0.2426,
+          "experience_sim": 0.2298
+        },
+        "explanation": "Dense vector similarity score of 26.18%.",
+        "latency_ms": 32.56,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 16.57,
+        "sub_scores": {
+          "overall_sim": 0.142,
+          "skills_sim": 0.1135,
+          "experience_sim": 0.2298
+        },
+        "explanation": "Dense vector similarity score of 16.57%.",
+        "latency_ms": 28.4,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_09": {
+    "baseline": 29.08,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 30.57,
+        "sub_scores": {
+          "overall_sim": 0.4022,
+          "skills_sim": 0.2375,
+          "experience_sim": 0.3257
+        },
+        "explanation": "Dense vector similarity score of 30.57%.",
+        "latency_ms": 40.11,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.31,
+        "sub_scores": {
+          "overall_sim": 0.4291,
+          "skills_sim": 0.3978,
+          "experience_sim": 0.3705
+        },
+        "explanation": "Dense vector similarity score of 39.31%.",
+        "latency_ms": 35.19,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 30.35,
+        "sub_scores": {
+          "overall_sim": 0.4008,
+          "skills_sim": 0.2375,
+          "experience_sim": 0.3208
+        },
+        "explanation": "Dense vector similarity score of 30.35%.",
+        "latency_ms": 37.36,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 35.45,
+        "sub_scores": {
+          "overall_sim": 0.4402,
+          "skills_sim": 0.2969,
+          "experience_sim": 0.3692
+        },
+        "explanation": "Dense vector similarity score of 35.45%.",
+        "latency_ms": 42.77,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_10": {
+    "baseline": 51.89,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 50.73,
+        "sub_scores": {
+          "overall_sim": 0.5627,
+          "skills_sim": 0.4438,
+          "experience_sim": 0.543
+        },
+        "explanation": "Dense vector similarity score of 50.73%.",
+        "latency_ms": 49.37,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 58.66,
+        "sub_scores": {
+          "overall_sim": 0.5647,
+          "skills_sim": 0.5732,
+          "experience_sim": 0.611
+        },
+        "explanation": "Dense vector similarity score of 58.66%.",
+        "latency_ms": 153.26,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 50.73,
+        "sub_scores": {
+          "overall_sim": 0.5632,
+          "skills_sim": 0.4414,
+          "experience_sim": 0.5451
+        },
+        "explanation": "Dense vector similarity score of 50.73%.",
+        "latency_ms": 27.94,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 51.86,
+        "sub_scores": {
+          "overall_sim": 0.4863,
+          "skills_sim": 0.4669,
+          "experience_sim": 0.5865
+        },
+        "explanation": "Dense vector similarity score of 51.86%.",
+        "latency_ms": 47.94,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_11": {
+    "baseline": 17.67,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 20.31,
+        "sub_scores": {
+          "overall_sim": 0.3093,
+          "skills_sim": 0.2378,
+          "experience_sim": 0.1152
+        },
+        "explanation": "Dense vector similarity score of 20.31%.",
+        "latency_ms": 62.56,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 19.74,
+        "sub_scores": {
+          "overall_sim": 0.3127,
+          "skills_sim": 0.1474,
+          "experience_sim": 0.1896
+        },
+        "explanation": "Dense vector similarity score of 19.74%.",
+        "latency_ms": 32.98,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 20.36,
+        "sub_scores": {
+          "overall_sim": 0.3093,
+          "skills_sim": 0.2378,
+          "experience_sim": 0.1166
+        },
+        "explanation": "Dense vector similarity score of 20.36%.",
+        "latency_ms": 42.76,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 24.5,
+        "sub_scores": {
+          "overall_sim": 0.3314,
+          "skills_sim": 0.2378,
+          "experience_sim": 0.2091
+        },
+        "explanation": "Dense vector similarity score of 24.5%.",
+        "latency_ms": 35.02,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_13": {
+    "baseline": 37.22,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.74,
+        "sub_scores": {
+          "overall_sim": 0.5958,
+          "skills_sim": 0.1974,
+          "experience_sim": 0.4983
+        },
+        "explanation": "Dense vector similarity score of 39.74%.",
+        "latency_ms": 39.72,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 42.83,
+        "sub_scores": {
+          "overall_sim": 0.5856,
+          "skills_sim": 0.2682,
+          "experience_sim": 0.5099
+        },
+        "explanation": "Dense vector similarity score of 42.83%.",
+        "latency_ms": 39.78,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.74,
+        "sub_scores": {
+          "overall_sim": 0.5958,
+          "skills_sim": 0.1974,
+          "experience_sim": 0.4983
+        },
+        "explanation": "Dense vector similarity score of 39.74%.",
+        "latency_ms": 38.62,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 48.28,
+        "sub_scores": {
+          "overall_sim": 0.5667,
+          "skills_sim": 0.3757,
+          "experience_sim": 0.548
+        },
+        "explanation": "Dense vector similarity score of 48.28%.",
+        "latency_ms": 37.15,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_14": {
+    "baseline": 13.34,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 15.83,
+        "sub_scores": {
+          "overall_sim": 0.5327,
+          "skills_sim": 0.06,
+          "experience_sim": 0.0695
+        },
+        "explanation": "Dense vector similarity score of 15.83%.",
+        "latency_ms": 37.2,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 15.83,
+        "sub_scores": {
+          "overall_sim": 0.5327,
+          "skills_sim": 0.06,
+          "experience_sim": 0.0695
+        },
+        "explanation": "Dense vector similarity score of 15.83%.",
+        "latency_ms": 35.3,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 15.83,
+        "sub_scores": {
+          "overall_sim": 0.5327,
+          "skills_sim": 0.06,
+          "experience_sim": 0.0695
+        },
+        "explanation": "Dense vector similarity score of 15.83%.",
+        "latency_ms": 33.71,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 9.79,
+        "sub_scores": {
+          "overall_sim": 0.4099,
+          "skills_sim": -0.0298,
+          "experience_sim": 0.0695
+        },
+        "explanation": "Dense vector similarity score of 9.79%.",
+        "latency_ms": 32.82,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_15": {
+    "baseline": 39.02,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 41.22,
+        "sub_scores": {
+          "overall_sim": 0.5688,
+          "skills_sim": 0.2225,
+          "experience_sim": 0.5237
+        },
+        "explanation": "Dense vector similarity score of 41.22%.",
+        "latency_ms": 29.83,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 42.08,
+        "sub_scores": {
+          "overall_sim": 0.5023,
+          "skills_sim": 0.3163,
+          "experience_sim": 0.4845
+        },
+        "explanation": "Dense vector similarity score of 42.08%.",
+        "latency_ms": 28.05,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 41.22,
+        "sub_scores": {
+          "overall_sim": 0.5688,
+          "skills_sim": 0.2225,
+          "experience_sim": 0.5237
+        },
+        "explanation": "Dense vector similarity score of 41.22%.",
+        "latency_ms": 28.96,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 51.99,
+        "sub_scores": {
+          "overall_sim": 0.5887,
+          "skills_sim": 0.4816,
+          "experience_sim": 0.5237
+        },
+        "explanation": "Dense vector similarity score of 51.99%.",
+        "latency_ms": 29.09,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_17": {
+    "baseline": 33.51,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 34.14,
+        "sub_scores": {
+          "overall_sim": 0.3933,
+          "skills_sim": 0.3169,
+          "experience_sim": 0.34
+        },
+        "explanation": "Dense vector similarity score of 34.14%.",
+        "latency_ms": 39.68,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 34.66,
+        "sub_scores": {
+          "overall_sim": 0.4396,
+          "skills_sim": 0.3809,
+          "experience_sim": 0.2659
+        },
+        "explanation": "Dense vector similarity score of 34.66%.",
+        "latency_ms": 41.69,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 33.97,
+        "sub_scores": {
+          "overall_sim": 0.3914,
+          "skills_sim": 0.3169,
+          "experience_sim": 0.3368
+        },
+        "explanation": "Dense vector similarity score of 33.97%.",
+        "latency_ms": 42.67,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 27.36,
+        "sub_scores": {
+          "overall_sim": 0.3819,
+          "skills_sim": 0.2993,
+          "experience_sim": 0.1938
+        },
+        "explanation": "Dense vector similarity score of 27.36%.",
+        "latency_ms": 33.08,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_20": {
+    "baseline": 20.47,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 21.42,
+        "sub_scores": {
+          "overall_sim": 0.4831,
+          "skills_sim": 0.2173,
+          "experience_sim": 0.0767
+        },
+        "explanation": "Dense vector similarity score of 21.42%.",
+        "latency_ms": 41.38,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 23.17,
+        "sub_scores": {
+          "overall_sim": 0.3965,
+          "skills_sim": 0.2919,
+          "experience_sim": 0.0891
+        },
+        "explanation": "Dense vector similarity score of 23.17%.",
+        "latency_ms": 34.53,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 24.89,
+        "sub_scores": {
+          "overall_sim": 0.4817,
+          "skills_sim": 0.3048,
+          "experience_sim": 0.0767
+        },
+        "explanation": "Dense vector similarity score of 24.89%.",
+        "latency_ms": 25.52,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 33.47,
+        "sub_scores": {
+          "overall_sim": 0.3642,
+          "skills_sim": 0.4054,
+          "experience_sim": 0.2493
+        },
+        "explanation": "Dense vector similarity score of 33.47%.",
+        "latency_ms": 25.59,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_25": {
+    "baseline": 34.69,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 34.45,
+        "sub_scores": {
+          "overall_sim": 0.4395,
+          "skills_sim": 0.2974,
+          "experience_sim": 0.3441
+        },
+        "explanation": "Dense vector similarity score of 34.45%.",
+        "latency_ms": 42.77,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 34.95,
+        "sub_scores": {
+          "overall_sim": 0.5482,
+          "skills_sim": 0.2688,
+          "experience_sim": 0.3309
+        },
+        "explanation": "Dense vector similarity score of 34.95%.",
+        "latency_ms": 58.66,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 34.45,
+        "sub_scores": {
+          "overall_sim": 0.4395,
+          "skills_sim": 0.2974,
+          "experience_sim": 0.3441
+        },
+        "explanation": "Dense vector similarity score of 34.45%.",
+        "latency_ms": 43.43,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.07,
+        "sub_scores": {
+          "overall_sim": 0.4301,
+          "skills_sim": 0.2974,
+          "experience_sim": 0.4643
+        },
+        "explanation": "Dense vector similarity score of 39.07%.",
+        "latency_ms": 42.32,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_27": {
+    "baseline": 33.29,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 33.21,
+        "sub_scores": {
+          "overall_sim": 0.3746,
+          "skills_sim": 0.3596,
+          "experience_sim": 0.2835
+        },
+        "explanation": "Dense vector similarity score of 33.21%.",
+        "latency_ms": 26.63,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 27.55,
+        "sub_scores": {
+          "overall_sim": 0.324,
+          "skills_sim": 0.3218,
+          "experience_sim": 0.2049
+        },
+        "explanation": "Dense vector similarity score of 27.55%.",
+        "latency_ms": 47.65,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 32.54,
+        "sub_scores": {
+          "overall_sim": 0.375,
+          "skills_sim": 0.3424,
+          "experience_sim": 0.2835
+        },
+        "explanation": "Dense vector similarity score of 32.54%.",
+        "latency_ms": 48.93,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 27.63,
+        "sub_scores": {
+          "overall_sim": 0.3077,
+          "skills_sim": 0.2881,
+          "experience_sim": 0.2487
+        },
+        "explanation": "Dense vector similarity score of 27.63%.",
+        "latency_ms": 42.72,
+        "total_tokens": 0
+      }
+    }
+  },
+  "PAIR_29": {
+    "baseline": 38.8,
+    "variants": {
+      "single_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.87,
+        "sub_scores": {
+          "overall_sim": 0.5975,
+          "skills_sim": 0.1477,
+          "experience_sim": 0.5502
+        },
+        "explanation": "Dense vector similarity score of 39.87%.",
+        "latency_ms": 39.25,
+        "total_tokens": 0
+      },
+      "two_column": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 42.15,
+        "sub_scores": {
+          "overall_sim": 0.6002,
+          "skills_sim": 0.1903,
+          "experience_sim": 0.5635
+        },
+        "explanation": "Dense vector similarity score of 42.15%.",
+        "latency_ms": 40.58,
+        "total_tokens": 0
+      },
+      "table": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.87,
+        "sub_scores": {
+          "overall_sim": 0.5975,
+          "skills_sim": 0.1477,
+          "experience_sim": 0.5502
+        },
+        "explanation": "Dense vector similarity score of 39.87%.",
+        "latency_ms": 33.81,
+        "total_tokens": 0
+      },
+      "section_order": {
+        "method_name": "2a_embedding_similarity",
+        "match_score": 39.68,
+        "sub_scores": {
+          "overall_sim": 0.5046,
+          "skills_sim": 0.1477,
+          "experience_sim": 0.5921
+        },
+        "explanation": "Dense vector similarity score of 39.68%.",
+        "latency_ms": 39.75,
+        "total_tokens": 0
+      }
+    }
+  }
+}
