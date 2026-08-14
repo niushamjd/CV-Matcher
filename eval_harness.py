@@ -19,7 +19,7 @@ class EvaluationHarness:
         if isinstance(pred_item, dict):
             # 1. Match Score
             score = pred_item.get("match_score", pred_item.get("score", pred_item.get("overall_score", 0.0)))
-            
+
             # 2. Latency (Saniyeyi Milisaniyeye Çevirme Mantığı eklendi)
             if "latency_seconds" in pred_item:
                 latency = float(pred_item["latency_seconds"]) * 1000.0
@@ -41,29 +41,41 @@ class EvaluationHarness:
                 "latency_ms": round(latency, 2),
                 "total_tokens": int(tokens) if tokens is not None else 0
             }
-        
+
         return {"match_score": 0.0, "latency_ms": 0.0, "total_tokens": 0}
 
-    def evaluate_method(self, predictions: list, gold_scores: list[float]) -> dict:
-        if len(predictions) != len(gold_scores):
-            raise ValueError(f"Length mismatch: {len(predictions)} predictions vs {len(gold_scores)} gold labels.")
-        
-        parsed_preds = [self._extract_score(p) for p in predictions]
-        
+    def evaluate_method(self, predictions: dict, gold_scores: dict) -> dict:
+        """predictions and gold_scores must both be {pair_id: value} dicts.
+        Only pair_ids present in both are compared, joined explicitly by key —
+        never by list position, since prediction files and the gold CSV are
+        not guaranteed to share the same row order."""
+        shared_ids = sorted(set(predictions.keys()) & set(gold_scores.keys()))
+        if not shared_ids:
+            raise ValueError("No overlapping pair_ids between predictions and gold_scores.")
+        missing_in_preds = set(gold_scores.keys()) - set(predictions.keys())
+        missing_in_gold = set(predictions.keys()) - set(gold_scores.keys())
+        if missing_in_preds:
+            print(f"Warning: {len(missing_in_preds)} gold pair_ids have no prediction: {sorted(missing_in_preds)}")
+        if missing_in_gold:
+            print(f"Warning: {len(missing_in_gold)} predicted pair_ids have no gold label: {sorted(missing_in_gold)}")
+
+        parsed_preds = [self._extract_score(predictions[pid]) for pid in shared_ids]
+        gold_list = [float(gold_scores[pid]) for pid in shared_ids]
+
         pred_scores = [p["match_score"] for p in parsed_preds]
         latencies = [p["latency_ms"] for p in parsed_preds]
         tokens = [p["total_tokens"] for p in parsed_preds]
 
         # 1. Spearman Rank Correlation
-        if len(set(pred_scores)) == 1 or len(set(gold_scores)) == 1:
+        if len(set(pred_scores)) == 1 or len(set(gold_list)) == 1:
             spearman_corr = 0.0
         else:
-            corr, _ = spearmanr(pred_scores, gold_scores)
+            corr, _ = spearmanr(pred_scores, gold_list)
             spearman_corr = 0.0 if np.isnan(corr) else float(corr)
 
         # 2. Shortlisting Classification Accuracy @ Threshold
         pred_binary = [1 if s >= self.threshold else 0 for s in pred_scores]
-        gold_binary = [1 if g >= self.threshold else 0 for g in gold_scores]
+        gold_binary = [1 if g >= self.threshold else 0 for g in gold_list]
         acc = float(accuracy_score(gold_binary, pred_binary))
 
         # 3. Aggregated Latency & Token Usage
@@ -72,6 +84,7 @@ class EvaluationHarness:
         avg_tokens = float(np.mean(tokens)) if tokens else 0.0
 
         return {
+            "n_pairs": len(shared_ids),
             "spearman_correlation": round(spearman_corr, 4),
             "accuracy_at_threshold": round(acc, 4),
             "avg_latency_ms": round(avg_latency, 2),
@@ -79,7 +92,7 @@ class EvaluationHarness:
             "avg_tokens_per_pair": round(avg_tokens, 1)
         }
 
-    def compare_methods(self, methods_predictions: dict[str, list], gold_scores: list[float]) -> dict:
+    def compare_methods(self, methods_predictions: dict[str, dict], gold_scores: dict) -> dict:
         results = {}
         for method_name, preds in methods_predictions.items():
             results[method_name] = self.evaluate_method(preds, gold_scores)
@@ -103,11 +116,13 @@ def generate_plots(methods_preds, gold_scores, report):
 
     for ax, (method, preds) in zip(axes, methods_preds.items()):
         label, color = method_meta[method]
-        parsed = [harness._extract_score(p) for p in preds]
+        shared_ids = sorted(set(preds.keys()) & set(gold_scores.keys()))
+        parsed = [harness._extract_score(preds[pid]) for pid in shared_ids]
         pred_scores = [p["match_score"] for p in parsed]
+        gold_list = [gold_scores[pid] for pid in shared_ids]
         rho = report[method]["spearman_correlation"]
 
-        ax.scatter(gold_scores, pred_scores, color=color, alpha=0.75, s=55,
+        ax.scatter(gold_list, pred_scores, color=color, alpha=0.75, s=55,
                    edgecolors="white", linewidth=0.5)
         ax.plot([0, 100], [0, 100], "k--", linewidth=0.8, alpha=0.35)
         ax.set_xlabel("Human Score (0–100)", fontsize=10)
@@ -169,32 +184,46 @@ def generate_plots(methods_preds, gold_scores, report):
     print("Saved results/fig2_bias.pdf/.png")
 
 
-def load_dict_or_list_json(filepath):
-    
+def load_pair_id_dict(filepath):
+    """Loads a predictions JSON and returns it as a {pair_id: prediction} dict.
+    Does NOT sort or flatten into a list — callers must join by pair_id
+    explicitly against gold_scores, never by position, since row/key order
+    across files is not guaranteed to match."""
     with open(filepath, "r", encoding="utf-8") as f:
         data = json.load(f)
-    
+
     if isinstance(data, dict):
-       
-        sorted_keys = sorted(data.keys(), key=lambda x: int(x.split('_')[1]) if '_' in x and x.split('_')[1].isdigit() else x)
-        return [data[k] for k in sorted_keys]
-    return data
+        return data
+
+    if isinstance(data, list):
+        result = {}
+        for item in data:
+            pid = item.get("pair_id") if isinstance(item, dict) else None
+            if pid is None:
+                raise ValueError(
+                    f"{filepath} is a list but an item has no 'pair_id' key; "
+                    "cannot safely join to gold scores without one."
+                )
+            result[pid] = item
+        return result
+
+    raise ValueError(f"{filepath}: unsupported JSON shape {type(data)}")
 
 
 if __name__ == "__main__":
-    
+
     df_human = pd.read_csv("results/judge_vs_human_comparison.csv")
 
     if "human_overall_fit_rescaled" in df_human.columns:
-        gold_scores = df_human["human_overall_fit_rescaled"].astype(float).tolist()
+        gold_scores = dict(zip(df_human["pair_id"], df_human["human_overall_fit_rescaled"].astype(float)))
     else:
         df_key = pd.read_csv("data/annotation/annotation_packets/pair_key.csv")
         bucket_mapping = {"strong": 90.0, "partial": 50.0, "weak": 10.0}
-        gold_scores = df_key["fit_bucket_prescreen"].map(bucket_mapping).tolist()
+        gold_scores = dict(zip(df_key["pair_id"], df_key["fit_bucket_prescreen"].map(bucket_mapping)))
 
-    preds_2a = load_dict_or_list_json("results/embedding_results.json")
-    preds_2b = load_dict_or_list_json("results/structured_extraction_results.json")
-    preds_2c = load_dict_or_list_json("results/judge_results_cache.json")
+    preds_2a = load_pair_id_dict("results/embedding_results.json")
+    preds_2b = load_pair_id_dict("results/structured_extraction_results.json")
+    preds_2c = load_pair_id_dict("results/judge_results_cache.json")
 
     harness = EvaluationHarness(threshold=70.0)
     methods_dict = {
@@ -210,7 +239,7 @@ if __name__ == "__main__":
 
     df_report = pd.DataFrame(report).T
     df_report.to_csv("results/final_summary_metrics.csv")
-    
+
     print("Final Scores")
     print(df_report.to_string())
 
