@@ -1,6 +1,31 @@
-# CV-Matcher
+# CV Matcher — Explainable CV–Job Matching System (ECMS)
 
-CVmatcher helps job seekers and recruiters quickly assess how well a CV matches a job description, using LLM-based methods instead of keyword-only ATS filtering.
+CVMatcher evaluates how well a candidate CV matches a job description using three complementary methods, ranging from fast local embeddings to a full LLM-as-judge pipeline.
+
+## Demo Video
+
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
+## Project Structure
+
+```
+CVMatcher/
+├── methods/
+│   ├── embedding_similarity/      # Method 2a — dense embedding similarity
+│   ├── structured_extraction/     # Method 2b — LLM extraction + rule scoring
+│   └── llm_judge/                 # Method 2c — LLM-as-judge
+├── data/
+│   ├── cv_matcher_candidate_pool.xlsx   # 30 gold-standard CV/JD pairs
+│   ├── annotation/                      # Human annotations and pair packets
+│   └── week2_variants/                  # Bias robustness test PDFs
+├── results/                       # All output JSON/CSV files
+├── eval_harness.py                # Unified evaluation across all methods
+└── requirements.txt
+```
+
+---
 
 ## Setup
 
@@ -8,126 +33,108 @@ CVmatcher helps job seekers and recruiters quickly assess how well a CV matches 
 git clone https://github.com/niushamjd/CV-Matcher.git
 cd CV-Matcher
 
-python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\Activate.ps1
+conda create -n matchlens python=3.11
+conda activate matchlens
 
 pip install -r requirements.txt
 ```
 
-## API keys
+## API Keys
 
-### Groq (for method 2b — Structured Extraction + Rules)
-
-1. Get a free key at [console.groq.com](https://console.groq.com) — no credit card needed.
-2. Create a `.env` file in the repo root (never commit this file):
-
-```
-GROQ_API_KEY=your-key-here
-```
-
-### Gemini (for method 2c — LLM-as-judge)
-
-1. Get a free key at [aistudio.google.com](https://aistudio.google.com) (API Keys → Create API key).
-2. Add it to the same `.env` file:
+Create a `.env` file in the repo root (never commit this):
 
 ```
 GEMINI_API_KEY=your-key-here
 ```
 
-## Gold-standard data
-
-The script reads real CV/JD pairs from `data/cv_matcher_candidate_pool.xlsx` (tracked in git under `data/`). It reads the `Candidate Pool` sheet, not `Final Selection` — the text lives in the `resume_text` and `jd_text` columns of `Candidate Pool`, filtered to the 30 rows where `FINAL_SELECTION (y/n) == "y"`.
-
-Human annotations (for evaluation) are in `data/annotation/annotated_pairs.xlsx`.
+Get a free Gemini key at [aistudio.google.com](https://aistudio.google.com) — no credit card needed. Methods 2b and 2c both use this key.
 
 ---
 
-## Running Structured Extraction + Rules (2b)
+## Method 2a — Dense Embedding Similarity
+
+Runs fully locally, no API key needed.
+
+```bash
+python methods/embedding_similarity/embedding_matcher.py
+```
+
+Reads the 30 gold-standard pairs from `data/cv_matcher_candidate_pool.xlsx` and writes scores to `results/embedding_results.json`.
+
+To run the bias robustness tests (format + name variants):
+
+```bash
+python methods/embedding_similarity/run_bias_tests.py
+```
+
+**How it works:** Uses `all-MiniLM-L6-v2` (SentenceTransformers) with section-aware cosine similarity — Skills at 40%, Experience at 40%, overall document at 20%.
+
+---
+
+## Method 2b — Structured Extraction + Rules
 
 ```bash
 cd methods/structured_extraction
-python test_pipeline.py
+python run_on_gold_standard.py
 ```
 
-This runs the full pipeline (LLM extraction → rule scoring → gap explanation) against sample CVs from the Kaggle Resume dataset.
+Reads the 30 gold-standard pairs and writes scores to `results/structured_extraction_results.json`.
 
-The pipeline has two data source options — edit the `USE_PDF` flag at the top of `test_pipeline.py`:
+To run the bias robustness tests:
 
-- `USE_PDF = False` — reads from `Resume/Resume.csv` (Kaggle CSV format)
-- `USE_PDF = True` — reads from `data/data/<CATEGORY>/*.pdf`
+```bash
+python methods/structured_extraction/run_bias_tests.py
+```
 
-### What each file does
+**How it works:** An LLM call parses each CV and JD into a shared schema (skills, experience, education), then rule-based scoring computes sub-scores deterministically. A gap explainer turns the structured diff into a natural-language rationale.
 
 | File | Role |
 |---|---|
 | `schema.py` | Shared Pydantic contracts: `ExtractedProfile`, `StructuredDiff`, `MatchResult` |
-| `llm_client.py` | LLM abstraction — defaults to Groq (`llama-3.3-70b-versatile`), Gemini fallback |
-| `extraction.py` | LLM prompt that parses raw CV/JD text into a structured `ExtractedProfile` |
-| `rule_scorer.py` | Skill overlap + experience/education threshold logic → `MatchResult` |
+| `llm_client.py` | LLM abstraction using Gemini via OpenAI-compatible API |
+| `extraction.py` | Parses raw CV/JD text into `ExtractedProfile` |
+| `rule_scorer.py` | Skill overlap + experience/education threshold logic |
 | `gap_explainer.py` | Turns `StructuredDiff` into a human-readable explanation |
-| `data_loader.py` | Loads CVs from CSV or PDF, returns `list[ResumeRecord]` |
-
-### Output schema
-
-```json
-{
-  "match_score": 0-100,
-  "sub_scores": {
-    "skills": 0-100,
-    "experience": 0-100,
-    "education": 0-100,
-    "writing_quality": 0-100
-  },
-  "explanation": "text",
-  "writing_quality_explanation": "text",
-  "structured_diff": {
-    "matched_skills": ["..."],
-    "missing_skills": ["..."],
-    "extra_skills": ["..."],
-    "years_required": 3.0,
-    "years_candidate": 5.0,
-    "years_gap": -2.0,
-    "education_match": true
-  }
-}
-```
-
-### Notes
-
-- The rule scorer is intentionally simple (set intersection + threshold) — it is a baseline, not the star of the show.
-- Skill normalization aliases (e.g. `ms excel` → `microsoft excel`) live in `rule_scorer.py`'s `_SKILL_ALIASES` dict — add entries there if you spot mismatches.
-- `gap_explainer.py` has a deterministic template (Option A) and an LLM-based version (Option B, default) for more natural phrasing.
-- Switch LLM provider via environment variable: `export LLM_PROVIDER=gemini` (uses Gemini free tier, 1M TPM — recommended for bulk runs to avoid Groq's 6k TPM limit).
 
 ---
 
-## Running the LLM-as-judge (2c)
+## Method 2c — LLM-as-Judge
 
 ```bash
-python3 methods/llm_judge/llm_judge_starter.py
+python methods/llm_judge/llm_judge_starter.py
 ```
 
-By default this runs the judge and writing-quality signal against all 30 real gold-standard CV/JD pairs from `data/cv_matcher_candidate_pool.xlsx`. Pair order matches the sheet's row order, which is intentionally randomized per the labeling rubric.
+Reads the 30 gold-standard pairs and caches results in `results/judge_results_cache.json`.
 
-To run against the six synthetic edge-case samples instead (strong match, clear mismatch, negation, poorly-written-but-qualified, hallucination, synonym/implied-experience) — useful for quick sanity checks without burning API quota on 30 pairs — swap the loop in `__main__` to iterate `SAMPLES` instead of `load_pairs_from_excel(...)`.
+To run the bias robustness tests:
 
-### Output schema
-
-```json
-{
-  "match_score": 0-100,
-  "sub_scores": {
-    "skills": 0-100,
-    "experience": 0-100,
-    "education": 0-100
-  },
-  "explanation": "text",
-  "source": "llm_judge"
-}
+```bash
+python methods/llm_judge/run_bias_tests.py
 ```
 
-### Notes
+**How it works:** The judge receives raw CV and JD text in a single prompt grounded in a two-tier must-have vs. nice-to-have recruiting rubric, returning a match score (0–100), sub-scores, and a natural-language explanation.
 
-- Default model is `gemini-3.5-flash-lite`. Free tier has daily request limits — check [aistudio.google.com/usage](https://aistudio.google.com/usage) if you hit a 429 error. A full 30-pair run uses ~60 calls (judge + writing-quality per pair).
-- `check_consistency()` in the script re-runs a pair multiple times to check score stability; call it manually.
-- `load_pairs_from_excel()` reads the real gold-standard dataset. `load_pairs_from_csv()` is a fallback stub if the data ever comes as CSV instead.
+---
+
+## Evaluation Harness
+
+Compares all three methods against the 30-pair gold standard and generates plots:
+
+```bash
+python eval_harness.py
+```
+
+Outputs:
+- `results/final_summary_metrics.json` — Spearman ρ, accuracy @70, latency, token usage
+- `results/fig1_scatter.png` — predicted vs. human score scatter plots
+- `results/fig2_bias.png` — bias robustness bar chart
+
+---
+
+## Results Summary
+
+| Method | Spearman ρ | Acc @70 | Avg Latency | Tokens/Pair |
+|---|---|---|---|---|
+| 2a: Embedding Similarity | 0.076 | 66.7% | 83 ms | 0 |
+| 2b: Structured Extraction | 0.242 | 70.0% | 4825 ms | 5215 |
+| 2c: LLM-as-Judge | **0.412** | **76.7%** | 2886 ms | 2964 |
