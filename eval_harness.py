@@ -9,7 +9,7 @@ class EvaluationHarness:
         self.threshold = threshold
 
     def _extract_score(self, pred_item) -> dict:
-        """Gelen JSON objesinden skor, saniye/milisaniye latency ve token toplamını çeker."""
+        """Extracts the score, latency (seconds/milliseconds), and token total from the incoming JSON object."""
         if isinstance(pred_item, str):
             try:
                 pred_item = json.loads(pred_item)
@@ -20,7 +20,7 @@ class EvaluationHarness:
             # 1. Match Score
             score = pred_item.get("match_score", pred_item.get("score", pred_item.get("overall_score", 0.0)))
 
-            # 2. Latency (Saniyeyi Milisaniyeye Çevirme Mantığı eklendi)
+            # 2. Latency (seconds-to-milliseconds conversion logic added)
             if "latency_seconds" in pred_item:
                 latency = float(pred_item["latency_seconds"]) * 1000.0
             elif "latency_ms" in pred_item:
@@ -28,7 +28,7 @@ class EvaluationHarness:
             else:
                 latency = float(pred_item.get("latency", 0.0))
 
-            # 3. Token Hesabı (prompt_tokens + completion_tokens)
+            # 3. Token count (prompt_tokens + completion_tokens)
             if "prompt_tokens" in pred_item or "completion_tokens" in pred_item:
                 p_tok = pred_item.get("prompt_tokens", 0) or 0
                 c_tok = pred_item.get("completion_tokens", 0) or 0

@@ -21,6 +21,11 @@ CVMatcher/
 │   ├── annotation/                      # Human annotations and pair packets
 │   └── week2_variants/                  # Bias robustness test PDFs
 ├── results/                       # All output JSON/CSV files
+├── demo/
+│   ├── demo.py                    # Live single-pair demo, all three methods
+│   ├── demo_bias.py               # Live bias-robustness demo, all three methods
+│   ├── demo_output.txt            # Terminal output from demo.py
+│   └── demo_bias_output.txt       # Terminal output from demo_bias.py
 ├── eval_harness.py                # Unified evaluation across all methods
 └── requirements.txt
 ```
@@ -45,9 +50,12 @@ Create a `.env` file in the repo root (never commit this):
 
 ```
 GEMINI_API_KEY=your-key-here
+GROQ_API_KEY=your-key-here
 ```
 
-Get a free Gemini key at [aistudio.google.com](https://aistudio.google.com) — no credit card needed. Methods 2b and 2c both use this key.
+Method 2c always uses Gemini — get a free key at [aistudio.google.com](https://aistudio.google.com), no credit card needed.
+
+Method 2b (`llm_client.py`) defaults to **Groq** (`LLM_PROVIDER=groq`), not Gemini — get a free key at [console.groq.com](https://console.groq.com). To run 2b on Gemini instead, set `LLM_PROVIDER=gemini`; to run it fully offline, set `LLM_PROVIDER=ollama` (requires a local Ollama install, no API key needed).
 
 ---
 
@@ -131,10 +139,42 @@ Outputs:
 
 ---
 
+## Demo
+
+Two standalone scripts, built for the project video, that run all three
+methods live end-to-end on a single gold-standard pair — **PAIR_13**, a
+Senior HR Specialist the human annotator rated 5/5 (shortlist). No
+batching, no cached results: every score you see is computed on the spot.
+
+```bash
+python demo/demo.py
+```
+Runs Methods 2a, 2b, and 2c on PAIR_13, narrating each step as it happens
+(model loads, each LLM call), then prints a final summary table comparing
+all three match scores against the human label.
+Terminal output: [`demo/demo_output.txt`](demo/demo_output.txt).
+
+```bash
+python demo/demo_bias.py
+```
+Runs all three methods on PAIR_13's baseline CV plus all 4 formatting
+variants and all 9 demographic name variants (13 live re-scorings per
+method), prints each method's full bias breakdown against baseline, and
+closes with a one-sentence takeaway on which method was most sensitive
+to formatting vs. name changes.
+Terminal output: [`demo/demo_bias_output.txt`](demo/demo_bias_output.txt).
+
+Both scripts need the same `.env` setup as Methods 2b/2c above
+(`GEMINI_API_KEY`, and `GROQ_API_KEY` unless you set `LLM_PROVIDER=gemini`).
+
+---
+
 ## Results Summary
 
 | Method | Spearman ρ | Acc @70 | Avg Latency | Tokens/Pair |
 |---|---|---|---|---|
-| 2a: Embedding Similarity | 0.076 | 66.7% | 83 ms | 0 |
-| 2b: Structured Extraction | 0.242 | 70.0% | 4825 ms | 5215 |
-| 2c: LLM-as-Judge | **0.412** | **76.7%** | 2886 ms | 2964 |
+| 2a: Embedding Similarity | 0.517 | 66.7% | 83 ms | 0 |
+| 2b: Structured Extraction | 0.177 | 63.3% | 4825 ms | 5215 |
+| 2c: LLM-as-Judge | **0.788** | **76.7%** | 2886 ms | 2964 |
+
+(n=30 gold pairs; see `results/final_summary_metrics.json`.)

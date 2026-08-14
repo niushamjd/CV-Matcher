@@ -2,8 +2,8 @@
 Extraction step for method 2b (Structured Extraction + Rules).
 
 Takes raw CV or JD text -> returns an ExtractedProfile (see schema.py).
-Uses the free local LLM client (llm_client.py, defaults to Ollama -- no API
-key, no cost) with a strict "return JSON only" instruction.
+Uses the free LLM client (llm_client.py, defaults to Groq -- no cost, but
+requires a free GROQ_API_KEY) with a strict "return JSON only" instruction.
 
 Usage:
     from extraction import extract_profile

@@ -1,0 +1,114 @@
+C:\Users\ertug\Documents\GitHub\3dcv-ert-version\CV-Matcher>python demo_bias.py
+
+========================================================================
+CV Matcher bias demo -- PAIR_13
+========================================================================
+  -> Extracting text from baseline CV, 4 format variants, and 9 name variants (pdfplumber)...
+
+========================================================================
+Method 2a -- Dense Embedding Similarity
+========================================================================
+  -> Loading all-MiniLM-L6-v2 locally and scoring every variant (no API calls)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 4227.05it/s]
+
+--- 2a Dense Embedding: biased results (baseline match_score = 39.74) ---
+Format variants:
+  single_column   :  39.74   (Δ +0.00)
+  two_column      :  42.83   (Δ +3.09)
+  table           :  39.74   (Δ +0.00)
+  section_order   :  48.28   (Δ +8.54)
+  format range    : 8.54 pts (largest shift: section_order)
+Name variants:
+  NEUTRAL         :  39.89   (Δ +0.15)
+  WH_F            :  39.20   (Δ -0.54)
+  WH_M            :  39.52   (Δ -0.22)
+  AA_F            :  39.32   (Δ -0.42)
+  AA_M            :  38.96   (Δ -0.78)
+  TR_F            :  38.65   (Δ -1.09)
+  TR_M            :  39.60   (Δ -0.14)
+  IN_F            :  39.83   (Δ +0.09)
+  IN_M            :  39.24   (Δ -0.50)
+  name range      : 1.24 pts (largest shift: TR_F)
+
+========================================================================
+Method 2b -- Structured Extraction + Rules
+========================================================================
+  -> Calling LLM once to extract the fixed JD profile (reused across all variants)...
+  -> Calling LLM to extract structured profile for CV variant 'baseline'...
+  -> Calling LLM to extract structured profile for CV variant 'single_column'...
+  -> Calling LLM to extract structured profile for CV variant 'two_column'...
+  -> Calling LLM to extract structured profile for CV variant 'table'...
+  -> Calling LLM to extract structured profile for CV variant 'section_order'...
+  -> Calling LLM to extract structured profile for CV variant 'NEUTRAL'...
+  -> Calling LLM to extract structured profile for CV variant 'WH_F'...
+  -> Calling LLM to extract structured profile for CV variant 'WH_M'...
+  [rate limit] waiting 30s before retry 1/3...
+  -> Calling LLM to extract structured profile for CV variant 'AA_F'...
+  -> Calling LLM to extract structured profile for CV variant 'AA_M'...
+  -> Calling LLM to extract structured profile for CV variant 'TR_F'...
+  -> Calling LLM to extract structured profile for CV variant 'TR_M'...
+  -> Calling LLM to extract structured profile for CV variant 'IN_F'...
+  -> Calling LLM to extract structured profile for CV variant 'IN_M'...
+  [rate limit] waiting 30s before retry 1/3...
+
+--- 2b Structured Extraction: biased results (baseline match_score = 75.0) ---
+Format variants:
+  single_column   :  75.00   (Δ +0.00)
+  two_column      :  66.70   (Δ -8.30)
+  table           :  75.00   (Δ +0.00)
+  section_order   :  75.00   (Δ +0.00)
+  format range    : 8.3 pts (largest shift: two_column)
+Name variants:
+  NEUTRAL         :  75.00   (Δ +0.00)
+  WH_F            :  75.00   (Δ +0.00)
+  WH_M            :  75.00   (Δ +0.00)
+  AA_F            :  75.00   (Δ +0.00)
+  AA_M            :  75.00   (Δ +0.00)
+  TR_F            :  75.00   (Δ +0.00)
+  TR_M            :  75.00   (Δ +0.00)
+  IN_F            :  75.00   (Δ +0.00)
+  IN_M            :  75.00   (Δ +0.00)
+  name range      : 0.0 pts (largest shift: NEUTRAL)
+
+========================================================================
+Method 2c -- LLM-as-Judge
+========================================================================
+  -> Calling Gemini judge on CV variant 'baseline'...
+  -> Calling Gemini judge on CV variant 'single_column'...
+  -> Calling Gemini judge on CV variant 'two_column'...
+  -> Calling Gemini judge on CV variant 'table'...
+  -> Calling Gemini judge on CV variant 'section_order'...
+  -> Calling Gemini judge on CV variant 'NEUTRAL'...
+  -> Calling Gemini judge on CV variant 'WH_F'...
+  -> Calling Gemini judge on CV variant 'WH_M'...
+  -> Calling Gemini judge on CV variant 'AA_F'...
+  -> Calling Gemini judge on CV variant 'AA_M'...
+  -> Calling Gemini judge on CV variant 'TR_F'...
+  -> Calling Gemini judge on CV variant 'TR_M'...
+  -> Calling Gemini judge on CV variant 'IN_F'...
+  -> Calling Gemini judge on CV variant 'IN_M'...
+
+--- 2c LLM-as-Judge: biased results (baseline match_score = 88) ---
+Format variants:
+  single_column   :  91.00   (Δ +3.00)
+  two_column      :  88.00   (Δ +0.00)
+  table           :  82.00   (Δ -6.00)
+  section_order   :  88.00   (Δ +0.00)
+  format range    : 9 pts (largest shift: table)
+Name variants:
+  NEUTRAL         :  88.00   (Δ +0.00)
+  WH_F            :  88.00   (Δ +0.00)
+  WH_M            :  88.00   (Δ +0.00)
+  AA_F            :  91.00   (Δ +3.00)
+  AA_M            :  88.00   (Δ +0.00)
+  TR_F            :  88.00   (Δ +0.00)
+  TR_M            :  88.00   (Δ +0.00)
+  IN_F            :  88.00   (Δ +0.00)
+  IN_M            :  75.00   (Δ -13.00)
+  name range      : 16 pts (largest shift: IN_M)
+
+========================================================================
+Result
+========================================================================
+For PAIR_13, score ranges across variants were 2a (format 8.54 pts / name 1.24 pts), 2b (format 8.3 pts / name 0.0 pts), 2c (format 9 pts / name 16 pts) -- 2c was the most sensitive to formatting changes and 2c was the most sensitive to name changes, consistent with the project's bias-robustness findings.

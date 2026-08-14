@@ -12,7 +12,6 @@ class EmbeddingMatcher:
         # SentenceTransformers handles local dense embeddings quickly with 0 API cost
         torch.set_num_threads(1)
         self.model = SentenceTransformer(model_name, device="cpu")
-        self.model = SentenceTransformer(model_name)
 
     def _cosine_similarity(self, vec1: np.ndarray, vec2: np.ndarray) -> float:
         norm1, norm2 = np.linalg.norm(vec1), np.linalg.norm(vec2)

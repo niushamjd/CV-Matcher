@@ -1,0 +1,51 @@
+C:\Users\ertug\Documents\GitHub\3dcv-ert-version\CV-Matcher>python demo.py
+
+========================================================================
+CV Matcher demo -- PAIR_13
+========================================================================
+Human label : overall 5/5, skills 5/5, experience 4/5, education 5/5, decision: shortlist
+Rationale   : The closest match in the pool: over a decade of hands-on generalist HR covering onboarding, performance, compensation and HRIS, comfortably clear of the four-year and degree floors.
+
+========================================================================
+Method 2a -- Dense Embedding Similarity
+========================================================================
+  -> Loading all-MiniLM-L6-v2 locally (SentenceTransformers, CPU, no API call)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 6868.04it/s]
+  -> Regex-extracting Skills/Experience sections from CV and JD...
+  -> Encoding sections into embeddings and computing weighted cosine similarity (40% skills, 40% experience, 20% overall)...
+match_score : 37.22
+sub_scores  : {'overall_sim': 0.488, 'skills_sim': 0.1974, 'experience_sim': 0.489}
+latency_ms  : 601.05
+
+========================================================================
+Method 2b -- Structured Extraction + Rules
+========================================================================
+  -> Calling LLM (extraction) to parse the CV into a structured profile (skills, experience, education)...
+  -> Calling LLM (extraction) to parse the JD into the same structured schema...
+  -> Scoring skills coverage, experience gap, and education match deterministically -- no LLM call for this step...
+  -> Calling LLM for a writing-quality signal (clarity/professionalism only, kept separate from match_score)...
+  -> Calling LLM (gap explainer) to turn the structured diff into a natural-language rationale...
+match_score : 75.0
+sub_scores  : {'skills_score': 25.0, 'experience_score': 100.0, 'education_score': 100.0, 'writing_quality_score': 80}
+explanation : Your CV is well-written and professional, showcasing your experience with HRIS and other notable skills like ADP, database management, and Oracle. However, to be a strong fit for this role, you'll need to develop skills in Microsoft Excel, PowerPoint, and Word, which are currently missing from your profile. With 12 years of experience, exceeding the required 4 years, you have a solid foundation to build on and address these skill gaps.
+latency_s   : 3.72
+
+========================================================================
+Method 2c -- LLM-as-Judge
+========================================================================
+  -> Calling Gemini with the raw CV + JD in a single prompt, grounded in a two-tier must-have/nice-to-have recruiting rubric...
+match_score : 88
+sub_scores  : {'skills': 85, 'experience': 90, 'education': 95}
+explanation : The candidate strongly matches the must-haves, holding a Bachelor's degree (plus an MBA) and over 15 years of HR professional experience, well exceeding the 4-year minimum. They demonstrate core HR competencies aligned with Bain's needs—such as performance management, benefits/compensation admin, onboarding, and HRIS experience—though they lack explicit mention of Workday (having experience with SAP, Oracle, ADP). The resume also features strong quantifiable accomplishments (e.g., reducing turnover from 68% to 14%), making them a robust fit despite minor gaps in specific HRIS tooling.
+latency_s   : 2.24
+
+========================================================================
+Summary
+========================================================================
+Method                        Match Score   Latency (s)    Delta vs Human
+-------------------------------------------------------------------------
+Human gold label                    100.0            --                --
+2a Dense Embedding                  37.22          0.60             -62.8
+2b Structured Extraction            75.00          3.72             -25.0
+2c LLM-as-Judge                     88.00          2.24             -12.0
